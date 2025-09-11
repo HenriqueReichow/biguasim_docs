@@ -1,4 +1,4 @@
-Welcome to HoloOcean's documentation!
+Welcome to BiguaSim's documentation!
 ==============================================
 .. image:: images/inspect_plane.jpg
 
