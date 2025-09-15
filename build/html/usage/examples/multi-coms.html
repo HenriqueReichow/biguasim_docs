@@ -1,29 +1,31 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="None" data-content_root="../../">
+<html class="writer-html5" lang="pt-BR" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multi-Agent Communications &mdash; BiguaSim 1.0.0 documentation</title>
+  <title>Multi-Agent Communications &mdash; Documentação BiguaSim 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=9261fe3b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=1f674ae1" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../../_static/documentation_options.js?v=c0c8e3fa"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/translations.js?v=71a39b36"></script>
+      <script src="../../_static/darkmode.js?v=d062ed36"></script>
     <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
     <link rel="next" title="PD Controller" href="pd-controllers.html" />
     <link rel="prev" title="Multi Agent Example" href="multi-agent.html" /> 
 </head>
@@ -41,12 +43,12 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
               <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
@@ -95,20 +97,20 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BiguaSim</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Navegação da página">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../getting-started.html">Getting Started &amp; Examples</a></li>
       <li class="breadcrumb-item active">Multi-Agent Communications</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/usage/examples/multi-coms.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/usage/examples/multi-coms.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
       </li>
   </ul>
   <hr/>
@@ -117,19 +119,19 @@
            <div itemprop="articleBody">
              
   <section id="multi-agent-communications">
-<h1>Multi-Agent Communications<a class="headerlink" href="#multi-agent-communications" title="Link to this heading"></a></h1>
-<p>Many times it's necessary to communicate between agents. This can be done using the
+<h1>Multi-Agent Communications<a class="headerlink" href="#multi-agent-communications" title="Link para este cabeçalho"></a></h1>
+<p>Many times it’s necessary to communicate between agents. This can be done using the
 <code class="docutils literal notranslate"><span class="pre">AcousticBeaconSensor</span></code> or the <code class="docutils literal notranslate"><span class="pre">OpticalModemSensor</span></code>. Below are some examples of these</p>
 <section id="sending-acoustic-messages">
-<h2>Sending Acoustic Messages<a class="headerlink" href="#sending-acoustic-messages" title="Link to this heading"></a></h2>
+<h2>Sending Acoustic Messages<a class="headerlink" href="#sending-acoustic-messages" title="Link para este cabeçalho"></a></h2>
 <p>The command <code class="xref py py-meth docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.send_acoustic_message()</span></code> is used to send messages between acoustic beacons.
-There's a number of message types that can be sent, all with varying functionality, see <code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.AcousticBeaconSensor</span></code>
+There’s a number of message types that can be sent, all with varying functionality, see <code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.AcousticBeaconSensor</span></code>
 for details.</p>
 <p>Further, a few helper functions exist if needed,</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons</span></code> returns all beacons.</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_id</span></code> returns all beacons' ids.</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_status</span></code> returns all beacons' status (whether it's transmitting or not).</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_id</span></code> returns all beacons’ ids.</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_status</span></code> returns all beacons’ status (whether it’s transmitting or not).</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoocean</span>
 
@@ -193,14 +195,14 @@ for details.</p>
 </div>
 </section>
 <section id="sending-optical-messages">
-<h2>Sending Optical Messages<a class="headerlink" href="#sending-optical-messages" title="Link to this heading"></a></h2>
+<h2>Sending Optical Messages<a class="headerlink" href="#sending-optical-messages" title="Link para este cabeçalho"></a></h2>
 <p>The command <code class="xref py py-meth docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.send_optical_message()</span></code> is used to send messages between optical modems.
 See <code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.OpticalModemSensor</span></code> for configuration details. Note in order for a message to be transmitted,
 the 2 sensors must be aligned.</p>
 <p>Further, a few helper functions exist if needed,</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems</span></code> returns all modems.</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems_id</span></code> returns all modems' ids.</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems_id</span></code> returns all modems’ ids.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoocean</span>
 
@@ -270,20 +272,20 @@ the 2 sensors must be aligned.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="multi-agent.html" class="btn btn-neutral float-left" title="Multi Agent Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pd-controllers.html" class="btn btn-neutral float-right" title="PD Controller" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="multi-agent.html" class="btn btn-neutral float-left" title="Multi Agent Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="pd-controllers.html" class="btn btn-neutral float-right" title="PD Controller" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Direitos autorais FURG.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

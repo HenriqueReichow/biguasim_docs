@@ -1,29 +1,31 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="None" data-content_root="../">
+<html class="writer-html5" lang="pt-BR" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Improving BiguaSim Performance &mdash; BiguaSim 1.0.0 documentation</title>
+  <title>Improving BiguaSim Performance &mdash; Documentação BiguaSim 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=9261fe3b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=1f674ae1" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../_static/documentation_options.js?v=c0c8e3fa"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=71a39b36"></script>
+      <script src="../_static/darkmode.js?v=d062ed36"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="Using BiguaSim Headless" href="running-headless.html" />
     <link rel="prev" title="Units and Coordinates in BiguaSim" href="units-and-coordinates.html" /> 
 </head>
@@ -41,12 +43,12 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
               <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
@@ -102,20 +104,20 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BiguaSim</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Navegação da página">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="usage.html">Using BiguaSim</a></li>
       <li class="breadcrumb-item active">Improving BiguaSim Performance</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/usage/performance.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/usage/performance.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
       </li>
   </ul>
   <hr/>
@@ -124,10 +126,10 @@
            <div itemprop="articleBody">
              
   <section id="improving-biguasim-performance">
-<span id="improving-performance"></span><h1>Improving BiguaSim Performance<a class="headerlink" href="#improving-biguasim-performance" title="Link to this heading"></a></h1>
+<span id="improving-performance"></span><h1>Improving BiguaSim Performance<a class="headerlink" href="#improving-biguasim-performance" title="Link para este cabeçalho"></a></h1>
 <p>BiguaSim is fairly performant by default, but you can also sacrifice
 features to increase your frames per second.</p>
-<nav class="contents local" id="contents">
+<nav class="contents local" id="sumario">
 <ul class="simple">
 <li><p><a class="reference internal" href="#rgbcamera" id="id2">RGBCamera</a></p>
 <ul>
@@ -147,7 +149,7 @@ features to increase your frames per second.</p>
 </ul>
 </nav>
 <section id="rgbcamera">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">RGBCamera</a><a class="headerlink" href="#rgbcamera" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">RGBCamera</a><a class="headerlink" href="#rgbcamera" title="Link para este cabeçalho"></a></h2>
 <p>By far, the biggest single thing you can do to improve performance is to
 disable the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code>. Rendering the camera every frame causes a
 context switch deep in the rendering code of the engine, which has a
@@ -224,14 +226,14 @@ the same.</p>
 </tbody>
 </table>
 <section id="disabling-the-rgbcamera">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Disabling the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code></a><a class="headerlink" href="#disabling-the-rgbcamera" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Disabling the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code></a><a class="headerlink" href="#disabling-the-rgbcamera" title="Link para este cabeçalho"></a></h3>
 <p>
 Remove the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> entry from the scenario configuration file you are
 using.</p>
 <p>See <a class="reference internal" href="examples/custom-scenarios.html#custom-scenarios"><span class="std std-ref">Custom Scenario Configurations</span></a>.</p>
 </section>
 <section id="lowering-the-rgbcamera-resolution">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Lowering the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> resolution</a><a class="headerlink" href="#lowering-the-rgbcamera-resolution" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Lowering the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> resolution</a><a class="headerlink" href="#lowering-the-rgbcamera-resolution" title="Link para este cabeçalho"></a></h3>
 <p>Lowering the resolution of the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> can also help speed things up.
 Create a <a class="reference internal" href="examples/custom-scenarios.html#custom-scenarios"><span class="std std-ref">custom scenario</span></a> and in the
 <a class="reference internal" href="scenarios.html#configuration-block"><span class="std std-ref">configuration block</span></a> for the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> set the
@@ -239,31 +241,31 @@ Create a <a class="reference internal" href="examples/custom-scenarios.html#cust
 <p>See <code class="xref py py-class docutils literal notranslate"><span class="pre">RGBCamera</span></code> for more details.</p>
 </section>
 <section id="changing-ticks-per-capture">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Changing ticks per capture</a><a class="headerlink" href="#changing-ticks-per-capture" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Changing ticks per capture</a><a class="headerlink" href="#changing-ticks-per-capture" title="Link para este cabeçalho"></a></h3>
 <p>The camera sample rate can be reduced to increase the average frames per second.
 See <a class="reference internal" href="scenarios.html#configure-sensors"><span class="std std-ref">Sensor Objects</span></a> and the <code class="docutils literal notranslate"><span class="pre">Hz</span></code> parameter for more info.</p>
 </section>
 </section>
 <section id="sonar-sensors">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Sonar Sensors</a><a class="headerlink" href="#sonar-sensors" title="Link to this heading"></a></h2>
-<p>The sonar sensors can also be taxing on performance. There's a number of things that can be
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Sonar Sensors</a><a class="headerlink" href="#sonar-sensors" title="Link para este cabeçalho"></a></h2>
+<p>The sonar sensors can also be taxing on performance. There’s a number of things that can be
 done to help improve their performance as well.</p>
 <section id="lowering-octree-resolution">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Lowering Octree Resolution</a><a class="headerlink" href="#lowering-octree-resolution" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Lowering Octree Resolution</a><a class="headerlink" href="#lowering-octree-resolution" title="Link para este cabeçalho"></a></h3>
 <p>The Octree resolution has a large impact on sonar performance. The higher <code class="docutils literal notranslate"><span class="pre">octree_min</span></code>
-is, the less leaves there are to search through, and the faster it'll run. This will have an
+is, the less leaves there are to search through, and the faster it’ll run. This will have an
 impact on image quality, especially at close distances. If most objects that are being
 inspected are a ways away, this parameter can be safely increased quite a bit.</p>
 <p>See <a class="reference internal" href="scenarios.html#configure-octree"><span class="std std-ref">Configuring Octree</span></a> for info on how to do that.</p>
 </section>
 <section id="id1">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Changing ticks per capture</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Changing ticks per capture</a><a class="headerlink" href="#id1" title="Link para este cabeçalho"></a></h3>
 <p>The sonar sample rate can be reduced to increase the average frames per second.
 See <a class="reference internal" href="scenarios.html#configure-sensors"><span class="std std-ref">Sensor Objects</span></a> and the <code class="docutils literal notranslate"><span class="pre">Hz</span></code> parameter for more info.</p>
 </section>
 </section>
 <section id="disable-viewport-rendering">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Disable Viewport Rendering</a><a class="headerlink" href="#disable-viewport-rendering" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Disable Viewport Rendering</a><a class="headerlink" href="#disable-viewport-rendering" title="Link para este cabeçalho"></a></h2>
 <p>Rendering the viewport window can be unnecessary during training. You can
 disable the viewport with the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>
@@ -271,7 +273,7 @@ method.</p>
 <p>At lower <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> resolutions, you can expect a ~40% frame time reduction.</p>
 </section>
 <section id="change-render-quality">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Change Render Quality</a><a class="headerlink" href="#change-render-quality" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Change Render Quality</a><a class="headerlink" href="#change-render-quality" title="Link para este cabeçalho"></a></h2>
 <p>You can adjust HoloOcean to render at a lower (or higher) quality to improve
 performance. See the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_render_quality()</span></code> method</p>
@@ -313,20 +315,20 @@ performance. See the
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="units-and-coordinates.html" class="btn btn-neutral float-left" title="Units and Coordinates in BiguaSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="running-headless.html" class="btn btn-neutral float-right" title="Using BiguaSim Headless" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="units-and-coordinates.html" class="btn btn-neutral float-left" title="Units and Coordinates in BiguaSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="running-headless.html" class="btn btn-neutral float-right" title="Using BiguaSim Headless" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Direitos autorais FURG.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

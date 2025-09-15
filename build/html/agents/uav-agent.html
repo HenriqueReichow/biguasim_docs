@@ -1,29 +1,31 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="None" data-content_root="../">
+<html class="writer-html5" lang="pt-BR" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UavAgent &mdash; BiguaSim 1.0.0 documentation</title>
+  <title>UavAgent &mdash; Documentação BiguaSim 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=9261fe3b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=1f674ae1" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../_static/documentation_options.js?v=c0c8e3fa"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=71a39b36"></script>
+      <script src="../_static/darkmode.js?v=d062ed36"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="Developing BiguaSim" href="../develop/develop.html" />
     <link rel="prev" title="SphereAgent" href="sphere-agent.html" /> 
 </head>
@@ -41,12 +43,12 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
               <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
@@ -92,20 +94,20 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BiguaSim</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Navegação da página">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="agents.html">BiguaSim Agents</a></li>
       <li class="breadcrumb-item active">UavAgent</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/agents/uav-agent.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/agents/uav-agent.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
       </li>
   </ul>
   <hr/>
@@ -114,23 +116,41 @@
            <div itemprop="articleBody">
              
   <section id="uavagent">
-<span id="uav-agent"></span><h1>UavAgent<a class="headerlink" href="#uavagent" title="Link to this heading"></a></h1>
+<span id="uav-agent"></span><h1>UavAgent<a class="headerlink" href="#uavagent" title="Link para este cabeçalho"></a></h1>
 <section id="images">
-<h2>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/uav-perspective.png"><img alt="../_images/uav-perspective.png" src="../_images/uav-perspective.png" style="width: 244.4px; height: 112.0px;" />
+<h2>Images<a class="headerlink" href="#images" title="Link para este cabeçalho"></a></h2>
+<a class="reference internal image-reference" href="../_images/uav-perspective.png"><img alt="../_images/uav-perspective.png" src="../_images/uav-perspective.png" />
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/lh/biguasim_docs/agents/uav-agent.rst</span>, line 9)</p>
+<p>Cannot scale image!
+  Could not get size from &quot;../_images/uav-perspective.png&quot;:
+  [Errno 2] No such file or directory: '/home/lh/_images/uav-perspective.png'</p>
+</aside>
 </a>
-<a class="reference internal image-reference" href="../_images/uav-top.png"><img alt="../_images/uav-top.png" src="../_images/uav-top.png" style="width: 152.0px; height: 151.8px;" />
+<a class="reference internal image-reference" href="../_images/uav-top.png"><img alt="../_images/uav-top.png" src="../_images/uav-top.png" />
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/lh/biguasim_docs/agents/uav-agent.rst</span>, line 12)</p>
+<p>Cannot scale image!
+  Could not get size from &quot;../_images/uav-top.png&quot;:
+  [Errno 2] No such file or directory: '/home/lh/_images/uav-top.png'</p>
+</aside>
 </a>
-<a class="reference internal image-reference" href="../_images/uav-side.png"><img alt="../_images/uav-side.png" src="../_images/uav-side.png" style="width: 263.40000000000003px; height: 118.60000000000001px;" />
+<a class="reference internal image-reference" href="../_images/uav-side.png"><img alt="../_images/uav-side.png" src="../_images/uav-side.png" />
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/lh/biguasim_docs/agents/uav-agent.rst</span>, line 15)</p>
+<p>Cannot scale image!
+  Could not get size from &quot;../_images/uav-side.png&quot;:
+  [Errno 2] No such file or directory: '/home/lh/_images/uav-side.png'</p>
+</aside>
 </a>
 </section>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link para este cabeçalho"></a></h2>
 <p>A quadcopter UAV agent.</p>
 <p>See the <code class="xref py py-class docutils literal notranslate"><span class="pre">UavAgent</span></code> class.</p>
 </section>
 <section id="control-schemes">
-<h2>Control Schemes<a class="headerlink" href="#control-schemes" title="Link to this heading"></a></h2>
+<h2>Control Schemes<a class="headerlink" href="#control-schemes" title="Link para este cabeçalho"></a></h2>
 <dl class="simple">
 <dt><strong>UAV Torques (``0``)</strong></dt><dd><p>A 4-length floating point vector used to specify the pitch torque,
 roll torque, yaw torque and thrust with indices 0, 1, 2 and 3 respectively.</p>
@@ -142,12 +162,18 @@ indices 0, 1, 2, and 3 respectively.</p>
 </dl>
 </section>
 <section id="sockets">
-<h2>Sockets<a class="headerlink" href="#sockets" title="Link to this heading"></a></h2>
+<h2>Sockets<a class="headerlink" href="#sockets" title="Link para este cabeçalho"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CameraSocket</span></code> located underneath the uav body</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Viewport</span></code> located behind the agent</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/uav-sockets.png"><img alt="../_images/uav-sockets.png" src="../_images/uav-sockets.png" style="width: 309.3px; height: 243.0px;" />
+<a class="reference internal image-reference" href="../_images/uav-sockets.png"><img alt="../_images/uav-sockets.png" src="../_images/uav-sockets.png" />
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/lh/biguasim_docs/agents/uav-agent.rst</span>, line 43)</p>
+<p>Cannot scale image!
+  Could not get size from &quot;../_images/uav-sockets.png&quot;:
+  [Errno 2] No such file or directory: '/home/lh/_images/uav-sockets.png'</p>
+</aside>
 </a>
 </section>
 </section>
@@ -155,20 +181,20 @@ indices 0, 1, 2, and 3 respectively.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="sphere-agent.html" class="btn btn-neutral float-left" title="SphereAgent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../develop/develop.html" class="btn btn-neutral float-right" title="Developing BiguaSim" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="sphere-agent.html" class="btn btn-neutral float-left" title="SphereAgent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../develop/develop.html" class="btn btn-neutral float-right" title="Developing BiguaSim" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Direitos autorais FURG.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

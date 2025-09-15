@@ -1,29 +1,31 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="None" data-content_root="../">
+<html class="writer-html5" lang="pt-BR" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; BiguaSim 1.0.0 documentation</title>
+  <title>Getting Started &mdash; Documentação BiguaSim 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=9261fe3b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=1f674ae1" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../_static/documentation_options.js?v=c0c8e3fa"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=71a39b36"></script>
+      <script src="../_static/darkmode.js?v=d062ed36"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="Developing Environments" href="env.html" />
     <link rel="prev" title="Developing BiguaSim" href="develop.html" /> 
 </head>
@@ -41,12 +43,12 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
               <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
@@ -93,20 +95,20 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BiguaSim</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Navegação da página">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="develop.html">Developing BiguaSim</a></li>
       <li class="breadcrumb-item active">Getting Started</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/develop/start.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/develop/start.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
       </li>
   </ul>
   <hr/>
@@ -115,17 +117,17 @@
            <div itemprop="articleBody">
              
   <section id="getting-started">
-<span id="develop-start"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
-<p>While unreal development is possible on Linux, I've found working on Windows to be much more straightforward and stable. Regardless of which one you use, you'll need the following dependencies:</p>
+<span id="develop-start"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link para este cabeçalho"></a></h1>
+<p>While unreal development is possible on Linux, I’ve found working on Windows to be much more straightforward and stable. Regardless of which one you use, you’ll need the following dependencies:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.unrealengine.com/4.27/en-US/Basics/InstallingUnrealEngine/">Unreal Engine 4.27</a></p></li>
-<li><p><a class="reference external" href="https://visualstudio.microsoft.com/vs/older-downloads/">Visual Studio 2019</a> -- See UE <a class="reference external" href="https://docs.unrealengine.com/4.26/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/">documentation</a> for setup</p></li>
+<li><p><a class="reference external" href="https://visualstudio.microsoft.com/vs/older-downloads/">Visual Studio 2019</a> – See UE <a class="reference external" href="https://docs.unrealengine.com/4.26/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/">documentation</a> for setup</p></li>
 <li><p>git</p></li>
 <li><p>Some sort of python installation (conda is my preferred)</p></li>
 </ul>
 <section id="cloning">
-<h2>Cloning<a class="headerlink" href="#cloning" title="Link to this heading"></a></h2>
-<p>For running holoocean live, you'll need to setup both the C++ and python portions of HoloOcean, which are now conveniently in the same repo.</p>
+<h2>Cloning<a class="headerlink" href="#cloning" title="Link para este cabeçalho"></a></h2>
+<p>For running holoocean live, you’ll need to setup both the C++ and python portions of HoloOcean, which are now conveniently in the same repo.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Clone <a class="reference external" href="https://bitbucket.org/frostlab/holoocean">holoocean</a>.</p></li>
@@ -140,14 +142,14 @@
 <p>You can now install the python package by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">client/</span></code>.</p>
 </section>
 <section id="opening-prepping-project">
-<h2>Opening &amp; Prepping Project<a class="headerlink" href="#opening-prepping-project" title="Link to this heading"></a></h2>
-<p>Inside of your cloned repo in the engine directory, there is a holodeck.uproject file. Double click it, and choose &quot;4.27&quot; if an engine version dialog opens up, click &quot;yes&quot; to any dialog that says &quot;Would you like to rebuild them now?&quot;, and then unreal should pop open!</p>
-<p>There's many ways to develop in unreal, but we're going to focus on how I've found is the easiest way to development code.</p>
+<h2>Opening &amp; Prepping Project<a class="headerlink" href="#opening-prepping-project" title="Link para este cabeçalho"></a></h2>
+<p>Inside of your cloned repo in the engine directory, there is a holodeck.uproject file. Double click it, and choose “4.27” if an engine version dialog opens up, click “yes” to any dialog that says “Would you like to rebuild them now?”, and then unreal should pop open!</p>
+<p>There’s many ways to develop in unreal, but we’re going to focus on how I’ve found is the easiest way to development code.</p>
 <p>In the Unreal Editor, go to File -&gt; Cook Content for {Platform}. After a few minutes you should get a success popup in the lower right.</p>
 </section>
 <section id="setting-up-vscode">
-<h2>Setting up VSCode<a class="headerlink" href="#setting-up-vscode" title="Link to this heading"></a></h2>
-<p>I'm not a fan of the Visual Studio IDE, and instead prefer to use VSCode. If VSCode is installed and you want to do this as well, do the following:</p>
+<h2>Setting up VSCode<a class="headerlink" href="#setting-up-vscode" title="Link para este cabeçalho"></a></h2>
+<p>I’m not a fan of the Visual Studio IDE, and instead prefer to use VSCode. If VSCode is installed and you want to do this as well, do the following:</p>
 <ul class="simple">
 <li><p>In Unreal Editor, Go to Edit -&gt; Editor Preferences</p></li>
 <li><p>Then go to General -&gt; Source Code -&gt; Source Code Editor and select Visual Studio Code</p></li>
@@ -156,20 +158,20 @@
 </ul>
 </section>
 <section id="compiling">
-<h2>Compiling<a class="headerlink" href="#compiling" title="Link to this heading"></a></h2>
-<p>I generally compile by clicking the big &quot;Compile&quot; button in Unreal Editor. Do this anytime you make changes to your code. There's also a way to compile in Visual Studio if you wish.</p>
-<p>The compile button is on the top toolbar next to 'cinematics' and 'build'. It might be hidden if your screen isn't wide enough. Click the double arrow to scroll to the right.</p>
+<h2>Compiling<a class="headerlink" href="#compiling" title="Link para este cabeçalho"></a></h2>
+<p>I generally compile by clicking the big “Compile” button in Unreal Editor. Do this anytime you make changes to your code. There’s also a way to compile in Visual Studio if you wish.</p>
+<p>The compile button is on the top toolbar next to ‘cinematics’ and ‘build’. It might be hidden if your screen isn’t wide enough. Click the double arrow to scroll to the right.</p>
 </section>
 <section id="launching-game-live">
-<h2>Launching Game Live<a class="headerlink" href="#launching-game-live" title="Link to this heading"></a></h2>
+<h2>Launching Game Live<a class="headerlink" href="#launching-game-live" title="Link para este cabeçalho"></a></h2>
 <p>To avoid having to package the project anytime you want to see changes to your code, you can play the game live from Unreal Editor and then attached your python code to it. This is a multi-step process, as follows.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If developing a sonar module, in UE4 click the down arrow next to the &quot;Play&quot; button in the top toolbar, and click &quot;Advanced Settings&quot;. Add the following line to &quot;Additional Launch Parameters&quot;</p>
+<p class="admonition-title">Nota</p>
+<p>If developing a sonar module, in UE4 click the down arrow next to the “Play” button in the top toolbar, and click “Advanced Settings”. Add the following line to “Additional Launch Parameters”</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">EnvMinX</span><span class="o">=-</span><span class="mi">1000</span> <span class="o">-</span><span class="n">EnvMinY</span><span class="o">=-</span><span class="mi">1000</span> <span class="o">-</span><span class="n">EnvMinZ</span><span class="o">=-</span><span class="mi">1000</span> <span class="o">-</span><span class="n">EnvMaxX</span><span class="o">=</span><span class="mi">1000</span> <span class="o">-</span><span class="n">EnvMaxY</span><span class="o">=</span><span class="mi">1000</span> <span class="o">-</span><span class="n">EnvMinZ</span><span class="o">=</span><span class="mi">1000</span> <span class="o">-</span><span class="n">OctreeMin</span><span class="o">=</span><span class="mf">0.02</span> <span class="n">OctreeMax</span><span class="o">=</span><span class="mi">5</span>
 </pre></div>
 </div>
-<p>These are all in meters. Tweak them as you need, they're all pretty self-explanatory.</p>
+<p>These are all in meters. Tweak them as you need, they’re all pretty self-explanatory.</p>
 </div>
 <p>Open and prep a python script similar to the following</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">holoocean.environments</span> <span class="kn">import</span> <span class="n">HoloOceanEnvironment</span>
@@ -202,19 +204,19 @@
 <p>Tweak it to put the sensors/agents you need in as you see fit.</p>
 <ul class="simple">
 <li><p>Have some way to run this python file open and ready</p></li>
-<li><p>Back in Unreal Editor, click the arrow next to the &quot;Play&quot; button in the top toolbar, and select &quot;Standalone Game&quot;. A seperate window should pop open with the unreal game.</p></li>
+<li><p>Back in Unreal Editor, click the arrow next to the “Play” button in the top toolbar, and select “Standalone Game”. A seperate window should pop open with the unreal game.</p></li>
 <li><p>Once this window pops open, run your python script. It will attach to the new open unreal game window and proceed as a normal holoocean simulation. Note you may have to try to run your script a couple of times, the unreal game window takes a second to load.</p></li>
 </ul>
-<p>That's it! There's a few weird quirks to keep an eye out for here as well. If you close the unreal game window before exiting the python script, your terminal will freeze and you'll have to open a new one. I have a small .bat script that runs the python file that I have pinned to my taskbar to get around this.
-Alternatively, VSCode's play button works rather smoothly as well for quickly opening/closing terminals with the correct conda environment.</p>
+<p>That’s it! There’s a few weird quirks to keep an eye out for here as well. If you close the unreal game window before exiting the python script, your terminal will freeze and you’ll have to open a new one. I have a small .bat script that runs the python file that I have pinned to my taskbar to get around this.
+Alternatively, VSCode’s play button works rather smoothly as well for quickly opening/closing terminals with the correct conda environment.</p>
 </section>
 <section id="logging">
-<h2>Logging<a class="headerlink" href="#logging" title="Link to this heading"></a></h2>
-<p>While definitely not the best way to do things, I generally use the unreal equivalent of print statements to debug my code. [<a class="reference external" href="https://unrealcommunity.wiki/logging-lgpidy6i">https://unrealcommunity.wiki/logging-lgpidy6i</a> Here's a good tutorial on sending things to the unreal log.]</p>
+<h2>Logging<a class="headerlink" href="#logging" title="Link para este cabeçalho"></a></h2>
+<p>While definitely not the best way to do things, I generally use the unreal equivalent of print statements to debug my code. [<a class="reference external" href="https://unrealcommunity.wiki/logging-lgpidy6i">https://unrealcommunity.wiki/logging-lgpidy6i</a> Here’s a good tutorial on sending things to the unreal log.]</p>
 <p>This log will be saved in holoocean-engine/Saved/Logs if you want to see it later, or, I prefer this way. In Unreal Editor,</p>
 <ul class="simple">
 <li><p>Go to Window -&gt; Developer Tools -&gt; Session Frontend</p></li>
-<li><p>Under &quot;My Sessions&quot; your unreal game window will have an entry, and in it all it's log will be listed.</p></li>
+<li><p>Under “My Sessions” your unreal game window will have an entry, and in it all it’s log will be listed.</p></li>
 </ul>
 <p>Easy Peasy!</p>
 <p>See <a class="reference internal" href="agents.html#develop-agents"><span class="std std-ref">Developing Agents</span></a>, <a class="reference internal" href="sensors.html#develop-sensor"><span class="std std-ref">Developing Sensors</span></a>, and <a class="reference internal" href="env.html#develop-env"><span class="std std-ref">Developing Environments</span></a> for information on developting custom sensors/agents/env and how to get started on those.</p>
@@ -225,20 +227,20 @@ Alternatively, VSCode's play button works rather smoothly as well for quickly op
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="develop.html" class="btn btn-neutral float-left" title="Developing BiguaSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="env.html" class="btn btn-neutral float-right" title="Developing Environments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="develop.html" class="btn btn-neutral float-left" title="Developing BiguaSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="env.html" class="btn btn-neutral float-right" title="Developing Environments" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Direitos autorais FURG.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

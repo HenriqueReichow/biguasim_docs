@@ -55,7 +55,7 @@ autodoc_default_options = {
 }
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['docstemplates']
+templates_path = ['doctemplates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -71,7 +71,13 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'None'
+# Idioma padrão do conteúdo
+language = 'pt_BR'  # ou 'en', 'fr', etc.
+
+# Caminho onde os arquivos de tradução serão gerados
+locale_dirs = ['locales/']  # pasta onde ficarão os arquivos .po/.mo
+gettext_compact = False      # se False, cria uma pasta por documento
+
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -80,7 +86,6 @@ exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style =  'sphinx'
-
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -104,8 +109,9 @@ html_theme_options = {
 html_static_path = ['_static']
 
 html_css_files = [
-    'custom_style.css',
+    'custom_style.css'
 ]
+html_js_files = ['darkmode.js']
 
 html_favicon = '_static/favicon.svg'
 
@@ -200,4 +206,4 @@ epub_exclude_files = ['search.html']
 # -- Options for todo extension ----------------------------------------------
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+todo_include_todos = True  # caminho para sua logo

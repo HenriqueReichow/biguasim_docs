@@ -1,6 +1,7 @@
 Welcome to BiguaSim's documentation!
 ==============================================
-.. image:: images/inspect_plane.jpg
+.. image:: images/4-new.svg
+
 
 BiguaSim is a high-fidelity simulator developed by the `Nautec <https://nautec.furg.br/>`_
 at `Federal University of Rio Grande <https://www.furg.br>`_ .

@@ -1,29 +1,31 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="None" data-content_root="../">
+<html class="writer-html5" lang="pt-BR" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scenarios &mdash; BiguaSim 1.0.0 documentation</title>
+  <title>Scenarios &mdash; Documentação BiguaSim 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=9261fe3b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=1f674ae1" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../_static/documentation_options.js?v=c0c8e3fa"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=71a39b36"></script>
+      <script src="../_static/darkmode.js?v=d062ed36"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="Viewport Hotkeys" href="hotkeys.html" />
     <link rel="prev" title="Using BiguaSim" href="usage.html" /> 
 </head>
@@ -41,12 +43,12 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
               <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
@@ -99,20 +101,20 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BiguaSim</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Navegação da página">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="usage.html">Using BiguaSim</a></li>
       <li class="breadcrumb-item active">Scenarios</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/usage/scenarios.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/usage/scenarios.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
       </li>
   </ul>
   <hr/>
@@ -121,9 +123,9 @@
            <div itemprop="articleBody">
              
   <section id="scenarios">
-<span id="id1"></span><h1>Scenarios<a class="headerlink" href="#scenarios" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1>Scenarios<a class="headerlink" href="#scenarios" title="Link para este cabeçalho"></a></h1>
 <section id="what-is-a-scenario">
-<h2>What is a scenario?<a class="headerlink" href="#what-is-a-scenario" title="Link to this heading"></a></h2>
+<h2>What is a scenario?<a class="headerlink" href="#what-is-a-scenario" title="Link para este cabeçalho"></a></h2>
 <p>A scenario tells BiguaSim which world to load, which agents to place in the
 world, and which sensors they need.</p>
 <p>It defines:</p>
@@ -138,9 +140,9 @@ world, and which sensors they need.</p>
 </li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>You can think of scenarios like a map or gametype variant from Halo:
-the world or map itself doesn't change, but the things in the world
+the world or map itself doesn’t change, but the things in the world
 and your objective can change.</p>
 </div>
 <p>Scenarios allow the same world to be used for many different purposes,
@@ -151,14 +153,14 @@ name of a scenario, eg <code class="docutils literal notranslate"><span class="p
 BiguaSim which world to load and where to place agents.</p>
 </section>
 <section id="scenario-file-format">
-<span id="scenario-files"></span><h2>Scenario File Format<a class="headerlink" href="#scenario-file-format" title="Link to this heading"></a></h2>
+<span id="scenario-files"></span><h2>Scenario File Format<a class="headerlink" href="#scenario-file-format" title="Link para este cabeçalho"></a></h2>
 <p>Scenario <code class="docutils literal notranslate"><span class="pre">.json</span></code> files are distributed in packages (see
 <a class="reference internal" href="../packages/docs/package-structure.html#package-contents"><span class="std std-ref">Package Contents</span></a>), and must be named
 <code class="docutils literal notranslate"><span class="pre">{WorldName}-{ScenarioName}.json</span></code>. By default they are stored in the
 <code class="docutils literal notranslate"><span class="pre">worlds/{PackageName}</span></code> directory, but they can be loaded from a
 Python dictionary as well.</p>
 <section id="scenario-file">
-<h3>Scenario File<a class="headerlink" href="#scenario-file" title="Link to this heading"></a></h3>
+<h3>Scenario File<a class="headerlink" href="#scenario-file" title="Link para este cabeçalho"></a></h3>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{Scenario Name}&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;world&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{world it is associated with}&quot;</span><span class="p">,</span>
@@ -186,23 +188,23 @@ Python dictionary as well.</p>
 <p><code class="docutils literal notranslate"><span class="pre">window_width/height</span></code> control the size of the window opened when an
 environment is created.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The first agent in the <code class="docutils literal notranslate"><span class="pre">agents</span></code> array is the &quot;main agent&quot;</p>
+<p class="admonition-title">Nota</p>
+<p>The first agent in the <code class="docutils literal notranslate"><span class="pre">agents</span></code> array is the “main agent”</p>
 </div>
 </section>
 <section id="frame-rates">
-<span id="configure-framerate"></span><h3>Frame Rates<a class="headerlink" href="#frame-rates" title="Link to this heading"></a></h3>
-<p>There's two parameters you can configure that'll handle frame rate changes: <code class="docutils literal notranslate"><span class="pre">ticks_per_sec</span></code> and <code class="docutils literal notranslate"><span class="pre">frames_per_sec</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">ticks_per_sec</span></code> changes how many ticks in a simulation second. This must be higher than any &quot;Hz&quot; sampling rate of the sensors used. Defaults to 30.</p>
+<span id="configure-framerate"></span><h3>Frame Rates<a class="headerlink" href="#frame-rates" title="Link para este cabeçalho"></a></h3>
+<p>There’s two parameters you can configure that’ll handle frame rate changes: <code class="docutils literal notranslate"><span class="pre">ticks_per_sec</span></code> and <code class="docutils literal notranslate"><span class="pre">frames_per_sec</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ticks_per_sec</span></code> changes how many ticks in a simulation second. This must be higher than any “Hz” sampling rate of the sensors used. Defaults to 30.</p>
 <p><code class="docutils literal notranslate"><span class="pre">frames_per_sec</span></code> is the max FPS the environment can run at. If <cite>true</cite>, it will match <code class="docutils literal notranslate"><span class="pre">ticks_per_sec</span></code>. If <cite>false</cite>, FPS will not be capped,
-and the environment will run as fast as possible. If a number, that'll be the frame rate cap.</p>
-<p>For a few examples of how you might want to configure these. If you're manually controlling the robot(s), you'll likely want it to run at realtime,
-thus you'll want to set <code class="docutils literal notranslate"><span class="pre">frames_per_sec</span></code> to true. When using a quality GPU, simulations can run much faster than realtime, making things difficult to control otherwise.
-If you're running headless/autonomous, you'll likely want the simulation to run as fast as possible,
+and the environment will run as fast as possible. If a number, that’ll be the frame rate cap.</p>
+<p>For a few examples of how you might want to configure these. If you’re manually controlling the robot(s), you’ll likely want it to run at realtime,
+thus you’ll want to set <code class="docutils literal notranslate"><span class="pre">frames_per_sec</span></code> to true. When using a quality GPU, simulations can run much faster than realtime, making things difficult to control otherwise.
+If you’re running headless/autonomous, you’ll likely want the simulation to run as fast as possible,
 thus a good <code class="docutils literal notranslate"><span class="pre">frames_per_sec</span></code> would be false.</p>
 </section>
 <section id="configuring-octree">
-<span id="configure-octree"></span><h3>Configuring Octree<a class="headerlink" href="#configuring-octree" title="Link to this heading"></a></h3>
+<span id="configure-octree"></span><h3>Configuring Octree<a class="headerlink" href="#configuring-octree" title="Link para este cabeçalho"></a></h3>
 <p>When using a form of sonar sensor and initializing the world, an Octree will either be
 created or loaded from a cache. The parameters of these can be set using the <code class="docutils literal notranslate"><span class="pre">env_min</span></code>,
 <code class="docutils literal notranslate"><span class="pre">env_max</span></code>, <code class="docutils literal notranslate"><span class="pre">octree_min</span></code>, and <code class="docutils literal notranslate"><span class="pre">octree_max</span></code>. The octrees are cached in the <code class="docutils literal notranslate"><span class="pre">LinuxNoEditor/Holodeck/Octrees</span></code> folder
@@ -213,7 +215,7 @@ be set in <a class="reference internal" href="../packages/docs/package-structure
 can go as low as .01 (1cm), and then the octree will double in size till it reaches <code class="docutils literal notranslate"><span class="pre">octree_max</span></code>.</p>
 </section>
 <section id="agent-objects">
-<h3>Agent objects<a class="headerlink" href="#agent-objects" title="Link to this heading"></a></h3>
+<h3>Agent objects<a class="headerlink" href="#agent-objects" title="Link para este cabeçalho"></a></h3>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">   </span><span class="nt">&quot;agent_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uav0&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;agent_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{agent types}&quot;</span><span class="p">,</span>
@@ -229,13 +231,13 @@ can go as low as .01 (1cm), and then the octree will double in size till it reac
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Nota</p>
 <p>BiguaSim coordinates are <strong>right handed</strong> in meters. See <a class="reference internal" href="units-and-coordinates.html#coordinate-system"><span class="std std-ref">Coordinate System</span></a></p>
 </div>
 <section id="location-randomization">
-<span id="id2"></span><h4>Location Randomization<a class="headerlink" href="#location-randomization" title="Link to this heading"></a></h4>
+<span id="id2"></span><h4>Location Randomization<a class="headerlink" href="#location-randomization" title="Link para este cabeçalho"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">location_randomization</span></code> and <code class="docutils literal notranslate"><span class="pre">rotation_randomization</span></code> are optional. If
-provided, the agent's start location and/or rotation will vary by a
+provided, the agent’s start location and/or rotation will vary by a
 random amount between the negative and the positive values of the
 provided randomization values as sampled from a uniform distribution.</p>
 <p>The location value is measured in meters, in the format <code class="docutils literal notranslate"><span class="pre">[dx,</span> <span class="pre">dy,</span> <span class="pre">dz]</span></code>
@@ -243,7 +245,7 @@ and the rotation is <code class="docutils literal notranslate"><span class="pre"
 ie R_z R_y R_x.</p>
 </section>
 <section id="agent-types">
-<h4>Agent Types<a class="headerlink" href="#agent-types" title="Link to this heading"></a></h4>
+<h4>Agent Types<a class="headerlink" href="#agent-types" title="Link para este cabeçalho"></a></h4>
 <p>Here are valid <code class="docutils literal notranslate"><span class="pre">agent_type</span></code> s:</p>
 <table class="docutils align-default">
 <thead>
@@ -268,14 +270,14 @@ ie R_z R_y R_x.</p>
 </table>
 </section>
 <section id="control-schemes">
-<h4>Control Schemes<a class="headerlink" href="#control-schemes" title="Link to this heading"></a></h4>
+<h4>Control Schemes<a class="headerlink" href="#control-schemes" title="Link para este cabeçalho"></a></h4>
 <p>Control schemes are represented as an integer. For valid values and a
 description of how each scheme works, see the documentation pages for each
 agent.</p>
 </section>
 </section>
 <section id="sensor-objects">
-<span id="configure-sensors"></span><h3>Sensor Objects<a class="headerlink" href="#sensor-objects" title="Link to this heading"></a></h3>
+<span id="configure-sensors"></span><h3>Sensor Objects<a class="headerlink" href="#sensor-objects" title="Link para este cabeçalho"></a></h3>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">   </span><span class="nt">&quot;sensor_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RGBCamera&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;sensor_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FrontCamera&quot;</span><span class="p">,</span>
@@ -363,7 +365,7 @@ rest will default as shown below</p>
 </div>
 </section>
 <section id="configuration-block">
-<span id="id3"></span><h3>Configuration Block<a class="headerlink" href="#configuration-block" title="Link to this heading"></a></h3>
+<span id="id3"></span><h3>Configuration Block<a class="headerlink" href="#configuration-block" title="Link para este cabeçalho"></a></h3>
 <p>The contents of the <code class="docutils literal notranslate"><span class="pre">configuration</span></code> block are sensor-specific. That block is
 passed verbatim to the sensor itself, which parses it.</p>
 <p>For example, the docstring for <code class="xref py py-class docutils literal notranslate"><span class="pre">RGBCamera</span></code> states that
@@ -386,20 +388,20 @@ sensor configuration would be:</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="usage.html" class="btn btn-neutral float-left" title="Using BiguaSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="hotkeys.html" class="btn btn-neutral float-right" title="Viewport Hotkeys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Using BiguaSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="hotkeys.html" class="btn btn-neutral float-right" title="Viewport Hotkeys" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Direitos autorais FURG.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

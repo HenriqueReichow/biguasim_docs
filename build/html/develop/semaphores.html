@@ -1,29 +1,31 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="None" data-content_root="../">
+<html class="writer-html5" lang="pt-BR" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Communication Protocol &mdash; BiguaSim 1.0.0 documentation</title>
+  <title>Communication Protocol &mdash; Documentação BiguaSim 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=9261fe3b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=1f674ae1" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../_static/documentation_options.js?v=c0c8e3fa"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=71a39b36"></script>
+      <script src="../_static/darkmode.js?v=d062ed36"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="Changelog" href="../changelog/changelog.html" />
     <link rel="prev" title="Developing Agents" href="agents.html" /> 
 </head>
@@ -41,12 +43,12 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
               <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
@@ -113,20 +115,20 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BiguaSim</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Navegação da página">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="develop.html">Developing BiguaSim</a></li>
       <li class="breadcrumb-item active">Communication Protocol</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/develop/semaphores.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/develop/semaphores.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
       </li>
   </ul>
   <hr/>
@@ -135,24 +137,24 @@
            <div itemprop="articleBody">
              
   <section id="communication-protocol">
-<span id="develop-sem"></span><h1>Communication Protocol<a class="headerlink" href="#communication-protocol" title="Link to this heading"></a></h1>
+<span id="develop-sem"></span><h1>Communication Protocol<a class="headerlink" href="#communication-protocol" title="Link para este cabeçalho"></a></h1>
 <p>This article was pulled from <a class="reference external" href="https://github.com/BYU-PCCL/holodeck/wiki/Holodeck-Communication-Protocol">here</a> for archiving purposes.</p>
 <p>In this wiki page, I explain how the two halves of BiguaSim (the client and engine) communicate.</p>
 <section id="prerequisite-reading">
-<h2>Prerequisite Reading<a class="headerlink" href="#prerequisite-reading" title="Link to this heading"></a></h2>
+<h2>Prerequisite Reading<a class="headerlink" href="#prerequisite-reading" title="Link para este cabeçalho"></a></h2>
 <p>Brush up on <a class="reference external" href="https://en.wikipedia.org/wiki/Semaphore_(programming)">semaphores</a>
 and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_memory">shared memory</a>.</p>
 </section>
 <section id="the-two-halves-of-biguasim">
-<h2>The Two Halves of BiguaSim<a class="headerlink" href="#the-two-halves-of-biguasim" title="Link to this heading"></a></h2>
-<p>What we call &quot;BiguaSim&quot; is actually two seperate projects.</p>
+<h2>The Two Halves of BiguaSim<a class="headerlink" href="#the-two-halves-of-biguasim" title="Link para este cabeçalho"></a></h2>
+<p>What we call “BiguaSim” is actually two seperate projects.</p>
 <section id="holoocean">
-<h3><code class="docutils literal notranslate"><span class="pre">holoocean</span></code><a class="headerlink" href="#holoocean" title="Link to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">holoocean</span></code><a class="headerlink" href="#holoocean" title="Link para este cabeçalho"></a></h3>
 <ul class="simple">
 <li><p>Known as:
-- &quot;python side&quot;
-- &quot;client&quot;
-- but initializes the &quot;server&quot;</p></li>
+- “python side”
+- “client”
+- but initializes the “server”</p></li>
 <li><p>Is a pip-installable python package</p></li>
 <li><p>User interacts with this exclusively</p></li>
 <li><p>Mostly shuffles information to and from the engine</p></li>
@@ -160,11 +162,11 @@ and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_mem
 </ul>
 </section>
 <section id="holoocean-engine">
-<h3><code class="docutils literal notranslate"><span class="pre">holoocean-engine</span></code><a class="headerlink" href="#holoocean-engine" title="Link to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">holoocean-engine</span></code><a class="headerlink" href="#holoocean-engine" title="Link para este cabeçalho"></a></h3>
 <ul class="simple">
 <li><p>Known as:
-- &quot;c++ side&quot;
-- &quot;engine&quot;</p></li>
+- “c++ side”
+- “engine”</p></li>
 <li><p>Unreal Engine project (<code class="docutils literal notranslate"><span class="pre">.uproject</span></code>)</p></li>
 <li><p>Compiled binaries are downloaded and installed by holoocean package</p></li>
 <li><p>Requires Unreal Developer account to install Unreal Editor and build/package
@@ -173,7 +175,7 @@ and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_mem
 </section>
 </section>
 <section id="simple-usage-example">
-<h2>Simple Usage Example<a class="headerlink" href="#simple-usage-example" title="Link to this heading"></a></h2>
+<h2>Simple Usage Example<a class="headerlink" href="#simple-usage-example" title="Link para este cabeçalho"></a></h2>
 <p>In this walkthrough, we are going to explain what communication between
 <code class="docutils literal notranslate"><span class="pre">holoocean</span></code> and <code class="docutils literal notranslate"><span class="pre">holoocean-engine</span></code> needs to happen to make this example work:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BiguaSim</span>
@@ -195,7 +197,7 @@ and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_mem
 </div>
 </section>
 <section id="part-1-biguasim-make">
-<h2>Part 1: <code class="docutils literal notranslate"><span class="pre">BiguaSim.make()</span></code><a class="headerlink" href="#part-1-biguasim-make" title="Link to this heading"></a></h2>
+<h2>Part 1: <code class="docutils literal notranslate"><span class="pre">BiguaSim.make()</span></code><a class="headerlink" href="#part-1-biguasim-make" title="Link para este cabeçalho"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">holoocean.make()</span></code> function is mostly a helper function to instantiate a
 <code class="docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code> object. <code class="docutils literal notranslate"><span class="pre">.make()</span></code> loads a configuration file and passes
 the appropriate paramaters to the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> of <code class="docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code>.</p>
@@ -215,19 +217,19 @@ the appropriate paramaters to the <code class="docutils literal notranslate"><sp
 <li><p>Instantiates agents, sensors, which use malloc() to allocate buffers</p></li>
 </ol>
 <section id="creating-loading-semaphore">
-<h3>Creating Loading Semaphore<a class="headerlink" href="#creating-loading-semaphore" title="Link to this heading"></a></h3>
-<p>A &quot;loading semaphore&quot; is created by the client and signaled by the engine.</p>
+<h3>Creating Loading Semaphore<a class="headerlink" href="#creating-loading-semaphore" title="Link para este cabeçalho"></a></h3>
+<p>A “loading semaphore” is created by the client and signaled by the engine.</p>
 <p>After starting the server process, the client will wait for the server to
 signal it so that the client knows the server has initialized.</p>
 <img alt="../_images/loading-1.svg" src="../_images/loading-1.svg" />
 </section>
 <section id="starting-subprocess">
-<h3>Starting Subprocess<a class="headerlink" href="#starting-subprocess" title="Link to this heading"></a></h3>
+<h3>Starting Subprocess<a class="headerlink" href="#starting-subprocess" title="Link para este cabeçalho"></a></h3>
 <p>Next, client will create the engine subprocess. It will pass a UUID on the
-engine's command line that will be used to create unique semaphore names.</p>
+engine’s command line that will be used to create unique semaphore names.</p>
 <img alt="../_images/loading-2.svg" src="../_images/loading-2.svg" />
 <section id="a-note-on-uuids">
-<h4>A note on UUIDs<a class="headerlink" href="#a-note-on-uuids" title="Link to this heading"></a></h4>
+<h4>A note on UUIDs<a class="headerlink" href="#a-note-on-uuids" title="Link para este cabeçalho"></a></h4>
 <p>The names for semaphores and shared memory (eg  <code class="docutils literal notranslate"><span class="pre">/HOLODECK_LOADING_SEM</span></code>) are
 global for all processes in the entire operating system.</p>
 <p>To avoid collisions between different instances of holodeck, <code class="docutils literal notranslate"><span class="pre">holoocean.make()</span></code>
@@ -242,13 +244,13 @@ This proves very useful for debugging.</p>
 </section>
 </section>
 <section id="waiting-for-engine-to-load">
-<h3>Waiting for engine to load<a class="headerlink" href="#waiting-for-engine-to-load" title="Link to this heading"></a></h3>
+<h3>Waiting for engine to load<a class="headerlink" href="#waiting-for-engine-to-load" title="Link para este cabeçalho"></a></h3>
 <p>Now that the engine is initializing itself, the client waits on the
 <code class="docutils literal notranslate"><span class="pre">/HOLODECK_LOADING_SEM</span></code>.</p>
 <img alt="../_images/loading-3.svg" src="../_images/loading-3.svg" />
 </section>
 <section id="engine-is-done-loading">
-<h3>Engine is done loading<a class="headerlink" href="#engine-is-done-loading" title="Link to this heading"></a></h3>
+<h3>Engine is done loading<a class="headerlink" href="#engine-is-done-loading" title="Link para este cabeçalho"></a></h3>
 <p>Once the engine finishes loading, the engine will wait on another semaphore
 while the client does more stuff.</p>
 <img alt="../_images/loading-4.svg" src="../_images/loading-4.svg" />
@@ -259,13 +261,13 @@ that each agent and sensor allocates shared memory buffers to allow
 communication between the engine and the client.</p>
 </section>
 <section id="main-synchronization-semaphores">
-<h3>Main Synchronization Semaphores<a class="headerlink" href="#main-synchronization-semaphores" title="Link to this heading"></a></h3>
+<h3>Main Synchronization Semaphores<a class="headerlink" href="#main-synchronization-semaphores" title="Link para este cabeçalho"></a></h3>
 <p>At this point of the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> of <code class="docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code>, it creates a
 <code class="docutils literal notranslate"><span class="pre">HolodeckClient</span></code> object, which makes two important synchronization semaphores.
 These semaphores allow the engine and the client to work in lock-step and
 alternate back and forth (see HolodeckServer.cpp / holooceanclient.py)</p>
 <section id="holodeck-semaphore-server">
-<h4><code class="docutils literal notranslate"><span class="pre">/HOLODECK_SEMAPHORE_SERVER</span></code><a class="headerlink" href="#holodeck-semaphore-server" title="Link to this heading"></a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">/HOLODECK_SEMAPHORE_SERVER</span></code><a class="headerlink" href="#holodeck-semaphore-server" title="Link para este cabeçalho"></a></h4>
 <ul class="simple">
 <li><p>Known as <code class="docutils literal notranslate"><span class="pre">semaphore</span></code></p>
 <ul>
@@ -284,7 +286,7 @@ wants to do</p></li>
 </ul>
 </section>
 <section id="holodeck-semaphore-client">
-<h4><code class="docutils literal notranslate"><span class="pre">/HOLODECK_SEMAPHORE_CLIENT</span></code><a class="headerlink" href="#holodeck-semaphore-client" title="Link to this heading"></a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">/HOLODECK_SEMAPHORE_CLIENT</span></code><a class="headerlink" href="#holodeck-semaphore-client" title="Link para este cabeçalho"></a></h4>
 <ul class="simple">
 <li><p>Known as <code class="docutils literal notranslate"><span class="pre">semaphore2</span></code></p></li>
 <li><p>The <strong>client</strong> waits on this semaphore while the <strong>engine</strong> simulates a tick</p></li>
@@ -295,7 +297,7 @@ wants to do</p></li>
 </section>
 </section>
 <section id="shared-memory-buffers">
-<h3>Shared Memory Buffers<a class="headerlink" href="#shared-memory-buffers" title="Link to this heading"></a></h3>
+<h3>Shared Memory Buffers<a class="headerlink" href="#shared-memory-buffers" title="Link para este cabeçalho"></a></h3>
 <p>Shared memory buffers are used for a lot in Holoocean.</p>
 <ol class="arabic simple">
 <li><p>Sending commands back and forth</p>
@@ -333,7 +335,7 @@ interpret action buffer)</p></li>
 </section>
 </section>
 <section id="part-2-step">
-<h2>Part 2: <code class="docutils literal notranslate"><span class="pre">.step()</span></code><a class="headerlink" href="#part-2-step" title="Link to this heading"></a></h2>
+<h2>Part 2: <code class="docutils literal notranslate"><span class="pre">.step()</span></code><a class="headerlink" href="#part-2-step" title="Link para este cabeçalho"></a></h2>
 <p>Now that we have a running environment, how do we get data back and forth?</p>
 <p>We will analyze what happens for</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
@@ -341,41 +343,41 @@ interpret action buffer)</p></li>
 </div>
 <p>to execute.</p>
 <section id="action-for-agent">
-<h3>1. Action for Agent<a class="headerlink" href="#action-for-agent" title="Link to this heading"></a></h3>
-<p>First, we copy the provided action (<code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">1000]</span></code>) into the agent's action
+<h3>1. Action for Agent<a class="headerlink" href="#action-for-agent" title="Link para este cabeçalho"></a></h3>
+<p>First, we copy the provided action (<code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">1000]</span></code>) into the agent’s action
 buffer:</p>
 <img alt="../_images/step-1.svg" src="../_images/step-1.svg" />
 </section>
 <section id="signal-server">
-<h3>2. Signal Server<a class="headerlink" href="#signal-server" title="Link to this heading"></a></h3>
+<h3>2. Signal Server<a class="headerlink" href="#signal-server" title="Link para este cabeçalho"></a></h3>
 <p>Next, the client signals <code class="docutils literal notranslate"><span class="pre">/HOLODECK_SEMAPHORE_SERVER</span></code> and wakes the server up.</p>
 <img alt="../_images/step-2.svg" src="../_images/step-2.svg" />
 </section>
 <section id="client-waits-server-processes">
-<h3>3. Client waits, server processes<a class="headerlink" href="#client-waits-server-processes" title="Link to this heading"></a></h3>
+<h3>3. Client waits, server processes<a class="headerlink" href="#client-waits-server-processes" title="Link para este cabeçalho"></a></h3>
 <img alt="../_images/step-3.svg" src="../_images/step-3.svg" />
 </section>
 <section id="server-samples-sensor-data-copies-it-into-buffers">
-<h3>4. Server samples sensor data, copies it into buffers<a class="headerlink" href="#server-samples-sensor-data-copies-it-into-buffers" title="Link to this heading"></a></h3>
+<h3>4. Server samples sensor data, copies it into buffers<a class="headerlink" href="#server-samples-sensor-data-copies-it-into-buffers" title="Link para este cabeçalho"></a></h3>
 <img alt="../_images/step-4.svg" src="../_images/step-4.svg" />
 </section>
 <section id="wake-up-client">
-<h3>5. Wake up client<a class="headerlink" href="#wake-up-client" title="Link to this heading"></a></h3>
+<h3>5. Wake up client<a class="headerlink" href="#wake-up-client" title="Link para este cabeçalho"></a></h3>
 <img alt="../_images/step-5.svg" src="../_images/step-5.svg" />
 </section>
 <section id="server-blocks-and-waits-for-client-to-signal-it-again">
-<h3>6. Server blocks and waits for client to signal it again<a class="headerlink" href="#server-blocks-and-waits-for-client-to-signal-it-again" title="Link to this heading"></a></h3>
+<h3>6. Server blocks and waits for client to signal it again<a class="headerlink" href="#server-blocks-and-waits-for-client-to-signal-it-again" title="Link para este cabeçalho"></a></h3>
 <img alt="../_images/step-6.svg" src="../_images/step-6.svg" />
 </section>
 </section>
 <section id="remarks">
-<h2>Remarks<a class="headerlink" href="#remarks" title="Link to this heading"></a></h2>
+<h2>Remarks<a class="headerlink" href="#remarks" title="Link para este cabeçalho"></a></h2>
 <p>Some interesting things to note.</p>
 <ol class="arabic simple">
 <li><p>Data copied into shared buffer persists. If an action is written, that same
 action will be executed until another action is written. Same with sensor
 data.</p></li>
-<li><p>The engine's default UUID is <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>. This means that if you launch the engine
+<li><p>The engine’s default UUID is <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>. This means that if you launch the engine
 from the editor or Visual Studio, you can attach to it with a python client
 if you specify the UUID is <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> when creating the <code class="docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code>
 object.</p></li>
@@ -386,20 +388,20 @@ object.</p></li>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="agents.html" class="btn btn-neutral float-left" title="Developing Agents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../changelog/changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="agents.html" class="btn btn-neutral float-left" title="Developing Agents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../changelog/changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Direitos autorais FURG.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

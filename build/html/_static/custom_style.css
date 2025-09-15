@@ -181,3 +181,59 @@ h1, h2, h3 {
     margin-top: 1.2em;
     margin-bottom: 0.6em;
 }
+
+
+/* ------------------- DARK MODE (Versão final e agressiva) ------------------- */
+body.dark-mode,
+html.dark-mode {
+    background-color: #000E1C !important; /* Azul escuro no fundo */
+    color: #FFF0E7 !important; /* Texto claro */
+}
+
+/* Garante que *qualquer* elemento dentro do body no modo noturno mude de cor */
+body.dark-mode * {
+    background-color: transparent !important; /* Fundo transparente */
+    color: inherit !important; /* Herda a cor do body (FFF0E7) */
+}
+
+/* Agora, aplique as cores nos elementos que não devem ser transparentes */
+body.dark-mode .wy-nav-side,
+body.dark-mode .wy-nav-top {
+    background-color: #001C39 !important;
+}
+
+body.dark-mode .highlight,
+body.dark-mode pre,
+body.dark-mode .literal-block {
+    background-color: #0A2C4F !important;
+    color: #E8E8E8 !important;
+}
+
+body.dark-mode code {
+    background-color: #004975 !important;
+    color: #F2C572 !important;
+}
+
+body.dark-mode * {
+    color: inherit !important;
+}
+
+/* Títulos */
+body.dark-mode .rst-content h1,
+body.dark-mode .rst-content h2,
+body.dark-mode .rst-content h3,
+body.dark-mode .rst-content h4,
+body.dark-mode .rst-content h5,
+body.dark-mode .rst-content h6,
+body.dark-mode .rst-content p.caption, /* Adicionado para títulos como "Indices and tables" */
+body.dark-mode .rst-content .caption-text { /* Adicionado para o texto da legenda */
+    color: #FFF0E7 !important; /* Dourado/marrom */
+}
+
+/* Links */
+body.dark-mode .rst-content a {
+    color: #21B1D9 !important;
+}
+body.dark-mode .rst-content a:hover {
+    color: #569cd6 !important;
+}
