@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="None" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; BiguaSim 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=9261fe3b" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=74edd8e5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Started &amp; Examples" href="getting-started.html" />
+    <link rel="prev" title="Welcome to BiguaSim&#39;s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            BiguaSim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">BiguaSim Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stable-installation">Stable Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta-installation">Beta Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-world-packages">Managing World Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-a-package-automatically">Install a Package Automatically</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-location">Installation Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manually-installing-a-package">Manually Installing a Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#print-information">Print Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started &amp; Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">BiguaSim Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../agents/agents.html">BiguaSim Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/agents.html">Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/spaces.html">Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/packagemanager.html">Package Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/sensors.html">Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/lcm.html">LCM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/shmem.html">Shared Memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/util.html">Util</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/weather.html">Weather Controller</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BiguaSim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/usage/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>BiguaSim is installed in two portions: a client python library (<code class="docutils literal notranslate"><span class="pre">biguasim</span></code>)
+is installed first, which then downloads world packages. The python portion is
+very small, while the world packages (&quot;binaries&quot;) can be several gigabytes.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>&gt;= Python 3.6</p></li>
+<li><p>Several gigabytes of storage</p></li>
+<li><p>pip3</p></li>
+<li><p>Linux or Windows 64bit</p></li>
+<li><p>Preferably a competent GPU</p></li>
+<li><p>For Linux: OpenGL 3+, gcc (minimum build-essential package)</p></li>
+</ul>
+<p>For the build-essential package for Linux, you can run the following console command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install build-essential</span>
+</pre></div>
+</div>
+</section>
+<section id="stable-installation">
+<h2>Stable Installation<a class="headerlink" href="#stable-installation" title="Link to this heading"></a></h2>
+<p>In accordance with the Unreal Engine EULA we can no longer offer HoloOcean through pypi. However,
+installing HoloOcean is still fairly simple, but requires a few more steps.</p>
+<p>First, follow the steps here to link your github account with Unreal: <a class="reference external" href="https://www.unrealengine.com/en-US/ue-on-github">https://www.unrealengine.com/en-US/ue-on-github</a>
+Note: The account web page may have been updated, currently the label for connections is named &quot;Apps and
+Accounts&quot;.
+This requires you accept their EULA.</p>
+<p>Then, download or clone our repo at: <a class="reference external" href="https://github.com/byu-holoocean/HoloOcean">https://github.com/byu-holoocean/HoloOcean</a>
+<strong>Note</strong>: If you get a Page Not Found Error, it's because you didn't link your github account to your Epic Games account. Please refer to the previous paragraph, and link the accounts.</p>
+<p>We suggest cloning it with lowercase naming, as our example code uses, like so:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone git@github.com:byu-holoocean/HoloOcean.git holoocean</span>
+</pre></div>
+</div>
+<p>From the cloned repo, do the following:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd holoocean/client</span>
+<span class="go">pip install .</span>
+</pre></div>
+</div>
+<p>Then to install the most recent version of the oceans package, open a python shell by typing the following and hit enter</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python</span>
+</pre></div>
+</div>
+<p>Then run the python command in that python shell</p>
+<p>Or as a single console command,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -c `import holoocean; holoocean.install(&quot;Ocean&quot;)`</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a bug on Windows with the package <code class="docutils literal notranslate"><span class="pre">pywin32</span></code> that occurs occasionally. If you see
+&quot;ImportError: DLL load failed while importing win32event: The specified module could not be found.&quot;,
+it can be fixed by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pywin32==225</span></code></p>
+</div>
+</section>
+<section id="beta-installation">
+<h2>Beta Installation<a class="headerlink" href="#beta-installation" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you had previously installed holoocean before moving to the develop or any other branch,
+then you will need to uninstall the binary by running <code class="docutils literal notranslate"><span class="pre">holoocean.remove(&quot;Ocean&quot;)</span></code> before proceeding.
+Failure to do so may result in unpredictable behavior.</p>
+</div>
+<p>To install the develop branch, simply run</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/byu-holoocean/HoloOcean.</span>
+<span class="go">cd holoocean/client</span>
+<span class="go">git checkout develop</span>
+<span class="go">pip install .</span>
+</pre></div>
+</div>
+<p>Then to install the most recent version of the oceans package, run the python command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoocean</span>
+<span class="n">holoocean</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;Ocean&quot;</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;develop&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or as a single console command,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -c `import holoocean; holoocean.install(&quot;Ocean&quot;, branch=&quot;develop&quot;)`</span>
+</pre></div>
+</div>
+</section>
+<section id="managing-world-packages">
+<h2>Managing World Packages<a class="headerlink" href="#managing-world-packages" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">holodeck</span></code> python package includes a <a class="reference internal" href="../holoocean/packagemanager.html#packagemanager"><span class="std std-ref">Package Manager</span></a> that is used
+to download and install world packages. Below are some example usages, but see
+<a class="reference internal" href="../holoocean/packagemanager.html#packagemanager"><span class="std std-ref">Package Manager</span></a> for complete documentation.</p>
+<section id="install-a-package-automatically">
+<h3>Install a Package Automatically<a class="headerlink" href="#install-a-package-automatically" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">holoocean</span> <span class="kn">import</span> <span class="n">packagemanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">packagemanager</span><span class="o">.</span><span class="n">installed_packages</span><span class="p">()</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">packagemanager</span><span class="o">.</span><span class="n">available_packages</span><span class="p">()</span>
+<span class="go">[&#39;Ocean&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">packagemanager</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;Ocean&quot;</span><span class="p">)</span>
+<span class="go">Installing Ocean ver. 0.1.0 from https://robots.et.byu.edu/holo/Ocean/v0.1.0/Linux.zip</span>
+<span class="go">File size: 1.55 GB</span>
+<span class="go">|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 100%</span>
+<span class="go">Unpacking worlds...</span>
+<span class="go">Finished.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">packagemanager</span><span class="o">.</span><span class="n">installed_packages</span><span class="p">()</span>
+<span class="go">[&#39;Ocean&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="installation-location">
+<h3>Installation Location<a class="headerlink" href="#installation-location" title="Link to this heading"></a></h3>
+<p>By default, HoloOcean will install packages local to your user profile. See
+<a class="reference internal" href="../packages/docs/installation.html#package-locations"><span class="std std-ref">Package Installation Location</span></a> for more information.</p>
+</section>
+<section id="manually-installing-a-package">
+<h3>Manually Installing a Package<a class="headerlink" href="#manually-installing-a-package" title="Link to this heading"></a></h3>
+<p>To manually install a package, you will be provided a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.
+Extract it into the <code class="docutils literal notranslate"><span class="pre">worlds</span></code> folder in your HoloOcean installation location
+(see <a class="reference internal" href="../packages/docs/installation.html#package-locations"><span class="std std-ref">Package Installation Location</span></a>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that the file structure is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="n">worlds</span>
+<span class="o">+--</span> <span class="n">YourManuallyInstalledPackage</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">config</span><span class="o">.</span><span class="n">json</span>
+<span class="o">|</span>    <span class="o">+--</span> <span class="n">etc</span><span class="o">...</span>
+<span class="o">+--</span> <span class="n">AnotherPackage</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">config</span><span class="o">.</span><span class="n">json</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">etc</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>Not</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="n">worlds</span>
+<span class="o">+--</span> <span class="n">YourManuallyInstalledPackage</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">YourManuallyInstalledPackage</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="n">config</span><span class="o">.</span><span class="n">json</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">etc</span><span class="o">...</span>
+<span class="o">+--</span> <span class="n">AnotherPackage</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">config</span><span class="o">.</span><span class="n">json</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">etc</span><span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="print-information">
+<h3>Print Information<a class="headerlink" href="#print-information" title="Link to this heading"></a></h3>
+<p>There are several convenience functions provided to allow packages, worlds,
+and scenarios to be easily inspected.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">packagemanager</span><span class="o">.</span><span class="n">package_info</span><span class="p">(</span><span class="s2">&quot;Ocean&quot;</span><span class="p">)</span>
+<span class="go">Package: Ocean</span>
+<span class="go">   Platform: Linux</span>
+<span class="go">   Version: 0.1.0</span>
+<span class="go">   Path: LinuxNoEditor/Holodeck/Binaries/Linux/Holodeck</span>
+<span class="go">   Worlds:</span>
+<span class="go">   Rooms</span>
+<span class="go">         Scenarios:</span>
+<span class="go">         Rooms-DataGen:</span>
+<span class="go">            Agents:</span>
+<span class="go">               Name: turtle0</span>
+<span class="go">               Type: TurtleAgent</span>
+<span class="go">               Sensors:</span>
+<span class="go">                  LocationSensor</span>
+<span class="go">                     lcm_channel: POSITION</span>
+<span class="go">                  RotationSensor</span>
+<span class="go">                     lcm_channel: ROTATION</span>
+<span class="go">                  RangeFinderSensor</span>
+<span class="go">                     lcm_channel: LIDAR</span>
+<span class="go">                     configuration</span>
+<span class="go">                        LaserCount: 64</span>
+<span class="go">                        LaserMaxDistance: 20</span>
+<span class="go">                        LaserAngle: 0</span>
+<span class="go">                        LaserDebug: True</span>
+<span class="go">         Rooms-IEKF:</span>
+<span class="go">            Agents:</span>
+<span class="go">               Name: uav0</span>
+<span class="go">               Type: UavAgent</span>
+<span class="go">               Sensors:</span>
+<span class="go">                  PoseSensor</span>
+<span class="go">                  VelocitySensor</span>
+<span class="go">                  IMUSensor</span>
+<span class="go">   SimpleUnderwater</span>
+<span class="go">         Scenarios:</span>
+<span class="go">         SimpleUnderwater-AUV:</span>
+<span class="go">            Agents:</span>
+<span class="go">               Name: auv0</span>
+<span class="go">               Type: HoveringAUV</span>
+<span class="go">               Sensors:</span>
+<span class="go">                  PoseSensor</span>
+<span class="go">                     socket: IMUSocket</span>
+<span class="go">                  VelocitySensor</span>
+<span class="go">                     socket: IMUSocket</span>
+<span class="go">                  IMUSensor</span>
+<span class="go">                     socket: IMUSocket</span>
+<span class="go">                  DVLSensor</span>
+<span class="go">                     socket: DVLSocket</span>
+</pre></div>
+</div>
+<p>You can also look for information for a specific world or scenario</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">packagemanager</span><span class="o">.</span><span class="n">world_info</span><span class="p">(</span><span class="s2">&quot;SimpleUnderwater&quot;</span><span class="p">)</span>
+<span class="n">packagemanager</span><span class="o">.</span><span class="n">scenario_info</span><span class="p">(</span><span class="s2">&quot;Rooms-DataGen&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to BiguaSim&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting-started.html" class="btn btn-neutral float-right" title="Getting Started &amp; Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright FURG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
