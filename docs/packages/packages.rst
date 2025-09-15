@@ -1,7 +1,7 @@
-HoloOcean Packages
+BiguaSim Packages
 ==================
 
-These are the different packages available for download. A holoocean package
+These are the different packages available for download. A biguasim package
 contains one or more worlds, which each have one or more scenarios. 
 
 .. _`all-packages`:

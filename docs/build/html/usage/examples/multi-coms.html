@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multi-Agent Communications &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=8d563738"></script>
@@ -68,20 +68,20 @@
 <li class="toctree-l2"><a class="reference internal" href="sonar_singlebeam.html">Visualizing Singlebeam Sonar</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../develop/develop.html">Developing HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop/develop.html">Developing BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/changelog.html">Changelog</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/lcm.html">LCM</a></li>
@@ -122,16 +122,16 @@
 <code class="docutils literal notranslate"><span class="pre">AcousticBeaconSensor</span></code> or the <code class="docutils literal notranslate"><span class="pre">OpticalModemSensor</span></code>. Below are some examples of these</p>
 <section id="sending-acoustic-messages">
 <h2>Sending Acoustic Messages<a class="headerlink" href="#sending-acoustic-messages" title="Link to this heading"></a></h2>
-<p>The command <a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.send_acoustic_message" title="holoocean.environments.HoloOceanEnvironment.send_acoustic_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.send_acoustic_message()</span></code></a> is used to send messages between acoustic beacons.
-There’s a number of message types that can be sent, all with varying functionality, see <a class="reference internal" href="../../holoocean/sensors.html#holoocean.sensors.AcousticBeaconSensor" title="holoocean.sensors.AcousticBeaconSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.AcousticBeaconSensor</span></code></a>
+<p>The command <code class="xref py py-meth docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.send_acoustic_message()</span></code> is used to send messages between acoustic beacons.
+There’s a number of message types that can be sent, all with varying functionality, see <code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.AcousticBeaconSensor</span></code>
 for details.</p>
 <p>Further, a few helper functions exist if needed,</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.beacons" title="holoocean.environments.HoloOceanEnvironment.beacons"><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons</span></code></a> returns all beacons.</p></li>
-<li><p><a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.beacons_id" title="holoocean.environments.HoloOceanEnvironment.beacons_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_id</span></code></a> returns all beacons’ ids.</p></li>
-<li><p><a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.beacons_status" title="holoocean.environments.HoloOceanEnvironment.beacons_status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_status</span></code></a> returns all beacons’ status (whether it’s transmitting or not).</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons</span></code> returns all beacons.</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_id</span></code> returns all beacons’ ids.</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.beacons_status</span></code> returns all beacons’ status (whether it’s transmitting or not).</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoocean</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">holoocean</span>
 
 <span class="n">cfg</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test_acou_coms&quot;</span><span class="p">,</span>
@@ -194,15 +194,15 @@ for details.</p>
 </section>
 <section id="sending-optical-messages">
 <h2>Sending Optical Messages<a class="headerlink" href="#sending-optical-messages" title="Link to this heading"></a></h2>
-<p>The command <a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.send_optical_message" title="holoocean.environments.HoloOceanEnvironment.send_optical_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.send_optical_message()</span></code></a> is used to send messages between optical modems.
-See <a class="reference internal" href="../../holoocean/sensors.html#holoocean.sensors.OpticalModemSensor" title="holoocean.sensors.OpticalModemSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.OpticalModemSensor</span></code></a> for configuration details. Note in order for a message to be transmitted,
+<p>The command <code class="xref py py-meth docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.send_optical_message()</span></code> is used to send messages between optical modems.
+See <code class="xref py py-class docutils literal notranslate"><span class="pre">holoocean.sensors.OpticalModemSensor</span></code> for configuration details. Note in order for a message to be transmitted,
 the 2 sensors must be aligned.</p>
 <p>Further, a few helper functions exist if needed,</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.modems" title="holoocean.environments.HoloOceanEnvironment.modems"><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems</span></code></a> returns all modems.</p></li>
-<li><p><a class="reference internal" href="../../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.modems_id" title="holoocean.environments.HoloOceanEnvironment.modems_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems_id</span></code></a> returns all modems’ ids.</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems</span></code> returns all modems.</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">holoocean.environments.HoloOceanEnvironment.modems_id</span></code> returns all modems’ ids.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoocean</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">holoocean</span>
 
 <span class="n">cfg</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test_acou_coms&quot;</span><span class="p">,</span>

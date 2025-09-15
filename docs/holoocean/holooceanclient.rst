@@ -1,4 +1,4 @@
-HoloOcean Client
+BiguaSim Client
 ================
 
 .. automodule:: holoocean.holooceanclient

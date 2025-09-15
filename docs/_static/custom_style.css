@@ -3,7 +3,7 @@
 /* Definição das fontes locais */
 @font-face {
     font-family: 'Rajdhani';
-    font-weight: 400;
+    font-weight: 500;
     src: url('fonts/Rajdhani-Light.woff2') format('woff2'),
          url('fonts/Rajdhani-Light.woff') format('woff');
 }
@@ -38,8 +38,8 @@ body,
 .rst-content span,
 .rst-content div,
 body {
-    font-family: 'Roboto', sans-serif !important;
-    color: #333 !important;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
 }
 
 /* ------------------- Estilo dos Títulos ------------------- */
@@ -74,7 +74,7 @@ body {
 }
 
 .wy-menu-vertical a:hover {
-    background-color: #004975 !important;
+    background-color: #036B9D !important;
 }
 
 .wy-menu-vertical li.current > a {
@@ -84,7 +84,7 @@ body {
 
 .wy-menu-vertical li.current li.toctree-l2 a {
     color: #FFF0E7 !important;
-    background-color: #036B9D !important;
+    background-color: #004975 !important;
 }
 
 /* ------------------- Links no Corpo do Texto ------------------- */
@@ -106,3 +106,68 @@ body {
 .rst-content .section h6 {
     color: #321F13 !important;
 }
+
+.highlight,
+.highlight-python,
+.highlight-default {
+    background-color: #f3f6f6 !important;
+}
+
+/*faz a pagina recarregar com transição*/
+body {
+    opacity: 0;
+    animation: fadeIn 0.1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/*faz os blocos saltarem um pouco da tela*/
+/*.highlight pre {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight pre:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.4);
+}*/
+
+/*faz uma linha abaixo dos botoes quando o mouse passa por cima*/
+a {
+    position: relative;
+    color: #569cd6;
+    text-decoration: none;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: #569cd6;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+h1, h2, h3 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

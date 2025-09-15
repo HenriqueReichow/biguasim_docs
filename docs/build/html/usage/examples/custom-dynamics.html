@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manually Defining Dynamics &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=8d563738"></script>
@@ -64,20 +64,20 @@
 <li class="toctree-l2"><a class="reference internal" href="sonar_singlebeam.html">Visualizing Singlebeam Sonar</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../develop/develop.html">Developing HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop/develop.html">Developing BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/changelog.html">Changelog</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../holoocean/lcm.html">LCM</a></li>
@@ -115,12 +115,12 @@
   <section id="manually-defining-dynamics">
 <h1>Manually Defining Dynamics<a class="headerlink" href="#manually-defining-dynamics" title="Link to this heading"></a></h1>
 <p>Many times, it may be useful for research to easily be able to implement custom dynamics. For this purpose, we have created controllers for the <a class="reference internal" href="../../agents/hovering-auv-agent.html#hovering-auv-agent"><span class="std std-ref">HoveringAUV</span></a> that take in linear and angular acceleration and integrate them for custom dynamics. Besides collisions, no other accelerations are applied to the vehicle in the simulator, allowing full custom dynamics to be implemented <em>in python</em>. The possibilities for this are endless and include complex hydrodynamics, water currents, and more.</p>
-<p>In addition, the <a class="reference internal" href="../../holoocean/sensors.html#holoocean.sensors.DynamicsSensor" title="holoocean.sensors.DynamicsSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynamicsSensor</span></code></a> was made to provide all necessary current state information for computing dynamics including, accelerations, velocities, and current pose information.</p>
+<p>In addition, the <code class="xref py py-class docutils literal notranslate"><span class="pre">DynamicsSensor</span></code> was made to provide all necessary current state information for computing dynamics including, accelerations, velocities, and current pose information.</p>
 <p>Here is an example of this in action, implementing gravity, buoyancy, and damping by hand.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">holoocean</span>
-<span class="kn">from</span> <span class="nn">holoocean.agents</span> <span class="kn">import</span> <span class="n">HoveringAUV</span>
-<span class="kn">from</span> <span class="nn">scipy.spatial.transform</span> <span class="kn">import</span> <span class="n">Rotation</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">holoocean</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">holoocean.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">HoveringAUV</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial.transform</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rotation</span>
 
 <span class="n">scenario</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hovering_dynamics&quot;</span><span class="p">,</span>
@@ -151,7 +151,7 @@
 <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># angular damping</span>
 <span class="c1"># HoveringAUV.mass += 1 # alternatively make it sink</span>
 
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="c1"># Extract all info from state</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>

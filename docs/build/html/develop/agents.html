@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Developing Agents &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=8d563738"></script>
@@ -51,10 +51,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/getting-started.html">Getting Started &amp; Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="develop.html">Developing HoloOcean</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="develop.html">Developing BiguaSim</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="start.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env.html">Developing Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensors.html">Developing Sensors</a></li>
@@ -80,12 +80,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/lcm.html">LCM</a></li>
@@ -109,7 +109,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="develop.html">Developing HoloOcean</a></li>
+          <li class="breadcrumb-item"><a href="develop.html">Developing BiguaSim</a></li>
       <li class="breadcrumb-item active">Developing Agents</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/develop/agents.rst.txt" rel="nofollow"> View page source</a>
@@ -134,10 +134,10 @@
 <li><p>Anything related to the controls. This includes all the constants, and <code class="docutils literal notranslate"><span class="pre">control_schemes()</span></code>. Make sure you put the number of inputs your agent will have in <code class="docutils literal notranslate"><span class="pre">ContinuousActionSpace</span></code> in the return</p></li>
 </ul>
 <p>That should be about it for the python portion, you should end up with something like this</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomAgent</span><span class="p">(</span><span class="n">HoloOceanAgent</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">CustomAgent</span><span class="p">(</span><span class="n">BiguasimAgent</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple custom bot.</span>
 
-<span class="sd">    Inherits from :class:`HoloOceanAgent`.&quot;&quot;&quot;</span>
+<span class="sd">    Inherits from :class:`BiguaSimAgent`.&quot;&quot;&quot;</span>
     <span class="c1"># constants in CustomAgent.h in holodeck-engine</span>
     <span class="n">__MAX</span> <span class="o">=</span> <span class="mf">160.0</span>
     <span class="n">__MIN</span> <span class="o">=</span> <span class="o">-</span><span class="n">__MAX</span>
@@ -145,18 +145,18 @@
     <span class="n">agent_type</span> <span class="o">=</span> <span class="s2">&quot;CustomAgent&quot;</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">control_schemes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">control_schemes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">low</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__MIN</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span>
         <span class="n">high</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__MAX</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span>
         <span class="k">return</span> <span class="p">[(</span><span class="s2">&quot;[first, second, third, fourth]&quot;</span><span class="p">,</span> <span class="n">ContinuousActionSpace</span><span class="p">([</span><span class="mi">4</span><span class="p">],</span> <span class="n">low</span><span class="o">=</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">high</span><span class="p">))]</span>
 
-    <span class="k">def</span> <span class="nf">get_joint_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_name</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_joint_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_name</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;CustomAgent &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-    <span class="k">def</span> <span class="nf">__act__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__act__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
         <span class="n">np</span><span class="o">.</span><span class="n">copyto</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_action_buffer</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">action</span><span class="p">))</span>
         <span class="n">np</span><span class="o">.</span><span class="n">copyto</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_action_buffer</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
 </pre></div>
@@ -202,7 +202,7 @@
 </section>
 <section id="buoyant-agents">
 <h2>Buoyant Agents<a class="headerlink" href="#buoyant-agents" title="Link to this heading"></a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">AHolodeckBuoyantAgent</span></code> class was made to remove the need to re-implement buoyancy dynamics for all future AUVs put into HoloOcean. By setting a few necessary variables everything should basically work out of the box. All of the physics information is set in C++ and not in the blueprint. Anything set in the blueprint (like mass or COM offset) will be overriden in C++.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">AHolodeckBuoyantAgent</span></code> class was made to remove the need to re-implement buoyancy dynamics for all future AUVs put into BiguaSim. By setting a few necessary variables everything should basically work out of the box. All of the physics information is set in C++ and not in the blueprint. Anything set in the blueprint (like mass or COM offset) will be overriden in C++.</p>
 <p>We’re not going to go into details on how to create a custom agent here, see the above section for that. The only difference is you’ll need to inherit from <code class="docutils literal notranslate"><span class="pre">AHolodeckBuoyantAgent</span></code> instead of <code class="docutils literal notranslate"><span class="pre">AHolodeckAgent</span></code> and should probably copy the files of <code class="docutils literal notranslate"><span class="pre">AHoveringAUV</span></code> instead of <code class="docutils literal notranslate"><span class="pre">ATurtleAgent</span></code>.</p>
 <section id="necessary-variables">
 <h3>Necessary Variables<a class="headerlink" href="#necessary-variables" title="Link to this heading"></a></h3>

@@ -20,7 +20,7 @@ just change the scenario to the one that you would like to create octrees for,
 
 ::
 
-    import holoocean
+    import biguasim
     import numpy as np
     from tqdm import tqdm
 

@@ -1,6 +1,6 @@
 .. _`holoocean-api-index`:
 
-HoloOcean
+BiguaSim
 =========
 
 .. automodule:: holoocean.holoocean

@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TurtleAgent &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=8d563738"></script>
@@ -51,8 +51,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/getting-started.html">Getting Started &amp; Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="agents.html">BiguaSim Agents</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="hovering-auv-agent.html">HoveringAUV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="surface-vessel-agent.html">SurfaceVessel</a></li>
@@ -67,17 +67,17 @@
 <li class="toctree-l2"><a class="reference internal" href="uav-agent.html">UavAgent</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog/changelog.html">Changelog</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/lcm.html">LCM</a></li>
@@ -114,13 +114,7 @@
              
   <section id="turtleagent">
 <span id="turtle-agent"></span><h1>TurtleAgent<a class="headerlink" href="#turtleagent" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="../_images/turtle.png"><img alt="../_images/turtle.png" src="../_images/turtle.png" />
-<aside class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/lh/Documents/HoloOcean/client/docs/agents/turtle-agent.rst</span>, line 6)</p>
-<p>Cannot scale image!
-  Could not get size from &quot;../_images/turtle.png&quot;:
-  [Errno 2] No such file or directory: '/home/lh/Documents/HoloOcean/client/_images/turtle.png'</p>
-</aside>
+<a class="reference internal image-reference" href="../_images/turtle.png"><img alt="../_images/turtle.png" src="../_images/turtle.png" style="width: 103.2px; height: 76.5px;" />
 </a>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
@@ -129,7 +123,7 @@ approximately 25cm and is approximately 10cm high.</p>
 <p>The TurtleAgent moves when forces are applied to it - so it has momentum and
 mass, compared to the sphere-agent which teleports around. The
 TurtleAgent is subject to gravity and can climb ramps and slopes.</p>
-<p>See <a class="reference internal" href="../holoocean/agents.html#holoocean.agents.TurtleAgent" title="holoocean.agents.TurtleAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">TurtleAgent</span></code></a> for more details.</p>
+<p>See <code class="xref py py-class docutils literal notranslate"><span class="pre">TurtleAgent</span></code> for more details.</p>
 </section>
 <section id="control-schemes">
 <h2>Control Schemes<a class="headerlink" href="#control-schemes" title="Link to this heading"></a></h2>
@@ -145,13 +139,7 @@ the agent’s forward force (index 0) and rotation force (index 1).</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">CameraSocket</span></code> located at the front of the body</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Viewport</span></code> located behind the agent</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/turtle-sockets.png"><img alt="../_images/turtle-sockets.png" src="../_images/turtle-sockets.png" />
-<aside class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/lh/Documents/HoloOcean/client/docs/agents/turtle-agent.rst</span>, line 33)</p>
-<p>Cannot scale image!
-  Could not get size from &quot;../_images/turtle-sockets.png&quot;:
-  [Errno 2] No such file or directory: '/home/lh/Documents/HoloOcean/client/_images/turtle-sockets.png'</p>
-</aside>
+<a class="reference internal image-reference" href="../_images/turtle-sockets.png"><img alt="../_images/turtle-sockets.png" src="../_images/turtle-sockets.png" style="width: 339.9px; height: 189.9px;" />
 </a>
 </section>
 </section>

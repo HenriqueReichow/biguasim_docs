@@ -1,13 +1,13 @@
 Getting Started & Examples
 ==========================
-First, see :ref:`installation` to get the ``holoocean`` package and 
+First, see :ref:`installation` to get the ``BiguaSim`` package and 
 ``Ocean`` installed.
 
-A minimal HoloOcean usage example is below:
+A minimal BiguaSim usage example is below:
 
 ::
 
-   import holoocean
+   import biguasim
    import numpy as np
 
    env = holoocean.make("PierHarbor-Hovering")

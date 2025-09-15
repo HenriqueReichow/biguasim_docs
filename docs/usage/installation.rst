@@ -4,7 +4,7 @@
 Installation
 ============
 
-HoloOcean is installed in two portions: a client python library (``holoocean``)
+BiguaSim is installed in two portions: a client python library (``biguasim``)
 is installed first, which then downloads world packages. The python portion is
 very small, while the world packages ("binaries") can be several gigabytes.
 
@@ -21,7 +21,7 @@ Requirements
 
 For the build-essential package for Linux, you can run the following console command:
 
-::
+.. code-block:: console
 
    sudo apt install build-essential
 
@@ -41,13 +41,13 @@ Then, download or clone our repo at: https://github.com/byu-holoocean/HoloOcean
 
 We suggest cloning it with lowercase naming, as our example code uses, like so:
 
-::
+.. code-block:: console
 
    git clone git@github.com:byu-holoocean/HoloOcean.git holoocean
 
 From the cloned repo, do the following:
 
-::
+.. code-block:: console
 
    cd holoocean/client
    pip install .
@@ -55,20 +55,20 @@ From the cloned repo, do the following:
 
 Then to install the most recent version of the oceans package, open a python shell by typing the following and hit enter
 
-::
+.. code-block:: console
 
    python
 
 Then run the python command in that python shell
 
-::
+.. code-block::python
 
    import holoocean
    holoocean.install("Ocean")
 
 Or as a single console command,
 
-::
+.. code-block:: console
 
    python -c `import holoocean; holoocean.install("Ocean")`
 
@@ -89,7 +89,7 @@ Beta Installation
 
 To install the develop branch, simply run
 
-::
+.. code-block:: console
 
    git clone https://github.com/byu-holoocean/HoloOcean.
    cd holoocean/client
@@ -99,7 +99,7 @@ To install the develop branch, simply run
 
 Then to install the most recent version of the oceans package, run the python command 
 
-::
+.. code-block:: python
 
    import holoocean
    holoocean.install("Ocean", branch="develop")
@@ -107,7 +107,7 @@ Then to install the most recent version of the oceans package, run the python co
 
 Or as a single console command,
 
-::
+.. code-block:: console
 
    python -c `import holoocean; holoocean.install("Ocean", branch="develop")`
 

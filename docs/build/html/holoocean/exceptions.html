@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exceptions &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=fc5fdf43" />
 
   
-    <link rel="shortcut icon" href="../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=8d563738"></script>
@@ -51,32 +51,26 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/getting-started.html">Getting Started &amp; Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog/changelog.html">Changelog</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcm.html">LCM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shmem.html">Shared Memory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="util.html">Util</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Exceptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#holoocean.exceptions.HoloOceanConfigurationException"><code class="docutils literal notranslate"><span class="pre">HoloOceanConfigurationException</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#holoocean.exceptions.HoloOceanException"><code class="docutils literal notranslate"><span class="pre">HoloOceanException</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#holoocean.exceptions.NotFoundException"><code class="docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#holoocean.exceptions.TimeoutException"><code class="docutils literal notranslate"><span class="pre">TimeoutException</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="weather.html">Weather Controller</a></li>
 </ul>
 
@@ -104,55 +98,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-holoocean.exceptions">
-<span id="exceptions"></span><h1>Exceptions<a class="headerlink" href="#module-holoocean.exceptions" title="Link to this heading"></a></h1>
-<p>HoloOcean Exceptions</p>
-<p><strong>Exceptions:</strong></p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#holoocean.exceptions.HoloOceanConfigurationException" title="holoocean.exceptions.HoloOceanConfigurationException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HoloOceanConfigurationException</span></code></a></p></td>
-<td><p>The user provided an invalid configuration for HoloOcean</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#holoocean.exceptions.HoloOceanException" title="holoocean.exceptions.HoloOceanException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HoloOceanException</span></code></a></p></td>
-<td><p>Base class for a generic exception in HoloOcean.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#holoocean.exceptions.NotFoundException" title="holoocean.exceptions.NotFoundException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></p></td>
-<td><p>Raised when a package cannot be found</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#holoocean.exceptions.TimeoutException" title="holoocean.exceptions.TimeoutException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeoutException</span></code></a></p></td>
-<td><p>Exception raised when communicating with the engine timed out.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py exception">
-<dt class="sig sig-object py" id="holoocean.exceptions.HoloOceanConfigurationException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">holoocean.exceptions.</span></span><span class="sig-name descname"><span class="pre">HoloOceanConfigurationException</span></span><a class="headerlink" href="#holoocean.exceptions.HoloOceanConfigurationException" title="Link to this definition"></a></dt>
-<dd><p>The user provided an invalid configuration for HoloOcean</p>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="holoocean.exceptions.HoloOceanException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">holoocean.exceptions.</span></span><span class="sig-name descname"><span class="pre">HoloOceanException</span></span><a class="headerlink" href="#holoocean.exceptions.HoloOceanException" title="Link to this definition"></a></dt>
-<dd><p>Base class for a generic exception in HoloOcean.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – The error string.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="holoocean.exceptions.NotFoundException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">holoocean.exceptions.</span></span><span class="sig-name descname"><span class="pre">NotFoundException</span></span><a class="headerlink" href="#holoocean.exceptions.NotFoundException" title="Link to this definition"></a></dt>
-<dd><p>Raised when a package cannot be found</p>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="holoocean.exceptions.TimeoutException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">holoocean.exceptions.</span></span><span class="sig-name descname"><span class="pre">TimeoutException</span></span><a class="headerlink" href="#holoocean.exceptions.TimeoutException" title="Link to this definition"></a></dt>
-<dd><p>Exception raised when communicating with the engine timed out.</p>
-</dd></dl>
-
+  <section id="exceptions">
+<h1>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading"></a></h1>
 </section>
 
 

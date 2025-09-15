@@ -1,10 +1,10 @@
 .. _`improving-performance`:
 
 ================================
-Improving HoloOcean Performance
+Improving BiguaSim Performance
 ================================
 
-HoloOcean is fairly performant by default, but you can also sacrifice
+BiguaSim is fairly performant by default, but you can also sacrifice
 features to increase your frames per second.
 
 .. contents::

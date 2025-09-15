@@ -79,7 +79,7 @@ language = 'en'
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style =  'default'
+pygments_style =  'sphinx'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -107,7 +107,7 @@ html_css_files = [
     'custom_style.css',
 ]
 
-html_favicon = '_static/Logo_BiguaSim_(2).svg'
+html_favicon = '_static/favicon.svg'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.

@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using HoloOcean Headless &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+  <title>Using BiguaSim Headless &mdash; BiguaSim 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=8d563738"></script>
@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Octree Generation" href="octree.html" />
-    <link rel="prev" title="Improving HoloOcean Performance" href="performance.html" /> 
+    <link rel="prev" title="Improving BiguaSim Performance" href="performance.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,13 +51,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started &amp; Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="usage.html">Using HoloOcean</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="usage.html">Using BiguaSim</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="scenarios.html">Scenarios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hotkeys.html">Viewport Hotkeys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcm.html">Publishing Sensor Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="units-and-coordinates.html">Units and Coordinates in HoloOcean</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html">Improving HoloOcean Performance</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using HoloOcean Headless</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="units-and-coordinates.html">Units and Coordinates in BiguaSim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html">Improving BiguaSim Performance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using BiguaSim Headless</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#headless-mode-vs-disabling-viewport-rendering">Headless Mode vs Disabling Viewport Rendering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#forcing-headless-mode">Forcing Headless Mode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automatic-headless-mode">Automatic Headless Mode</a></li>
@@ -66,19 +66,19 @@
 <li class="toctree-l2"><a class="reference internal" href="octree.html">Octree Generation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/develop.html">Developing BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog/changelog.html">Changelog</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/lcm.html">LCM</a></li>
@@ -102,8 +102,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="usage.html">Using HoloOcean</a></li>
-      <li class="breadcrumb-item active">Using HoloOcean Headless</li>
+          <li class="breadcrumb-item"><a href="usage.html">Using BiguaSim</a></li>
+      <li class="breadcrumb-item active">Using BiguaSim Headless</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/usage/running-headless.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -113,18 +113,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="using-holoocean-headless">
-<h1>Using HoloOcean Headless<a class="headerlink" href="#using-holoocean-headless" title="Link to this heading"></a></h1>
-<p>On Linux, HoloOcean can run headless without opening a viewport window. This
+  <section id="using-biguasim-headless">
+<h1>Using BiguaSim Headless<a class="headerlink" href="#using-biguasim-headless" title="Link to this heading"></a></h1>
+<p>On Linux, BiguaSim can run headless without opening a viewport window. This
 can happen automatically, or you can force it to not appear</p>
 <section id="headless-mode-vs-disabling-viewport-rendering">
 <h2>Headless Mode vs Disabling Viewport Rendering<a class="headerlink" href="#headless-mode-vs-disabling-viewport-rendering" title="Link to this heading"></a></h2>
 <p>These are two different features.</p>
 <p><strong>Disabling Viewport Rendering</strong> is calling the
-(<a class="reference internal" href="../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.should_render_viewport" title="holoocean.environments.HoloOceanEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a>)
-method on a <a class="reference internal" href="../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment" title="holoocean.environments.HoloOceanEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code></a>. This can be
+(<code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>)
+method on a <code class="xref py py-class docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code>. This can be
 done at runtime. It will appear as if the image being rendered in the viewport
-has frozen, but <a class="reference internal" href="../holoocean/sensors.html#holoocean.sensors.RGBCamera" title="holoocean.sensors.RGBCamera"><code class="xref py py-class docutils literal notranslate"><span class="pre">RGBCamera</span></code></a> s and other sensors will
+has frozen, but <code class="xref py py-class docutils literal notranslate"><span class="pre">RGBCamera</span></code> s and other sensors will
 still update correctly.</p>
 <p><strong>Headless Mode</strong> is when the viewport window does not appear. If Headless
 Mode is manually enabled, it will also disable viewport rendering
@@ -137,18 +137,18 @@ automatically.</p>
 <p class="admonition-title">Note</p>
 <p>This will also
 disable viewport rendering
-(<a class="reference internal" href="../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.should_render_viewport" title="holoocean.environments.HoloOceanEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a>)</p>
+(<code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>)</p>
 <p>If you still want to render the viewport (ie for the
-<a class="reference internal" href="../holoocean/sensors.html#holoocean.sensors.ViewportCapture" title="holoocean.sensors.ViewportCapture"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportCapture</span></code></a>) when running headless,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportCapture</span></code>) when running headless,
 simply set
-(<a class="reference internal" href="../holoocean/environments.html#holoocean.environments.HoloOceanEnvironment.should_render_viewport" title="holoocean.environments.HoloOceanEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a>)
+(<code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>)
 to <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 </div>
 </section>
 <section id="automatic-headless-mode">
 <h2>Automatic Headless Mode<a class="headerlink" href="#automatic-headless-mode" title="Link to this heading"></a></h2>
 <p>If the engine does not detect the <code class="docutils literal notranslate"><span class="pre">DISPLAY</span></code> environment variable, it will
-not open a window. This will happen automatically if HoloOcean is run from a
+not open a window. This will happen automatically if BiguaSim is run from a
 SSH session.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -161,7 +161,7 @@ SSH session.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="performance.html" class="btn btn-neutral float-left" title="Improving HoloOcean Performance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="performance.html" class="btn btn-neutral float-left" title="Improving BiguaSim Performance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="octree.html" class="btn btn-neutral float-right" title="Octree Generation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

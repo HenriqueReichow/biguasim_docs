@@ -14,17 +14,17 @@ This process will compile the C++ code for Holodeck and "cook" the ``.uasset``
 files (including blueprints!) into one large ``.pak`` file, and create the 
 directory structure needed.
 
-Adding HoloOcean Worlds
+Adding BiguaSim Worlds
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The finished package will only contain the worlds (called "levels" in the editor) that are added into the project. The ``holoocean`` repo only contains the example level. You can 
+The finished package will only contain the worlds (called "levels" in the editor) that are added into the project. The ``BiguaSim`` repo only contains the example level. You can 
 create new worlds by simply making a new level in unreal engine editor. See the `Unreal Engine documentation <https://docs.unrealengine.com/4.27/en-US/Basics/Levels/HowTo/WorkWithLevelAssets/>`_ for
 more information.
 
 
 .. note::
     
-    Because the other packaged worlds distributed with HoloOcean contain purchased assets, they are only available to official BYU FRoStLab members. Others will have to develop their own worlds in the holoocean repo.
+    Because the other packaged worlds distributed with BiguaSim contain purchased assets, they are only available to official BYU FRoStLab members. Others will have to develop their own worlds in the BiguaSim repo.
 
 Cooking Content
 ~~~~~~~~~~~~~~~~

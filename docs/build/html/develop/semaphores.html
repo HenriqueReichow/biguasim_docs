@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Communication Protocol &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=8d563738"></script>
@@ -51,23 +51,23 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/getting-started.html">Getting Started &amp; Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">HoloOcean Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages.html">BiguaSim Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="develop.html">Developing HoloOcean</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="develop.html">Developing BiguaSim</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="start.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env.html">Developing Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensors.html">Developing Sensors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="agents.html">Developing Agents</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Communication Protocol</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisite-reading">Prerequisite Reading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-two-halves-of-holoocean">The Two Halves of holoocean</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-two-halves-of-biguasim">The Two Halves of BiguaSim</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#holoocean"><code class="docutils literal notranslate"><span class="pre">holoocean</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#holoocean-engine"><code class="docutils literal notranslate"><span class="pre">holoocean-engine</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#simple-usage-example">Simple Usage Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#part-1-holoocean-make">Part 1: <code class="docutils literal notranslate"><span class="pre">holoocean.make()</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#part-1-biguasim-make">Part 1: <code class="docutils literal notranslate"><span class="pre">BiguaSim.make()</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#creating-loading-semaphore">Creating Loading Semaphore</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#starting-subprocess">Starting Subprocess</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#waiting-for-engine-to-load">Waiting for engine to load</a></li>
@@ -94,12 +94,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../holoocean/lcm.html">LCM</a></li>
@@ -123,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="develop.html">Developing HoloOcean</a></li>
+          <li class="breadcrumb-item"><a href="develop.html">Developing BiguaSim</a></li>
       <li class="breadcrumb-item active">Communication Protocol</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/develop/semaphores.rst.txt" rel="nofollow"> View page source</a>
@@ -137,15 +137,15 @@
   <section id="communication-protocol">
 <span id="develop-sem"></span><h1>Communication Protocol<a class="headerlink" href="#communication-protocol" title="Link to this heading"></a></h1>
 <p>This article was pulled from <a class="reference external" href="https://github.com/BYU-PCCL/holodeck/wiki/Holodeck-Communication-Protocol">here</a> for archiving purposes.</p>
-<p>In this wiki page, I explain how the two halves of holoocean (the client and engine) communicate.</p>
+<p>In this wiki page, I explain how the two halves of BiguaSim (the client and engine) communicate.</p>
 <section id="prerequisite-reading">
 <h2>Prerequisite Reading<a class="headerlink" href="#prerequisite-reading" title="Link to this heading"></a></h2>
 <p>Brush up on <a class="reference external" href="https://en.wikipedia.org/wiki/Semaphore_(programming)">semaphores</a>
 and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_memory">shared memory</a>.</p>
 </section>
-<section id="the-two-halves-of-holoocean">
-<h2>The Two Halves of holoocean<a class="headerlink" href="#the-two-halves-of-holoocean" title="Link to this heading"></a></h2>
-<p>What we call “holoocean” is actually two seperate projects.</p>
+<section id="the-two-halves-of-biguasim">
+<h2>The Two Halves of BiguaSim<a class="headerlink" href="#the-two-halves-of-biguasim" title="Link to this heading"></a></h2>
+<p>What we call “BiguaSim” is actually two seperate projects.</p>
 <section id="holoocean">
 <h3><code class="docutils literal notranslate"><span class="pre">holoocean</span></code><a class="headerlink" href="#holoocean" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -176,10 +176,10 @@ and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_mem
 <h2>Simple Usage Example<a class="headerlink" href="#simple-usage-example" title="Link to this heading"></a></h2>
 <p>In this walkthrough, we are going to explain what communication between
 <code class="docutils literal notranslate"><span class="pre">holoocean</span></code> and <code class="docutils literal notranslate"><span class="pre">holoocean-engine</span></code> needs to happen to make this example work:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoocean</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">BiguaSim</span>
 
 <span class="c1"># (1). start up the engine</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">holoocean</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;SimpleUnderwater-Hovering&quot;</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">BiguaSim</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;SimpleUnderwater-Hovering&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
   <span class="c1"># intitialize the level and the main agent inside of it</span>
@@ -194,8 +194,8 @@ and <a class="reference external" href="https://en.wikipedia.org/wiki/Shared_mem
 </pre></div>
 </div>
 </section>
-<section id="part-1-holoocean-make">
-<h2>Part 1: <code class="docutils literal notranslate"><span class="pre">holoocean.make()</span></code><a class="headerlink" href="#part-1-holoocean-make" title="Link to this heading"></a></h2>
+<section id="part-1-biguasim-make">
+<h2>Part 1: <code class="docutils literal notranslate"><span class="pre">BiguaSim.make()</span></code><a class="headerlink" href="#part-1-biguasim-make" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">holoocean.make()</span></code> function is mostly a helper function to instantiate a
 <code class="docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code> object. <code class="docutils literal notranslate"><span class="pre">.make()</span></code> loads a configuration file and passes
 the appropriate paramaters to the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> of <code class="docutils literal notranslate"><span class="pre">HoloOceanEnvironment</span></code>.</p>

@@ -19,10 +19,10 @@ That should be about it for the python portion, you should end up with something
 
 .. code:: python
 
-    class CustomAgent(HoloOceanAgent):
+    class CustomAgent(BiguasimAgent):
         """A simple custom bot.
 
-        Inherits from :class:`HoloOceanAgent`."""
+        Inherits from :class:`BiguaSimAgent`."""
         # constants in CustomAgent.h in holodeck-engine
         __MAX = 160.0
         __MIN = -__MAX
@@ -93,7 +93,7 @@ That's it! If you find anything unclear/wrong here, feel free to edit it and cla
 
 Buoyant Agents
 ---------------
-The ``AHolodeckBuoyantAgent`` class was made to remove the need to re-implement buoyancy dynamics for all future AUVs put into HoloOcean. By setting a few necessary variables everything should basically work out of the box. All of the physics information is set in C++ and not in the blueprint. Anything set in the blueprint (like mass or COM offset) will be overriden in C++.
+The ``AHolodeckBuoyantAgent`` class was made to remove the need to re-implement buoyancy dynamics for all future AUVs put into BiguaSim. By setting a few necessary variables everything should basically work out of the box. All of the physics information is set in C++ and not in the blueprint. Anything set in the blueprint (like mass or COM offset) will be overriden in C++.
 
 We're not going to go into details on how to create a custom agent here, see the above section for that. The only difference is you'll need to inherit from ``AHolodeckBuoyantAgent`` instead of ``AHolodeckAgent`` and should probably copy the files of ``AHoveringAUV`` instead of ``ATurtleAgent``. 
 

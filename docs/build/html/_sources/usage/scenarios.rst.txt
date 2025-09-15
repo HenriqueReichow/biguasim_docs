@@ -6,7 +6,7 @@ Scenarios
 What is a scenario?
 -------------------
 
-A scenario tells HoloOcean which world to load, which agents to place in the
+A scenario tells BiguaSim which world to load, which agents to place in the
 world, and which sensors they need.
 
 It defines:
@@ -29,7 +29,7 @@ suit your needs without repackaging the engine.
 
 When you call ``holoocean.make()`` to create an environment, you pass in the
 name of a scenario, eg ``holoocean.make("Pier-Hovering")``. This tells
-HoloOcean which world to load and where to place agents.
+BiguaSim which world to load and where to place agents.
 
 .. _`scenario-files`:
 
@@ -129,7 +129,7 @@ Agent objects
    }
 
 .. note::
-   HoloOcean coordinates are **right handed** in meters. See :ref:`coordinate-system`
+   BiguaSim coordinates are **right handed** in meters. See :ref:`coordinate-system`
 
 .. _`location-randomization`:
 
@@ -243,7 +243,7 @@ Sensors have a couple options for placement.
 
 5. **Publish Message**
 
-   Currently, HoloOcean supports publishing mesages to LCM (with possible ROS package coming).
+   Currently, BiguaSim supports publishing mesages to LCM (with possible ROS package coming).
    To publish sensor data to LCM, specify the type to publish.
 
    .. code-block:: json

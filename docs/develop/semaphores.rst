@@ -5,7 +5,7 @@ Communication Protocol
 
 This article was pulled from `here <https://github.com/BYU-PCCL/holodeck/wiki/Holodeck-Communication-Protocol>`_ for archiving purposes.
 
-In this wiki page, I explain how the two halves of holoocean (the client and engine) communicate.
+In this wiki page, I explain how the two halves of BiguaSim (the client and engine) communicate.
 
 
 Prerequisite Reading
@@ -13,9 +13,9 @@ Prerequisite Reading
 Brush up on `semaphores <https://en.wikipedia.org/wiki/Semaphore_(programming)>`_
 and `shared memory <https://en.wikipedia.org/wiki/Shared_memory>`_.
 
-The Two Halves of holoocean
+The Two Halves of BiguaSim
 ---------------------------
-What we call "holoocean" is actually two seperate projects.
+What we call "BiguaSim" is actually two seperate projects.
 
 ``holoocean``
 ##############
@@ -46,10 +46,10 @@ In this walkthrough, we are going to explain what communication between
 
 .. code:: python
 
-  import holoocean
+  import BiguaSim
 
   # (1). start up the engine
-  env = holoocean.make("SimpleUnderwater-Hovering")
+  env = BiguaSim.make("SimpleUnderwater-Hovering")
 
   for i in range(10):
     # intitialize the level and the main agent inside of it
@@ -63,7 +63,7 @@ In this walkthrough, we are going to explain what communication between
       state = env.step(command)
 
 
-Part 1: ``holoocean.make()``
+Part 1: ``BiguaSim.make()``
 -------------------------------
 
 The ``holoocean.make()`` function is mostly a helper function to instantiate a

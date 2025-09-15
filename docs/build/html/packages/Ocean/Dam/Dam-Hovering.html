@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dam-Hovering &mdash; BiguaSim 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom_style.css?v=cd77b319" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom_style.css?v=d270a6cc" />
 
   
-    <link rel="shortcut icon" href="../../../_static/Logo_BiguaSim_(2).svg"/>
+    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=8d563738"></script>
@@ -51,8 +51,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../usage/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usage/getting-started.html">Getting Started &amp; Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usage/usage.html">Using HoloOcean</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../packages.html">HoloOcean Packages</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/usage.html">Using BiguaSim</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../packages.html">BiguaSim Packages</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../Ocean.html">Ocean Package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="dam.html">Dam</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Dam-Hovering</a></li>
@@ -71,17 +71,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../agents/agents.html">BiguaSim Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../develop/develop.html">Developing HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../develop/develop.html">Developing BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog/changelog.html">Changelog</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../holoocean/index.html">HoloOcean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../holoocean/index.html">BiguaSim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/agents.html">Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/spaces.html">Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../holoocean/holooceanclient.html">HoloOcean Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../holoocean/holooceanclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../holoocean/lcm.html">LCM</a></li>
@@ -105,7 +105,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../packages.html">HoloOcean Packages</a></li>
+          <li class="breadcrumb-item"><a href="../../packages.html">BiguaSim Packages</a></li>
           <li class="breadcrumb-item"><a href="../Ocean.html">Ocean Package</a></li>
           <li class="breadcrumb-item"><a href="dam.html">Dam</a></li>
       <li class="breadcrumb-item active">Dam-Hovering</li>
@@ -125,12 +125,12 @@ all sensors are named the same as their class name, ie IMUSensor is named “IMU
 <ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">auv0</span></code>: Main <a class="reference internal" href="../../../agents/hovering-auv-agent.html#hovering-auv-agent"><span class="std std-ref">HoveringAUV</span></a> agent</dt><dd><ul>
-<li><p><a class="reference internal" href="../../../holoocean/sensors.html#holoocean.sensors.IMUSensor" title="holoocean.sensors.IMUSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMUSensor</span></code></a> configured with noise, bias, and returns bias.</p></li>
-<li><p><a class="reference internal" href="../../../holoocean/sensors.html#holoocean.sensors.GPSSensor" title="holoocean.sensors.GPSSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">GPSSensor</span></code></a> gets measurements with N(1, 0.25) of the surface, actual measurement also has noise.</p></li>
-<li><p><a class="reference internal" href="../../../holoocean/sensors.html#holoocean.sensors.DVLSensor" title="holoocean.sensors.DVLSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">DVLSensor</span></code></a> configured with an elevation of 22.5 degrees, noise, and returns 4 range measurements.</p></li>
-<li><p><a class="reference internal" href="../../../holoocean/sensors.html#holoocean.sensors.DepthSensor" title="holoocean.sensors.DepthSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">DepthSensor</span></code></a> configured with noise.</p></li>
-<li><p><a class="reference internal" href="../../../holoocean/sensors.html#holoocean.sensors.PoseSensor" title="holoocean.sensors.PoseSensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">PoseSensor</span></code></a> for ground truth.</p></li>
-<li><p><a class="reference internal" href="../../../holoocean/sensors.html#holoocean.sensors.VelocitySensor" title="holoocean.sensors.VelocitySensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">VelocitySensor</span></code></a> for ground truth.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">IMUSensor</span></code> configured with noise, bias, and returns bias.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">GPSSensor</span></code> gets measurements with N(1, 0.25) of the surface, actual measurement also has noise.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DVLSensor</span></code> configured with an elevation of 22.5 degrees, noise, and returns 4 range measurements.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DepthSensor</span></code> configured with noise.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PoseSensor</span></code> for ground truth.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VelocitySensor</span></code> for ground truth.</p></li>
 </ul>
 </dd>
 </dl>
