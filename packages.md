@@ -1,4 +1,4 @@
-# BiguaSim Packages and Configuration
+# HoloOcean Packages and Configuration
 How packages are installed, managed, and interpreted in holoocean.
 
 ## Package Installation

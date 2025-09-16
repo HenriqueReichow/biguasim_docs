@@ -1,12 +1,11 @@
 Welcome to BiguaSim's documentation!
 ==============================================
-.. image:: images/4-new.svg
+.. image:: _static/images/logo-light.svg
+   :alt: BiguaSim hero
+   :class: main-logo
 
-
-BiguaSim is a high-fidelity simulator developed by the `Nautec <https://nautec.furg.br/>`_
+BiguaSim is a high-fidelity simulator developed by `Nautec <https://nautec.furg.br/>`_
 at `Federal University of Rio Grande <https://www.furg.br>`_ .
-
-Built upon Unreal Engine (by Epic Games) and Holodeck (developed by the BYU PCCL Lab), BiguaSim enables easy simulation of marine robotics and autonomy with a wide variety of sensors, agents, and features.
 
 Features
 """"""""
@@ -39,6 +38,7 @@ General BiguaSim use:
 
 Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
 ::
+   
    @inproceedings{Potokar22iros,
       author = {E. Potokar and K. Lay and K. Norman and D. Benham and T. Neilsen and M. Kaess and J. Mangelson},
       title = {Holo{O}cean: Realistic Sonar Simulation},
@@ -57,6 +57,8 @@ Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
    usage/usage
    packages/packages
    agents/agents
+   sensors/sensors
+   examples/examples
    develop/develop
    changelog/changelog
 
@@ -64,19 +66,20 @@ Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
    :maxdepth: 3
    :caption: API Documentation
 
-   holoocean/index
-   holoocean/agents
-   holoocean/environments
-   holoocean/spaces
-   holoocean/commands
-   holoocean/holooceanclient
-   holoocean/packagemanager
-   holoocean/sensors
-   holoocean/lcm
-   holoocean/shmem
-   holoocean/util
-   holoocean/exceptions
-   holoocean/weather
+   biguasim/index
+   biguasim/agents
+   biguasim/environments
+   biguasim/spaces
+   biguasim/commands
+   biguasim/holooceanclient
+   biguasim/packagemanager
+   biguasim/sensors
+   biguasim/lcm
+   biguasim/dynamics
+   biguasim/shmem
+   biguasim/util
+   biguasim/exceptions
+   biguasim/weather
 
 
 Indices and tables

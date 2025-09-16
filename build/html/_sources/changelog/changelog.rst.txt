@@ -1,3 +1,4 @@
+=========
 Changelog
 =========
 
@@ -12,7 +13,7 @@ Changelog
   - see https://github.com/BYU-PCCL/holodeck/wiki/Holodeck-Release-Notes-Template
 
 BiguaSim 1.0.0
-----------------
+===============
 *-/-/2025*
 
-Migrating to GitHub, and updating license phrasing.
+First official release coming soon!

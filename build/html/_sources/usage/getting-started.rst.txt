@@ -1,6 +1,8 @@
-Getting Started & Examples
-==========================
-First, see :ref:`installation` to get the ``BiguaSim`` package and 
+===============
+Getting Started
+===============
+
+First, see :ref:`installation` to get the ``biguasim`` package and 
 ``Ocean`` installed.
 
 A minimal BiguaSim usage example is below:
@@ -10,51 +12,36 @@ A minimal BiguaSim usage example is below:
    import biguasim
    import numpy as np
 
-   env = holoocean.make("PierHarbor-Hovering")
+   env = biguasim.make("PierHarbor-Hovering")
 
    # The hovering AUV takes a command for each thruster
    command = np.array([10,10,10,10,0,0,0,0])
 
-   for _ in range(180):
+   for _ in range(2000):
       state = env.step(command)
+   print("Finished!")
 
 
 Notice that:
 
-1. You pass the name of a :ref:`scenario<scenarios>` into ``holoocean.make``
+1. You pass the name of a :ref:`scenario<scenarios>` into ``biguasim.make``. The scenario 
+defines a world, the agents in it, the sensors on the agents, and so on. ``biguasim.make``
+returns an environment object that you can interact with.
    
-   See :ref:`all-packages` for all of the different worlds and scenarios that
-   are available.
-2. The interface of HoloOcean is designed to be familiar to `OpenAI Gym`_
+   See :ref:`all-packages` for all of the different worlds and pre-built scenarios that
+   are available, or make your own custom scenario.
 
-.. _`OpenAI Gym`: https://gym.openai.com/
+2. You pass a command to the environment object with ``env.step``. The command is passed to the 
+agent in the world, and the environment is updated. The environment returns a dictionary of the 
+state of the world after the update, including sensor data. 
 
-You can access data from a specific sensor with the state dictionary:
+   You can access data from a specific sensor with the state dictionary:
+   ::
 
-::
+      dvl = state["DVLSensor"]
 
-   dvl = state["DVLSensor"]
+**That's it!** BiguaSim is meant to be fairly simple to use.
 
-**That's it!** HoloOcean is meant to be fairly simple to use. 
-
-Check out the different
-:ref:`worlds<all-packages>` that are available, read the 
-:ref:`API documentation<holoocean-api-index>`, or get started on making your own
+Check out the different :ref:`worlds<all-packages>` that are available, read the
+:ref:`API documentation<biguasim-api-index>`, or get started on making your own
 custom :ref:`scenarios<scenarios>`.
-
-Below are some snippets that show how to use different aspects of HoloOcean.
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-   :glob:
-
-   examples/*
-
-
-There is also an `examples.py`_ in the root of the `holoocean repo`_ with more 
-example code.
-
-.. _`examples.py`: https://bitbucket.org/frostlab/holoocean/src/master/example.py
-
-.. _`holoocean repo`: https://bitbucket.org/frostlab/holoocean

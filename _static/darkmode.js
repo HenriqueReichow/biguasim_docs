@@ -13,20 +13,23 @@ document.addEventListener("DOMContentLoaded", function () {
     button.style.color = "white";
     document.body.appendChild(button);
 
-    // Recupera preferência salva
+    const mainImage = document.querySelector(".main-logo");
+
+    // Verifica se já tinha preferência salva
     if (localStorage.getItem("dark-mode") === "enabled") {
         document.body.classList.add("dark-mode");
-        document.documentElement.classList.add("dark-mode");
+        if (mainImage) mainImage.src = "_static/images/logo-dark.svg";
     }
 
     button.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
-        document.documentElement.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
             localStorage.setItem("dark-mode", "enabled");
+            if (mainImage) mainImage.src = "_static/images/logo-dark.svg";
         } else {
             localStorage.setItem("dark-mode", "disabled");
+            if (mainImage) mainImage.src = "_static/images/logo-light.svg";
         }
     });
 });

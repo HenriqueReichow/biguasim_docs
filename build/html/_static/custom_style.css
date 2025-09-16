@@ -211,7 +211,7 @@ body.dark-mode .literal-block {
 
 body.dark-mode code {
     background-color: #004975 !important;
-    color: #F2C572 !important;
+    color: #f3f6f6 !important;
 }
 
 body.dark-mode * {
@@ -237,3 +237,53 @@ body.dark-mode .rst-content a {
 body.dark-mode .rst-content a:hover {
     color: #569cd6 !important;
 }
+
+/* docs/_static/custom_style.css */
+
+/* --- Estilos para as caixas de notas e avisos no MODO CLARO --- */
+.admonition.note {
+    background-color: #F0F8FF; /* Azul claro */
+    border-left: 5px solid #007BFF;
+}
+
+.admonition.caution {
+    background-color: #FFF3CD; /* Amarelo claro */
+    border-left: 5px solid #FFC107;
+}
+
+/* Garante que o texto dentro das caixas mantenha a cor escura */
+.admonition.note p,
+.admonition.caution p {
+    color: #333 !important;
+}
+
+
+/* --- Estilos para as caixas de notas e avisos no MODO ESCURO --- */
+body.dark-mode .admonition {
+    background-color: transparent !important; /* Limpa o fundo para usar o específico */
+    border: none !important;
+}
+
+body.dark-mode .admonition.note {
+    background-color: #0A3D73 !important; /* Azul escuro */
+    border-left: 5px solid #21B1D9 !important;
+}
+
+body.dark-mode .admonition.caution {
+    background-color: #5C4F29 !important; /* Amarelo escuro */
+    border-left: 5px solid #F2C572 !important;
+}
+
+/* Garante que o texto dentro das caixas no dark mode fique claro */
+body.dark-mode .admonition p,
+body.dark-mode .admonition.note p,
+body.dark-mode .admonition.caution p {
+    color: #E8E8E8 !important;
+}
+
+/* Mantém o estilo de código dentro das caixas */
+body.dark-mode .admonition code {
+    background-color: #004975 !important;
+    color: #F2C572 !important;
+}
+
