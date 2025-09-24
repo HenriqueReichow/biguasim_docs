@@ -27,7 +27,7 @@ If you use BiguaSim in your research, please cite the following publications dep
 General BiguaSim use:
 ::
       
-   @inproceedings{Potokar22icra,
+   @inproceedings{,
       author = {E. Potokar and S. Ashford and M. Kaess and J. Mangelson},
       title = {Holo{O}cean: An Underwater Robotics Simulator},
       booktitle = {Proc. IEEE Intl. Conf. on Robotics and Automation, ICRA},
