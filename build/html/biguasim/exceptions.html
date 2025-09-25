@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=016e45db" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=8d6ac7b8" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
@@ -79,7 +79,13 @@
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Fossen Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shmem.html">Shared Memory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="util.html">Util</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Exceptions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#biguasim.exceptions.BiguaSimConfigurationException"><code class="docutils literal notranslate"><span class="pre">BiguaSimConfigurationException</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#biguasim.exceptions.BiguaSimException"><code class="docutils literal notranslate"><span class="pre">BiguaSimException</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#biguasim.exceptions.NotFoundException"><code class="docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#biguasim.exceptions.TimeoutException"><code class="docutils literal notranslate"><span class="pre">TimeoutException</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="weather.html">Weather Controller</a></li>
 </ul>
 
@@ -107,8 +113,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="exceptions">
-<h1>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading"></a></h1>
+  <section id="module-biguasim.exceptions">
+<span id="exceptions"></span><h1>Exceptions<a class="headerlink" href="#module-biguasim.exceptions" title="Link to this heading"></a></h1>
+<p>BiguaSim Exceptions</p>
+<p><strong>Exceptions:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.exceptions.BiguaSimConfigurationException" title="biguasim.exceptions.BiguaSimConfigurationException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BiguaSimConfigurationException</span></code></a></p></td>
+<td><p>The user provided an invalid configuration for BiguaSim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.exceptions.BiguaSimException" title="biguasim.exceptions.BiguaSimException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BiguaSimException</span></code></a></p></td>
+<td><p>Base class for a generic exception in BiguaSim.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.exceptions.NotFoundException" title="biguasim.exceptions.NotFoundException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></p></td>
+<td><p>Raised when a package cannot be found</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.exceptions.TimeoutException" title="biguasim.exceptions.TimeoutException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeoutException</span></code></a></p></td>
+<td><p>Exception raised when communicating with the engine timed out.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py exception">
+<dt class="sig sig-object py" id="biguasim.exceptions.BiguaSimConfigurationException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.exceptions.</span></span><span class="sig-name descname"><span class="pre">BiguaSimConfigurationException</span></span><a class="headerlink" href="#biguasim.exceptions.BiguaSimConfigurationException" title="Link to this definition"></a></dt>
+<dd><p>The user provided an invalid configuration for BiguaSim</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="biguasim.exceptions.BiguaSimException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.exceptions.</span></span><span class="sig-name descname"><span class="pre">BiguaSimException</span></span><a class="headerlink" href="#biguasim.exceptions.BiguaSimException" title="Link to this definition"></a></dt>
+<dd><p>Base class for a generic exception in BiguaSim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – The error string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="biguasim.exceptions.NotFoundException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.exceptions.</span></span><span class="sig-name descname"><span class="pre">NotFoundException</span></span><a class="headerlink" href="#biguasim.exceptions.NotFoundException" title="Link to this definition"></a></dt>
+<dd><p>Raised when a package cannot be found</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="biguasim.exceptions.TimeoutException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.exceptions.</span></span><span class="sig-name descname"><span class="pre">TimeoutException</span></span><a class="headerlink" href="#biguasim.exceptions.TimeoutException" title="Link to this definition"></a></dt>
+<dd><p>Exception raised when communicating with the engine timed out.</p>
+</dd></dl>
+
 </section>
 
 

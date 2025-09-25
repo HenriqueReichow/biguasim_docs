@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=016e45db" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=8d6ac7b8" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
@@ -72,7 +72,15 @@
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">BiguaSim Client</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BiguaSim Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient.acquire"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.acquire()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient.malloc"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.malloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient.release"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.release()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcm.html">LCM</a></li>
@@ -107,8 +115,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="biguasim-client">
-<h1>BiguaSim Client<a class="headerlink" href="#biguasim-client" title="Link to this heading"></a></h1>
+  <section id="module-biguasim.biguasimclient">
+<span id="biguasim-client"></span><h1>BiguaSim Client<a class="headerlink" href="#module-biguasim.biguasimclient" title="Link to this heading"></a></h1>
+<p>The client used for subscribing shared memory between python and c++.</p>
+<p><strong>Classes:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a>([uuid])</p></td>
+<td><p>BiguaSimClient for controlling a shared memory session.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="biguasim.biguasimclient.BiguaSimClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.biguasimclient.</span></span><span class="sig-name descname"><span class="pre">BiguaSimClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.biguasimclient.BiguaSimClient" title="Link to this definition"></a></dt>
+<dd><p>BiguaSimClient for controlling a shared memory session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>uuid</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – A UUID to indicate which server this client is associated with.
+The same UUID should be passed to the world through a command line flag. Defaults to “”.</p>
+</dd>
+</dl>
+<p><strong>Methods:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient.acquire" title="biguasim.biguasimclient.BiguaSimClient.acquire"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquire</span></code></a>([timeout])</p></td>
+<td><p>Used to acquire control.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient.malloc" title="biguasim.biguasimclient.BiguaSimClient.malloc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">malloc</span></code></a>(key, shape, dtype)</p></td>
+<td><p>Allocates a block of shared memory, and returns a numpy array whose data corresponds with that block.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.biguasimclient.BiguaSimClient.release" title="biguasim.biguasimclient.BiguaSimClient.release"><code class="xref py py-obj docutils literal notranslate"><span class="pre">release</span></code></a>()</p></td>
+<td><p>Used to release control.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="biguasim.biguasimclient.BiguaSimClient.acquire">
+<span class="sig-name descname"><span class="pre">acquire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.biguasimclient.BiguaSimClient.acquire" title="Link to this definition"></a></dt>
+<dd><p>Used to acquire control. Will wait until the HolodeckServer has finished its work.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="biguasim.biguasimclient.BiguaSimClient.malloc">
+<span class="sig-name descname"><span class="pre">malloc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.biguasimclient.BiguaSimClient.malloc" title="Link to this definition"></a></dt>
+<dd><p>Allocates a block of shared memory, and returns a numpy array whose data corresponds
+with that block.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – The key to identify the block.</p></li>
+<li><p><strong>shape</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>) – The shape of the numpy array to allocate.</p></li>
+<li><p><strong>dtype</strong> (<em>type</em>) – The numpy data type (e.g. np.float32).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The numpy array that is positioned on the shared memory.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="biguasim.biguasimclient.BiguaSimClient.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.biguasimclient.BiguaSimClient.release" title="Link to this definition"></a></dt>
+<dd><p>Used to release control. Will allow the HolodeckServer to take a step.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
