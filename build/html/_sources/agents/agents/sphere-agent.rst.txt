@@ -15,7 +15,7 @@ A basic sphere robot that moves along a plane. The SphereAgent does not have
 physics - it simply computes its next location and teleports there, as 
 compared to other agents which have mass and momentum.
 
-See :class:`~holoocean.agents.SphereAgent` for more details.
+See :class:`~biguasim.agents.SphereAgent` for more details.
 
 
 Control Schemes

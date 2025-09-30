@@ -12,7 +12,7 @@ Description
 ===========
 A simple surface vessel with 2 thrusters in the rear for propulsion.
 
-See the :class:`~holoocean.agents.SurfaceVessel`.
+See the :class:`~biguasim.agents.SurfaceVessel`.
 
 
 Control Schemes

@@ -7,7 +7,7 @@ sides being scanned.
 
 See :ref:`visualizing_sidescan_sonar` for an example of how to use this sensor.
 
-See :py:class:`~holoocean.sensors.SidescanSonar` for the python API.
+See :py:class:`~biguasim.sensors.SidescanSonar` for the python API.
 
 Example sensor definition::
     

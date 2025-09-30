@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=8d6ac7b8" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
@@ -72,7 +72,7 @@
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sensors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#biguasim.sensors.AcousticBeaconSensor"><code class="docutils literal notranslate"><span class="pre">AcousticBeaconSensor</span></code></a><ul>
@@ -531,7 +531,7 @@ following options:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> (<a class="reference internal" href="holooceanclient.html#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a>) – Client
+<li><p><strong>client</strong> (<a class="reference internal" href="biguasimclient.html#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a>) – Client
 attached to a sensor</p></li>
 <li><p><strong>agent_name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – Name of the parent agent</p></li>
 <li><p><strong>agent_type</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – Type of the parent agent</p></li>
@@ -650,11 +650,11 @@ options:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">FilmShoulder</span></code> (float): Overrides the base Film Shoulder (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FilmBlackClip</span></code> (float): Overrides the baseFilm Black Clip (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FilmWhiteClip</span></code> (float): Overrides the baseFile White Clip (default: disabled, min: 0.0, max: 1.0)</p></li>
-<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>ExposureMinBrightness (float): Auto-Exposure minimum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
-<li><p><a href="#id3"><span class="problematic" id="id4">``</span></a>ExposureMaxBrightness (float):  Auto-Exposure maximum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExposureMinBrightness</span></code> (float): Auto-Exposure minimum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExposureMaxBrightness</span></code> (float):  Auto-Exposure maximum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ExposureSpeedDown</span></code> (float): Overrides base auto exposure speed down (default: disabled, min: 0.02, max: 20.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ExposureSpeedUp</span></code> (float): Overrides base auto exposure speed up (default: disabled, min: 0.02, max: 20.0)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurIntensity</span></code> (float): /** Strength of motion blur, 0:off <a href="#id5"><span class="problematic" id="id6">*</span></a>/ (default: disabled, min: 0.0, max: 1.0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurIntensity</span></code> (float): Strength of motion blur, 0 = off (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurMaxDistortion</span></code> (float): max distortion caused by motion blur, in percent of the screen width, 0:off  (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurMinObjectScreenSize</span></code> (float): The minimum projected screen radius for a primitive to be drawn in the velocity pass, percentage of screen width. smaller numbers cause more draw calls, default: 4% (default: 2, min: 0.0, max: 100.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LensFlareIntensity</span></code> (float): Brightness scale of the image cased lens flares (linear) (default: disabled, min: 0.0, max: 16.0)</p></li>
@@ -1607,11 +1607,11 @@ options:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">FilmShoulder</span></code> (float): Overrides the base Film Shoulder (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FilmBlackClip</span></code> (float): Overrides the baseFilm Black Clip (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FilmWhiteClip</span></code> (float): Overrides the baseFile White Clip (default: disabled, min: 0.0, max: 1.0)</p></li>
-<li><p><a href="#id7"><span class="problematic" id="id8">``</span></a>ExposureMinBrightness (float): Auto-Exposure minimum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
-<li><p><a href="#id9"><span class="problematic" id="id10">``</span></a>ExposureMaxBrightness (float):  Auto-Exposure maximum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExposureMinBrightness</span></code> (float): Auto-Exposure minimum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExposureMaxBrightness</span></code> (float):  Auto-Exposure maximum adaptation. Eye Adaptation is disabled if Min = Max. (default: disabled, min: -10.0, max: 20.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ExposureSpeedDown</span></code> (float): Overrides base auto exposure speed down (default: disabled, min: 0.02, max: 20.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ExposureSpeedUp</span></code> (float): Overrides base auto exposure speed up (default: disabled, min: 0.02, max: 20.0)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurIntensity</span></code> (float): /** Strength of motion blur, 0:off <a href="#id11"><span class="problematic" id="id12">*</span></a>/ (default: disabled, min: 0.0, max: 1.0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurIntensity</span></code> (float): Strength of motion blur, 0=off (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurMaxDistortion</span></code> (float): max distortion caused by motion blur, in percent of the screen width, 0:off  (default: disabled, min: 0.0, max: 1.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MotionBlurMinObjectScreenSize</span></code> (float): The minimum projected screen radius for a primitive to be drawn in the velocity pass, percentage of screen width. smaller numbers cause more draw calls, default: 4% (default: 2, min: 0.0, max: 100.0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LensFlareIntensity</span></code> (float): Brightness scale of the image cased lens flares (linear) (default: disabled, min: 0.0, max: 16.0)</p></li>
@@ -1712,7 +1712,7 @@ options:</p>
 the parameters. For example, if an agent had two range sensors at different
 angles with 24 lasers each, the LaserDebug traces would look something like
 this:</p>
-<img alt="../docs/images/UAVRangeFinder.PNG" src="../docs/images/UAVRangeFinder.PNG" />
+<img alt="../_images/UAVRangeFinder1.PNG" src="../_images/UAVRangeFinder1.PNG" />
 <p>That is, for 1 laser, you’d have 1 laser facing forward, for 3, you’d have one forward,
 with the other 2 distributed evenly along the circle, at 120 degree intervals, and for
 24, you’d have a laser spaced every 15 degrees.</p>

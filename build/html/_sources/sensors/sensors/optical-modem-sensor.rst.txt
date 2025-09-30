@@ -4,7 +4,7 @@ Optical Modem
 
 An optical modem for communications for aerial or surface agents.
 
-The command :meth:`holoocean.environments.HoloOceanEnvironment.send_optical_message` is used to send 
+The command :meth:`biguasim.environments.BiguaSimEnvironment.send_optical_message` is used to send 
 messages between optical modems.
 
 .. note::
@@ -12,12 +12,12 @@ messages between optical modems.
 
 Further, a few helper functions exist if needed:
 
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.modems` returns all modems.
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.modems_id` returns all modem ID's.
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.modems` returns all modems.
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.modems_id` returns all modem ID's.
 
 See :ref:`multi-agent_example` for an example of how to use this sensor.
 
-See :py:class:`~holoocean.sensors.OpticalModemSensor` for the Python API.
+See :py:class:`~biguasim.sensors.OpticalModemSensor` for the Python API.
 
 Example sensor definition::
 

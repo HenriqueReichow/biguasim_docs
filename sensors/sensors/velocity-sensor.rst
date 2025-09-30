@@ -9,7 +9,7 @@ a socket other than the vehicle COM, it will return the velocity of the socket u
 velocity plus the relative velocity between vehicle COM and socket used).
 
 
-See :py:class:`~holoocean.sensors.VelocitySensor` for the python API.
+See :py:class:`~biguasim.sensors.VelocitySensor` for the python API.
 
 Example sensor definition::
     

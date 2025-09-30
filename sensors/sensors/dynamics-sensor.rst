@@ -12,7 +12,7 @@ position, in that order.
     This sensor always returns values at the **COM of the vehicle**, with values given in the **global 
     frame**, regardless of the socket it is placed in. 
 
-See :py:class:`~holoocean.sensors.DynamicsSensor` for the Python API and more details.
+See :py:class:`~biguasim.sensors.DynamicsSensor` for the Python API and more details.
 
 Example sensor definition::
     

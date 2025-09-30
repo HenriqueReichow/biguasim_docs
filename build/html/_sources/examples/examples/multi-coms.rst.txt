@@ -10,15 +10,15 @@ Many times it's necessary to communicate between agents. This can be done using 
 Sending Acoustic Messages
 =========================
 
-The command :meth:`holoocean.environments.HoloOceanEnvironment.send_acoustic_message` is used to send messages between acoustic beacons.
-There's a number of message types that can be sent, all with varying functionality, see :class:`holoocean.sensors.AcousticBeaconSensor`
+The command :meth:`biguasim.environments.BiguaSimEnvironment.send_acoustic_message` is used to send messages between acoustic beacons.
+There's a number of message types that can be sent, all with varying functionality, see :class:`biguasim.sensors.AcousticBeaconSensor`
 for details.
 
 Further, a few helper functions exist if needed, 
 
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.beacons` returns all beacons.
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.beacons_id` returns all beacons' ids.
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.beacons_status` returns all beacons' status (whether it's transmitting or not).
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.beacons` returns all beacons.
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.beacons_id` returns all beacons' ids.
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.beacons_status` returns all beacons' status (whether it's transmitting or not).
 
 ::
 
@@ -85,14 +85,14 @@ Further, a few helper functions exist if needed,
 Sending Optical Messages
 ========================
 
-The command :meth:`holoocean.environments.HoloOceanEnvironment.send_optical_message` is used to send messages between optical modems.
-See :class:`holoocean.sensors.OpticalModemSensor` for configuration details. Note in order for a message to be transmitted,
+The command :meth:`biguasim.environments.BiguaSimEnvironment.send_optical_message` is used to send messages between optical modems.
+See :class:`biguasim.sensors.OpticalModemSensor` for configuration details. Note in order for a message to be transmitted,
 the 2 sensors must be aligned.
 
 Further, a few helper functions exist if needed, 
 
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.modems` returns all modems.
-- :py:attr:`holoocean.environments.HoloOceanEnvironment.modems_id` returns all modems' ids.
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.modems` returns all modems.
+- :py:attr:`biguasim.environments.BiguaSimEnvironment.modems_id` returns all modems' ids.
 
 ::
 

@@ -71,7 +71,7 @@ Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
    biguasim/environments
    biguasim/spaces
    biguasim/commands
-   biguasim/holooceanclient
+   biguasim/biguasimclient
    biguasim/packagemanager
    biguasim/sensors
    biguasim/lcm

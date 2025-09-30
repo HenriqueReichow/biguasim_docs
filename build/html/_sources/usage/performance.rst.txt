@@ -85,7 +85,7 @@ Create a :ref:`custom scenario <custom-scenarios>`, and in the
 :ref:`configuration block <configuration-block>` for the ``RGBCamera`` or ``Camera``, set the
 ``CaptureWidth`` and ``CaptureHeight``.
 
-See :class:`~holoocean.sensors.RGBCamera` and :class:`~holoocean.sensors.Camera` for more details.
+See :class:`~biguasim.sensors.RGBCamera` and :class:`~biguasim.sensors.Camera` for more details.
 
 Changing Ticks-Per-Capture
 --------------------------
@@ -99,7 +99,7 @@ Disable Viewport Rendering
 
 Rendering the viewport window can be unnecessary when running simulations sequentially, 
 such as when using BiguaSim for reinforcement learning. You can disable the viewport with 
-the :meth:`~holoocean.environments.HoloOceanEnvironment.should_render_viewport` method (see 
+the :meth:`~biguasim.environments.BiguaSimEnvironment.should_render_viewport` method (see 
 :ref:`headless` for details).
 
 At lower camera resolutions, disabling the viewport can improve framerates by up to 40%.
@@ -109,7 +109,7 @@ Change Render Quality
 
 You can adjust BiguaSim to render at a lower (or higher) quality to improve
 performance. See the 
-:meth:`~holoocean.environments.HoloOceanEnvironment.set_render_quality` method.
+:meth:`~biguasim.environments.BiguaSimEnvironment.set_render_quality` method.
 
 Below is a comparison of render qualities and the frame time in ms.
 

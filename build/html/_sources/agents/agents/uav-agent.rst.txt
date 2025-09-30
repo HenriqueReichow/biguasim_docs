@@ -18,7 +18,7 @@ Description
 ===========
 A quadcopter UAV agent. 
 
-See the :class:`~holoocean.agents.UavAgent` class. 
+See the :class:`~biguasim.agents.UavAgent` class. 
 
 
 Control Schemes

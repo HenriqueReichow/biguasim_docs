@@ -16,7 +16,7 @@ asset.
 The asset has three fins, but the control scheme is set up for four fins. We have not corrected this 
 becuase we primarily use this vehicle with :ref:`fossen-dynamics`.
 
-See the :class:`~holoocean.agents.CougUV`.
+See the :class:`~biguasim.agents.CougUV`.
 
 
 Control Schemes

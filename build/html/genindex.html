@@ -7,7 +7,7 @@
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="_static/custom_style.css?v=8d6ac7b8" />
+      <link rel="stylesheet" type="text/css" href="_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="_static/favicon.svg"/>
@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="biguasim/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="biguasim/holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biguasim/biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/lcm.html">LCM</a></li>
@@ -135,7 +135,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="biguasim/sensors.html#biguasim.sensors.AcousticBeaconSensor">AcousticBeaconSensor (class in biguasim.sensors)</a>
 </li>
-      <li><a href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient.acquire">acquire() (biguasim.biguasimclient.BiguaSimClient method)</a>
+      <li><a href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient.acquire">acquire() (biguasim.biguasimclient.BiguaSimClient method)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.BiguaSimAgent.act">act() (biguasim.agents.BiguaSimAgent method)</a>
 
@@ -151,16 +151,26 @@
       </ul></li>
       <li><a href="biguasim/spaces.html#biguasim.spaces.ActionSpace">ActionSpace (class in biguasim.spaces)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinDep.actuator_dynamics">actuator_dynamics() (biguasim.vehicle_dynamics.torpedo.fourFinDep method)</a>
+
+      <ul>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinInd.actuator_dynamics">(biguasim.vehicle_dynamics.torpedo.fourFinInd method)</a>
+</li>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.actuator_dynamics">(biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.threeFinInd.actuator_dynamics">(biguasim.vehicle_dynamics.torpedo.threeFinInd method)</a>
+</li>
+      </ul></li>
       <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.add_agent">add_agent() (biguasim.environments.BiguaSimEnvironment method)</a>
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.CommandsGroup.add_command">add_command() (biguasim.command.CommandsGroup method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="biguasim/commands.html#biguasim.command.Command.add_number_parameters">add_number_parameters() (biguasim.command.Command method)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.BiguaSimAgent.add_sensors">add_sensors() (biguasim.agents.BiguaSimAgent method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="biguasim/commands.html#biguasim.command.Command.add_string_parameters">add_string_parameters() (biguasim.command.Command method)</a>
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.AddSensorCommand">AddSensorCommand (class in biguasim.command)</a>
@@ -213,7 +223,7 @@
     biguasim.biguasimclient
 
       <ul>
-        <li><a href="biguasim/holooceanclient.html#module-biguasim.biguasimclient">module</a>
+        <li><a href="biguasim/biguasimclient.html#module-biguasim.biguasimclient">module</a>
 </li>
       </ul></li>
       <li>
@@ -221,6 +231,13 @@
 
       <ul>
         <li><a href="biguasim/commands.html#module-biguasim.command">module</a>
+</li>
+      </ul></li>
+      <li>
+    biguasim.dynamics
+
+      <ul>
+        <li><a href="biguasim/dynamics.html#module-biguasim.dynamics">module</a>
 </li>
       </ul></li>
       <li>
@@ -282,6 +299,13 @@
 </li>
       </ul></li>
       <li>
+    biguasim.vehicle_dynamics.torpedo
+
+      <ul>
+        <li><a href="biguasim/dynamics.html#module-biguasim.vehicle_dynamics.torpedo">module</a>
+</li>
+      </ul></li>
+      <li>
     biguasim.weather
 
       <ul>
@@ -290,7 +314,7 @@
       </ul></li>
       <li><a href="biguasim/agents.html#biguasim.agents.BiguaSimAgent">BiguaSimAgent (class in biguasim.agents)</a>
 </li>
-      <li><a href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient">BiguaSimClient (class in biguasim.biguasimclient)</a>
+      <li><a href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient">BiguaSimClient (class in biguasim.biguasimclient)</a>
 </li>
       <li><a href="biguasim/exceptions.html#biguasim.exceptions.BiguaSimConfigurationException">BiguaSimConfigurationException</a>
 </li>
@@ -312,6 +336,8 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.calculate_additional_parameters">calculate_additional_parameters() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.CameraSensor">CameraSensor (class in biguasim.sensors)</a>
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.CommandCenter.clear">clear() (biguasim.command.CommandCenter method)</a>
@@ -327,6 +353,8 @@
       <li><a href="biguasim/commands.html#biguasim.command.CommandCenter">CommandCenter (class in biguasim.command)</a>
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.CommandsGroup">CommandsGroup (class in biguasim.command)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.configure_from_scenario">configure_from_scenario() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.ControlSchemes.CONTINUOUS_SPHERE_DEFAULT">CONTINUOUS_SPHERE_DEFAULT (biguasim.agents.ControlSchemes attribute)</a>
 </li>
@@ -367,6 +395,10 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="biguasim/agents.html#biguasim.agents.ControlSchemes">ControlSchemes (class in biguasim.agents)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.convert_NED_to_NWU">convert_NED_to_NWU() (biguasim.dynamics.FossenDynamics method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.convert_NWU_to_NED">convert_NWU_to_NED() (biguasim.dynamics.FossenDynamics method)</a>
 </li>
       <li><a href="biguasim/util.html#biguasim.util.convert_unicode">convert_unicode() (in module biguasim.util)</a>
 </li>
@@ -440,16 +472,26 @@
       </ul></li>
       <li><a href="biguasim/commands.html#biguasim.command.DebugDrawCommand">DebugDrawCommand (class in biguasim.command)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinDep.depthHeadingAutopilot">depthHeadingAutopilot() (biguasim.vehicle_dynamics.torpedo.fourFinDep method)</a>
+
+      <ul>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinInd.depthHeadingAutopilot">(biguasim.vehicle_dynamics.torpedo.fourFinInd method)</a>
+</li>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.depthHeadingAutopilot">(biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.threeFinInd.depthHeadingAutopilot">(biguasim.vehicle_dynamics.torpedo.threeFinInd method)</a>
+</li>
+      </ul></li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.DepthSensor">DepthSensor (class in biguasim.sensors)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.ControlSchemes.DISCRETE_SPHERE_DEFAULT">DISCRETE_SPHERE_DEFAULT (biguasim.agents.ControlSchemes attribute)</a>
 </li>
       <li><a href="biguasim/spaces.html#biguasim.spaces.DiscreteActionSpace">DiscreteActionSpace (class in biguasim.spaces)</a>
 </li>
-      <li><a href="biguasim/agents.html#biguasim.agents.DjiMatrice">DjiMatrice (class in biguasim.agents)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="biguasim/agents.html#biguasim.agents.DjiMatrice">DjiMatrice (class in biguasim.agents)</a>
+</li>
       <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.draw_arrow">draw_arrow() (biguasim.environments.BiguaSimEnvironment method)</a>
 </li>
       <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.draw_box">draw_box() (biguasim.environments.BiguaSimEnvironment method)</a>
@@ -518,6 +560,8 @@
       </ul></li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.DVLSensor">DVLSensor (class in biguasim.sensors)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.dynamics">dynamics() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.DynamicsSensor">DynamicsSensor (class in biguasim.sensors)</a>
 </li>
   </ul></td>
@@ -536,8 +580,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="biguasim/agents.html#biguasim.agents.FixedWing">FixedWing (class in biguasim.agents)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics">FossenDynamics (class in biguasim.dynamics)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinDep">fourFinDep (class in biguasim.vehicle_dynamics.torpedo)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinInd">fourFinInd (class in biguasim.vehicle_dynamics.torpedo)</a>
+</li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.FOVDetection">FOVDetection (class in biguasim.sensors)</a>
 </li>
   </ul></td>
@@ -688,7 +738,7 @@
 </li>
       <li><a href="biguasim/index.html#biguasim.biguasim.make">make() (in module biguasim.biguasim)</a>
 </li>
-      <li><a href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient.malloc">malloc() (biguasim.biguasimclient.BiguaSimClient method)</a>
+      <li><a href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient.malloc">malloc() (biguasim.biguasimclient.BiguaSimClient method)</a>
 </li>
       <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.modems">modems (biguasim.environments.BiguaSimEnvironment property)</a>
 </li>
@@ -702,9 +752,11 @@
 </li>
         <li><a href="biguasim/index.html#module-biguasim.biguasim">biguasim.biguasim</a>
 </li>
-        <li><a href="biguasim/holooceanclient.html#module-biguasim.biguasimclient">biguasim.biguasimclient</a>
+        <li><a href="biguasim/biguasimclient.html#module-biguasim.biguasimclient">biguasim.biguasimclient</a>
 </li>
         <li><a href="biguasim/commands.html#module-biguasim.command">biguasim.command</a>
+</li>
+        <li><a href="biguasim/dynamics.html#module-biguasim.dynamics">biguasim.dynamics</a>
 </li>
         <li><a href="biguasim/environments.html#module-biguasim.environments">biguasim.environments</a>
 </li>
@@ -721,6 +773,8 @@
         <li><a href="biguasim/spaces.html#module-biguasim.spaces">biguasim.spaces</a>
 </li>
         <li><a href="biguasim/util.html#module-biguasim.util">biguasim.util</a>
+</li>
+        <li><a href="biguasim/dynamics.html#module-biguasim.vehicle_dynamics.torpedo">biguasim.vehicle_dynamics.torpedo</a>
 </li>
         <li><a href="biguasim/weather.html#module-biguasim.weather">biguasim.weather</a>
 </li>
@@ -789,13 +843,15 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.R2euler">R2euler() (biguasim.dynamics.FossenDynamics method)</a>
+</li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.RangeFinderSensor">RangeFinderSensor (class in biguasim.sensors)</a>
 </li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.RaycastLidar">RaycastLidar (class in biguasim.sensors)</a>
 </li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.RaycastSemanticLidar">RaycastSemanticLidar (class in biguasim.sensors)</a>
 </li>
-      <li><a href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient.release">release() (biguasim.biguasimclient.BiguaSimClient method)</a>
+      <li><a href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient.release">release() (biguasim.biguasimclient.BiguaSimClient method)</a>
 </li>
       <li><a href="biguasim/packagemanager.html#biguasim.packagemanager.remove">remove() (in module biguasim.packagemanager)</a>
 </li>
@@ -881,7 +937,13 @@
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.BiguaSimAgent.sensors">sensors (biguasim.agents.BiguaSimAgent attribute)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_actuator_parameters">set_actuator_parameters() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_autopilot_parameters">set_autopilot_parameters() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
       <li><a href="biguasim/commands.html#biguasim.command.Command.set_command_type">set_command_type() (biguasim.command.Command method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_control_mode">set_control_mode() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.BiguaSimAgent.set_control_scheme">set_control_scheme() (biguasim.agents.BiguaSimAgent method)</a>
 
@@ -891,12 +953,18 @@
       </ul></li>
       <li><a href="biguasim/weather.html#biguasim.weather.WeatherController.set_day_time">set_day_time() (biguasim.weather.WeatherController method)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_depth_goal">set_depth_goal() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
       <li><a href="biguasim/weather.html#biguasim.weather.WeatherController.set_fog_density">set_fog_density() (biguasim.weather.WeatherController method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_goal">set_goal() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_heading_goal">set_heading_goal() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+      <li><a href="biguasim/commands.html#biguasim.command.SpawnAgentCommand.set_location">set_location() (biguasim.command.SpawnAgentCommand method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="biguasim/commands.html#biguasim.command.SpawnAgentCommand.set_location">set_location() (biguasim.command.SpawnAgentCommand method)</a>
-</li>
       <li><a href="biguasim/commands.html#biguasim.command.SpawnAgentCommand.set_name">set_name() (biguasim.command.SpawnAgentCommand method)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.BiguaSimAgent.set_physics_state">set_physics_state() (biguasim.agents.BiguaSimAgent method)</a>
@@ -904,6 +972,10 @@
       <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.set_render_quality">set_render_quality() (biguasim.environments.BiguaSimEnvironment method)</a>
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.SpawnAgentCommand.set_rotation">set_rotation() (biguasim.command.SpawnAgentCommand method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_rpm_goal">set_rpm_goal() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_surge_goal">set_surge_goal() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
 </li>
       <li><a href="biguasim/sensors.html#biguasim.sensors.AnnotationComponent.set_ticks_per_capture">set_ticks_per_capture() (biguasim.sensors.AnnotationComponent method)</a>
 
@@ -919,7 +991,11 @@
       </ul></li>
       <li><a href="biguasim/commands.html#biguasim.command.SpawnAgentCommand.set_type">set_type() (biguasim.command.SpawnAgentCommand method)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.set_u_control_rad">set_u_control_rad() (biguasim.dynamics.FossenDynamics method)</a>
+</li>
       <li><a href="biguasim/lcm.html#biguasim.lcm.SensorData.set_value">set_value() (biguasim.lcm.SensorData method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.set_vehicle_parameters">set_vehicle_parameters() (biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
 </li>
       <li><a href="biguasim/weather.html#biguasim.weather.WeatherController.set_weather">set_weather() (biguasim.weather.WeatherController method)</a>
 </li>
@@ -945,6 +1021,16 @@
 </li>
       <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.step">step() (biguasim.environments.BiguaSimEnvironment method)</a>
 </li>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinDep.stepInput">stepInput() (biguasim.vehicle_dynamics.torpedo.fourFinDep method)</a>
+
+      <ul>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinInd.stepInput">(biguasim.vehicle_dynamics.torpedo.fourFinInd method)</a>
+</li>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV.stepInput">(biguasim.vehicle_dynamics.torpedo.TAUV method)</a>
+</li>
+        <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.threeFinInd.stepInput">(biguasim.vehicle_dynamics.torpedo.threeFinInd method)</a>
+</li>
+      </ul></li>
       <li><a href="biguasim/weather.html#biguasim.weather.WeatherController.stop_day_cycle">stop_day_cycle() (biguasim.weather.WeatherController method)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.SurfaceVessel">SurfaceVessel (class in biguasim.agents)</a>
@@ -961,6 +1047,8 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV">TAUV (class in biguasim.vehicle_dynamics.torpedo)</a>
+</li>
       <li><a href="biguasim/agents.html#biguasim.agents.ControlSchemes.TAUV_FINS">TAUV_FINS (biguasim.agents.ControlSchemes attribute)</a>
 </li>
       <li><a href="biguasim/agents.html#biguasim.agents.ControlSchemes.TAUV_FORCES">TAUV_FORCES (biguasim.agents.ControlSchemes attribute)</a>
@@ -969,10 +1057,12 @@
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.TeleportCameraCommand">TeleportCameraCommand (class in biguasim.command)</a>
 </li>
-      <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.tick">tick() (biguasim.environments.BiguaSimEnvironment method)</a>
+      <li><a href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.threeFinInd">threeFinInd (class in biguasim.vehicle_dynamics.torpedo)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.tick">tick() (biguasim.environments.BiguaSimEnvironment method)</a>
+</li>
       <li><a href="biguasim/exceptions.html#biguasim.exceptions.TimeoutException">TimeoutException</a>
 </li>
       <li><a href="biguasim/commands.html#biguasim.command.Command.to_json">to_json() (biguasim.command.Command method)</a>
@@ -1000,6 +1090,8 @@
       <li><a href="biguasim/agents.html#biguasim.agents.UavAgent">UavAgent (class in biguasim.agents)</a>
 </li>
       <li><a href="biguasim/shmem.html#biguasim.shmem.Shmem.unlink">unlink() (biguasim.shmem.Shmem method)</a>
+</li>
+      <li><a href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.update">update() (biguasim.dynamics.FossenDynamics method)</a>
 </li>
   </ul></td>
 </tr></table>

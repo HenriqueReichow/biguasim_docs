@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=016e45db" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
@@ -87,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../biguasim/holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../biguasim/biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/lcm.html">LCM</a></li>
@@ -199,24 +199,24 @@ the “Custom Dynamics” control scheme. The Fossen models account for these se
 <p>If a user has developed a dynamics model class using Thor Fossen’s PythonVehicleSimulator and would
 like to use it in BiguaSim, they must make the following changes:</p>
 <ul>
-<li><p>Move the fossen model file into the <cite>client/src/holoocean/fossen_dynamics</cite> folder</p></li>
+<li><p>Move the fossen model file into the <cite>client/src/biguasim/fossen_dynamics</cite> folder</p></li>
 <li><p>In the fossen model file:</p>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
-<dt>Change the following import statements:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">python_vehicle_simulator.lib</span></code> to <code class="docutils literal notranslate"><span class="pre">holoocean.fossen_dynamics</span></code>
-<code class="docutils literal notranslate"><span class="pre">python_vehicle_simulator.lib.gnc</span></code> to <code class="docutils literal notranslate"><span class="pre">holoocean.fossen_dynamics.helper_functions</span></code></p>
+<dt>Change the following import statements:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">python_vehicle_simulator.lib</span></code> to <code class="docutils literal notranslate"><span class="pre">biguasim.fossen_dynamics</span></code>
+<code class="docutils literal notranslate"><span class="pre">python_vehicle_simulator.lib.gnc</span></code> to <code class="docutils literal notranslate"><span class="pre">biguasim.fossen_dynamics.helper_functions</span></code></p>
 </dd>
 </dl>
 </li>
 <li><p>The <cite>dynamics</cite> method must be changed to return nu_dot (body frame accelerations) instead of nu (body frame velocities).</p></li>
 <li><p>Add a class variable <code class="docutils literal notranslate"><span class="pre">config_fnc</span></code> that is either set to <code class="docutils literal notranslate"><span class="pre">None</span></code> or a function that takes a scenario configuration</p></li>
 </ul>
-<p>and modifies the class parameters based on the scenario configuration. See the <cite>client/src/holoocean/fossen_dynamics/torpedo.py</cite>
+<p>and modifies the class parameters based on the scenario configuration. See the <cite>client/src/biguasim/fossen_dynamics/torpedo.py</cite>
 <code class="docutils literal notranslate"><span class="pre">configure_torpedo_from_scenario</span></code> function for an example of how to implement this function.</p>
 </div></blockquote>
 </li>
-<li><p>In the <cite>client/src/holoocean/fossen_dynamics/fossen_interface.py</cite> file:</p>
+<li><p>In the <cite>client/src/biguasim/fossen_dynamics/fossen_interface.py</cite> file:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Add an import statement to import the fossen model class</p></li>
@@ -383,13 +383,13 @@ scenario that will be controlled by the Fossen dynamics. The list of
 fossen agent names and scenario configuration are passed to the Fossen Interface.
 Finally, we initialize a NumPy array of length 6 for linear accelerations (x, y, z)
 and angular accelerations (about axis x, y, z), all in the global NWU frame.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">holoocean</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">holoocean.fossen_dynamics</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">biguasim</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">biguasim.fossen_dynamics</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">scenario</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span> <span class="c1"># See above for scenario configuration</span>
 
-<span class="n">env</span> <span class="o">=</span> <span class="n">holoocean</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">scenario_cfg</span><span class="o">=</span><span class="n">scenario</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">biguasim</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">scenario_cfg</span><span class="o">=</span><span class="n">scenario</span><span class="p">)</span>
 
 <span class="c1"># Initialize Fossen dynamics model for the agent</span>
 <span class="n">fossen_agents</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;auv0&#39;</span><span class="p">]</span> <span class="c1"># List of names of the agents that will use Fossen dynamics</span>
@@ -552,13 +552,13 @@ This example is very similar to the above example but with two agents.</p>
 <h3>Simulation Setup<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <p>The setup is about the single agent example.</p>
 <p>The only difference is that you need to add the name of the surface vessel agent to the fossen_agents list</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">holoocean</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">holoocean.fossen_dynamics</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">biguasim</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">biguasim.fossen_dynamics</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">scenario</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span> <span class="c1"># See above for scenario configuration</span>
 
-<span class="n">env</span> <span class="o">=</span> <span class="n">holoocean</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">scenario_cfg</span><span class="o">=</span><span class="n">scenario</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">biguasim</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">scenario_cfg</span><span class="o">=</span><span class="n">scenario</span><span class="p">)</span>
 <span class="n">main_agent</span> <span class="o">=</span> <span class="s1">&#39;auv0&#39;</span>
 <span class="n">sv_agent</span> <span class="o">=</span> <span class="s1">&#39;sv1&#39;</span>
 <span class="n">fossen_agents</span> <span class="o">=</span> <span class="p">[</span><span class="n">main_agent</span><span class="p">,</span> <span class="n">sv_agent</span><span class="p">]</span>
@@ -589,6 +589,19 @@ are used instead of the <code class="docutils literal notranslate"><span class="
 <p>To set the control surface commands for the agent using the Fossen Interface the vehicle name is required.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">FossenInterface.update</span></code> function takes in the states for both agents returned from the <code class="docutils literal notranslate"><span class="pre">tick</span></code> function and calculates
 an output of accelerations. The update needs to be called for every agent in the list and then applied to the agent with the <code class="docutils literal notranslate"><span class="pre">act</span></code> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span> <span class="c1"># Get the inital states of the agent for the dynamics</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1500</span><span class="p">):</span>
+    <span class="n">fossen_interface</span><span class="o">.</span><span class="n">set_u_control</span><span class="p">(</span><span class="n">main_agent</span><span class="p">,</span> <span class="n">u_control_torpedo</span><span class="p">)</span> <span class="c1">#If desired you can change control command here</span>
+    <span class="n">fossen_interface</span><span class="o">.</span><span class="n">set_u_control</span><span class="p">(</span><span class="n">sv_agent</span><span class="p">,</span> <span class="n">u_control_otter</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">agent</span> <span class="ow">in</span> <span class="n">fossen_agents</span><span class="p">:</span>
+        <span class="n">accel</span> <span class="o">=</span> <span class="n">fossen_interface</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span> <span class="c1">#Calculate accelerations to be applied to BiguaSim agent</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">act</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">accel</span><span class="p">)</span>
+
+    <span class="n">states</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>

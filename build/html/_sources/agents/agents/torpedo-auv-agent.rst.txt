@@ -12,7 +12,7 @@ Description
 ===========
 A generic torpedo-style AUV with four fins.
 
-See the :class:`~holoocean.agents.TorpedoAUV`.
+See the :class:`~biguasim.agents.TorpedoAUV`.
 
 
 Control Schemes

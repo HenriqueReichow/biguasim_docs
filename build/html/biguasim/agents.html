@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=8d6ac7b8" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
@@ -185,7 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcm.html">LCM</a></li>
@@ -324,7 +324,7 @@ BiguaSimSensors to read from this agent.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> (<a class="reference internal" href="holooceanclient.html#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">biguasim.biguasimclient.BiguaSimClient</span></code></a>) – BiguaSimClient agent is
+<li><p><strong>client</strong> (<a class="reference internal" href="biguasimclient.html#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">biguasim.biguasimclient.BiguaSimClient</span></code></a>) – BiguaSimClient agent is
 associated with</p></li>
 <li><p><strong>agent_def</strong> (<a class="reference internal" href="#biguasim.agents.AgentDefinition" title="biguasim.agents.AgentDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">AgentDefinition</span></code></a>) – Definition of the agent to instantiate</p></li>
 </ul>
@@ -344,7 +344,7 @@ Examples include the Android, UAV, and SphereRobot.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> (<a class="reference internal" href="holooceanclient.html#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a>) – The BiguaSimClient that this
+<li><p><strong>client</strong> (<a class="reference internal" href="biguasimclient.html#biguasim.biguasimclient.BiguaSimClient" title="biguasim.biguasimclient.BiguaSimClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a>) – The BiguaSimClient that this
 agent belongs with.</p></li>
 <li><p><strong>name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The name of the agent. Must be unique from other agents in
 the same environment.</p></li>
@@ -1055,7 +1055,7 @@ dynamics.</p>
 </ol>
 <p>Inherits from <a class="reference internal" href="#biguasim.agents.BiguaSimAgent" title="biguasim.agents.BiguaSimAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimAgent</span></code></a>.</p>
 <p><strong>These variables are the constants used in the C++ for “Thruster” and “PD” control schemes. Editing them in python will not change the vehicle behavior.</strong>
-<a href="#id1"><span class="problematic" id="id2">**</span></a>If using the “custom dynamics” control scheme, these values are ignored, and any desired dynamics parameters must be defined separately in your dynamics implementation. **</p>
+<strong>If using the “custom dynamics” control scheme, these values are ignored, and any desired dynamics parameters must be defined separately in your dynamics implementation.</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1330,7 +1330,7 @@ specified joint. Will return None if the joint does not exist for the agent.</p>
 </ol>
 <p>Inherits from <a class="reference internal" href="#biguasim.agents.BiguaSimAgent" title="biguasim.agents.BiguaSimAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimAgent</span></code></a>.</p>
 <p><strong>These variables are the constants used in the C++ for “Thruster” and “PD” control schemes. Editing them in python will not change the vehicle behavior.</strong>
-<a href="#id3"><span class="problematic" id="id4">**</span></a>If using the “custom dynamics” control scheme, these values are ignored, and any desired dynamics parameters must be defined separately in your dynamics implementation. **</p>
+<strong>If using the “custom dynamics” control scheme, these values are ignored, and any desired dynamics parameters must be defined separately in your dynamics implementation.</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1473,7 +1473,7 @@ dynamics.</p>
 </ol>
 <p>Inherits from <a class="reference internal" href="#biguasim.agents.BiguaSimAgent" title="biguasim.agents.BiguaSimAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimAgent</span></code></a>.</p>
 <p><strong>These variables are the constants used in the C++ for “Thruster” and “PD” control schemes. Editing them in python will not change the vehicle behavior.</strong>
-<a href="#id5"><span class="problematic" id="id6">**</span></a>If using the “custom dynamics” control scheme, these values are ignored, and any desired dynamics parameters must be defined separately in your dynamics implementation. **</p>
+<strong>If using the “custom dynamics” control scheme, these values are ignored, and any desired dynamics parameters must be defined separately in your dynamics implementation.</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

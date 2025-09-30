@@ -17,7 +17,7 @@ The TurtleAgent moves when forces are applied to it - so it has momentum and
 mass, compared to the sphere-agent which teleports around. The 
 TurtleAgent is subject to gravity and can climb ramps and slopes.
 
-See :class:`~holoocean.agents.TurtleAgent` for more details.
+See :class:`~biguasim.agents.TurtleAgent` for more details.
 
 
 Control Schemes

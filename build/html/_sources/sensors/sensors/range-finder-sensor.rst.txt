@@ -12,7 +12,7 @@ That is, for one laser, you'd have one laser facing forward; for three, you'd ha
 other two distributed evenly along the circle, at 120 degree intervals; and for 24, you'd have a laser 
 spaced every 15 degrees.
 
-See :py:class:`~holoocean.sensors.RangeFinderSensor` for the Python API and more details.
+See :py:class:`~biguasim.sensors.RangeFinderSensor` for the Python API and more details.
 
 
 Example sensor definition::

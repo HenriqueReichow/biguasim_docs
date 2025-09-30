@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=016e45db" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
@@ -90,7 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../biguasim/holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../biguasim/biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../biguasim/lcm.html">LCM</a></li>
@@ -130,10 +130,10 @@
 <h1>Viewport Sensor<a class="headerlink" href="#viewport-sensor" title="Link to this heading"></a></h1>
 <p>Captures what the viewport is seeing (what the simulation window displays). This is faster than the
 camera, but there can be only one viewport capture. It may be useful to move the viewport with
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">move_viewport()</span></code>. Note that the dimensions set in
+<a class="reference internal" href="../../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.move_viewport" title="biguasim.environments.BiguaSimEnvironment.move_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">move_viewport()</span></code></a>. Note that the dimensions set in
 the configuration must match the viewports dimensions. Default settings match the default viewport
 resolution.</p>
-<p>See <code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportCapture</span></code> for the python API.</p>
+<p>See <a class="reference internal" href="../../biguasim/sensors.html#biguasim.sensors.ViewportCapture" title="biguasim.sensors.ViewportCapture"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportCapture</span></code></a> for the python API.</p>
 <p>Example sensor definition:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;sensor_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ViewportCapture&quot;</span><span class="p">,</span>

@@ -12,8 +12,8 @@ BiguaSim simulations are run in a pop-up window known as the "viewport".
 Hotkeys
 =======
 There are a few hotkeys you can use to control the viewport when the window is open and the 
-environment is being ticked (with calls to :meth:`~holoocean.environment.HoloOceanEnvironment.tick` 
-or :meth:`~holoocean.environment.HoloOceanEnvironment.step`). 
+environment is being ticked (with calls to :meth:`~biguasim.environment.BiguaSimEnvironment.tick` 
+or :meth:`~biguasim.environment.BiguaSimEnvironment.step`). 
 
 The "AgentFollower", or the camera that the viewport displays, can be 
 manipulated as follows:

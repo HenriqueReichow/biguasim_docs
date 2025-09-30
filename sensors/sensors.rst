@@ -92,6 +92,17 @@ other, but are provided for convenience for different use cases.
    sensors/raycast-semantic-lidar-sensor
 
   
+Not Finished Sensors
+-------------
+Sensors not tested yet
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   sensors/rgbd-camera-sensor 
+   sensors/semantic-segmentation-camera-sensor
+   sensors/raycast-lidar-sensor
+   sensors/raycast-semantic-lidar-sensor
 
 

@@ -15,4 +15,4 @@ It includes support for autopilot control, simulation reset, and clock synchroni
 - Docker containers available for development and runtime  
 
 Installation and usage instructions can be found on the GitHub repository:  
-https://github.com/byu-holoocean/holoocean-ros
+https://github.com/byu-biguasim/biguasim-ros

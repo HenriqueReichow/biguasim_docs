@@ -27,11 +27,11 @@ Cloning BiguaSim
 For all installation methods the first step is to clone the repository.
 
 To get the most recent stable release of the BiguaSim library, download or clone our repo at: 
-https://github.com/byu-holoocean/HoloOcean. We suggest cloning it with lowercase naming, as our
+https://github.com/byu-biguasim/BiguaSim. We suggest cloning it with lowercase naming, as our
 example code uses, like so:
 ::
 
-   git clone git@github.com:byu-holoocean/HoloOcean.git holoocean
+   git clone git@github.com:byu-biguasim/BiguaSim.git biguasim
 
 .. note::
    

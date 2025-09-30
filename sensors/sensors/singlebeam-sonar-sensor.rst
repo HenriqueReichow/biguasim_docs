@@ -7,7 +7,7 @@ strength at each range bin.
 
 See :ref:`visualizing_singlebeam_sonar` for an example of how to use this sensor.
 
-See :py:class:`~holoocean.sensors.SinglebeamSonar` for the python API.
+See :py:class:`~biguasim.sensors.SinglebeamSonar` for the python API.
 
 Example sensor definition::
     

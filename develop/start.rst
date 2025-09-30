@@ -33,7 +33,7 @@ Cloning
 =======
 For running BiguaSim live, you'll need to setup both the C++ and Python portions of BiguaSim. 
 
- * Clone `holoocean <https://github.com/byu-holoocean/HoloOcean>`_.
+ * Clone `biguasim <https://github.com/byu-biguasim/BiguaSim>`_.
  * Navigate into the local repository.
  * Checkout to the branch you want to develop on, likely the develop branch, which you can access 
    through ``git checkout develop``, 
@@ -167,7 +167,7 @@ Tweak the code above to put the sensors/agents you need in as you see fit.
 * Back in Unreal Editor, click the arrow next to the "Play" button in the top toolbar, and select 
   "Standalone Game". A seperate window should pop open with the unreal game.
 * Once this window pops open, wait a few seconds for the game to fully load, then run your Python 
-  script. It will attach to the new open Unreal game window and proceed as a normal HoloOcean 
+  script. It will attach to the new open Unreal game window and proceed as a normal BiguaSim 
   simulation.
 
 .. note::

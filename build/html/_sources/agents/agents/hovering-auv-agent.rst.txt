@@ -12,7 +12,7 @@ Description
 ===========
 Our custom in-house hovering AUV.
 
-See the :class:`~holoocean.agents.HoveringAUV`.
+See the :class:`~biguasim.agents.HoveringAUV`.
 
 
 Control Schemes

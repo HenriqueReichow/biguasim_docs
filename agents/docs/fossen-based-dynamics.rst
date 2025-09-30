@@ -87,22 +87,22 @@ Importing Models from PythonVehicleSimulator
 If a user has developed a dynamics model class using Thor Fossen's PythonVehicleSimulator and would 
 like to use it in BiguaSim, they must make the following changes: 
 
-- Move the fossen model file into the `client/src/holoocean/fossen_dynamics` folder 
+- Move the fossen model file into the `client/src/biguasim/fossen_dynamics` folder 
 
 - In the fossen model file:
 
     - Change the following import statements:
-        ``python_vehicle_simulator.lib`` to ``holoocean.fossen_dynamics``
-        ``python_vehicle_simulator.lib.gnc`` to ``holoocean.fossen_dynamics.helper_functions``
+        ``python_vehicle_simulator.lib`` to ``biguasim.fossen_dynamics``
+        ``python_vehicle_simulator.lib.gnc`` to ``biguasim.fossen_dynamics.helper_functions``
 
 
     - The `dynamics` method must be changed to return nu_dot (body frame accelerations) instead of nu (body frame velocities). 
 
     - Add a class variable ``config_fnc`` that is either set to ``None`` or a function that takes a scenario configuration
-    and modifies the class parameters based on the scenario configuration. See the `client/src/holoocean/fossen_dynamics/torpedo.py` 
+    and modifies the class parameters based on the scenario configuration. See the `client/src/biguasim/fossen_dynamics/torpedo.py` 
     ``configure_torpedo_from_scenario`` function for an example of how to implement this function.
 
--  In the `client/src/holoocean/fossen_dynamics/fossen_interface.py` file:
+-  In the `client/src/biguasim/fossen_dynamics/fossen_interface.py` file:
 
     - Add an import statement to import the fossen model class
 
@@ -262,13 +262,13 @@ and angular accelerations (about axis x, y, z), all in the global NWU frame.
 
 .. code-block:: python
 
-    import holoocean
-    from holoocean.fossen_dynamics import *
+    import biguasim
+    from biguasim.fossen_dynamics import *
     import numpy as np
     
     scenario = {...} # See above for scenario configuration
 
-    env = holoocean.make(scenario_cfg=scenario)
+    env = biguasim.make(scenario_cfg=scenario)
     
     # Initialize Fossen dynamics model for the agent
     fossen_agents = ['auv0'] # List of names of the agents that will use Fossen dynamics
@@ -445,13 +445,13 @@ The only difference is that you need to add the name of the surface vessel agent
 
 .. code-block:: python
 
-    import holoocean
-    from holoocean.fossen_dynamics import *
+    import biguasim
+    from biguasim.fossen_dynamics import *
     import numpy as np
     
     scenario = {...} # See above for scenario configuration
 
-    env = holoocean.make(scenario_cfg=scenario)
+    env = biguasim.make(scenario_cfg=scenario)
     main_agent = 'auv0'
     sv_agent = 'sv1'
     fossen_agents = [main_agent, sv_agent]
@@ -489,6 +489,7 @@ The ``FossenInterface.update`` function takes in the states for both agents retu
 an output of accelerations. The update needs to be called for every agent in the list and then applied to the agent with the ``act`` function.
 
 .. code-block:: python
+    
     states = env.tick() # Get the inital states of the agent for the dynamics
 
     for i in range(1500):

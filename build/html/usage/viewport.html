@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=016e45db" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
@@ -91,7 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../biguasim/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biguasim/spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biguasim/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../biguasim/holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../biguasim/biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biguasim/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biguasim/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biguasim/lcm.html">LCM</a></li>
@@ -216,8 +216,8 @@ can happen automatically, or you can force it to not appear.</p>
 <h3>Headless Mode vs Disabling Viewport Rendering<a class="headerlink" href="#headless-mode-vs-disabling-viewport-rendering" title="Link to this heading"></a></h3>
 <p>These are two different features.</p>
 <p><strong>Disabling Viewport Rendering</strong> is calling the
-(<code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>)
-method on a <code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimEnvironment</span></code>. This can be
+(<a class="reference internal" href="../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.should_render_viewport" title="biguasim.environments.BiguaSimEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a>)
+method on a <a class="reference internal" href="../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment" title="biguasim.environments.BiguaSimEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiguaSimEnvironment</span></code></a>. This can be
 done at runtime. It will appear as if the image being rendered in the viewport
 has frozen, but cameras other sensors will still update correctly.</p>
 <p><strong>Headless Mode</strong> is when the viewport window does not appear. If Headless
@@ -231,11 +231,11 @@ automatically.</p>
 <p class="admonition-title">Note</p>
 <p>This will also
 disable viewport rendering
-(<code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>)</p>
+(<a class="reference internal" href="../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.should_render_viewport" title="biguasim.environments.BiguaSimEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a>)</p>
 <p>If you still want to render the viewport (ie for the
-<code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportCapture</span></code>) when running headless,
+<a class="reference internal" href="../biguasim/sensors.html#biguasim.sensors.ViewportCapture" title="biguasim.sensors.ViewportCapture"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportCapture</span></code></a>) when running headless,
 simply set
-(<code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code>)
+(<a class="reference internal" href="../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.should_render_viewport" title="biguasim.environments.BiguaSimEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a>)
 to <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 </div>
 </section>

@@ -1,5 +1,5 @@
-# HoloOcean Packages and Configuration
-How packages are installed, managed, and interpreted in holoocean.
+# BiguaSim Packages and Configuration
+How packages are installed, managed, and interpreted in biguasim.
 
 ## Package Installation
 
@@ -7,10 +7,10 @@ Packages are located on an S3 bucket, due to the size of the files and the
 bandwidth required to distribute them. 
 
 ### Retrieving Package List
-A version of holoocean has a certain set of packages that are associated with it. 
-Each package can have multiple versions, and a version of holoocean can be 
+A version of biguasim has a certain set of packages that are associated with it. 
+Each package can have multiple versions, and a version of biguasim can be 
 compatible with multiple versions of a package. A package can also be added
-after shipping a version of holoocean, so the client fetches a list of available
+after shipping a version of biguasim, so the client fetches a list of available
 packages from the backend.
 
 The client will post a GET to the following endpoint:

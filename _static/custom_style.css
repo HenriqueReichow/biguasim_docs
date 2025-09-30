@@ -500,3 +500,52 @@ body.dark-mode .rst-content .field-list .field-body,
 body.dark-mode .rst-content .field-list p {
     color: #E8E8E8 !important;
 }
+
+/* ================= PATCH LEGIBILIDADE CÓDIGO ================= */
+
+/* Código inline */
+.rst-content code {
+    font-family: "Roboto Mono", monospace !important;
+    background-color: rgba(0, 0, 0, 0.07) !important;
+    color: #1e1e1e !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+}
+
+/* Código em blocos (light mode) */
+.rst-content pre.literal-block,
+.rst-content pre.highlight,
+.rst-content .highlight pre {
+    background-color: #f5f7fa !important;
+    color: #1e1e1e !important;
+    font-family: "Roboto Mono", monospace !important;
+    font-size: 0.95em !important;
+    line-height: 1.5 !important;
+    padding: 12px 14px !important;
+    border-radius: 6px !important;
+    overflow-x: auto !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
+}
+
+/* Código em blocos (dark mode) */
+body.dark-mode .rst-content pre.literal-block,
+body.dark-mode .rst-content pre.highlight,
+body.dark-mode .rst-content .highlight pre {
+    background-color: #001c39 !important;   /* fundo escuro GitHub-like */
+    color: #e6edf3 !important;              /* texto claro */
+    border-radius: 6px !important;
+    padding: 12px 14px !important;
+    font-family: "Roboto Mono", monospace !important;
+    font-size: 0.95em !important;
+    line-height: 1.5 !important;
+    overflow-x: auto !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35) !important;
+}
+
+/* Syntax highlight mínima no dark mode */
+body.dark-mode .highlight .k { color: #ff7b72 !important; } /* keywords */
+body.dark-mode .highlight .s { color: #a5d6ff !important; } /* strings */
+body.dark-mode .highlight .n { color: #d2a8ff !important; } /* names */
+body.dark-mode .highlight .c { color: #8b949e !important; font-style: italic !important; } /* comments */
+
+/* ================= FIM DO PATCH ================= */

@@ -1,17 +1,11 @@
 Fossen Dynamics
 ===============
 
-.. automodule:: biguasim.fossen_dynamics.fossen_interface
+.. automodule:: biguasim.dynamics
    :members:
 
 Torpedo Dynamics
 ----------------
 
-.. automodule:: biguasim.fossen_dynamics.torpedo
-   :members:
-
-Otter Dynamics
-----------------
-
-.. automodule:: biguasim.fossen_dynamics.otter
+.. automodule:: biguasim.vehicle_dynamics.torpedo
    :members:

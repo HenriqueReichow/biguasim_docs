@@ -1,4 +1,4 @@
-.. _`holoocean-api-index`:
+.. _`biguasim-api-index`:
 
 BiguaSim
 =========

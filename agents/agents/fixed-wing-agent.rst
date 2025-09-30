@@ -23,7 +23,7 @@ Our implementation has some key differences from the image shown. First, the act
 row of horizontal prepellors pointing directly forward, on the agent they are angled outward from 
 the vehicle in the XY plane by 45 degrees.
 
-See :class:`~holoocean.agents.FixedWing`.
+See :class:`~biguasim.agents.FixedWing`.
 
 
 Control Schemes

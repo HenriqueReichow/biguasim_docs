@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="_static/custom_style.css?v=8d6ac7b8" />
+      <link rel="stylesheet" type="text/css" href="_static/custom_style.css?v=90e08f4c" />
 
   
     <link rel="shortcut icon" href="_static/favicon.svg"/>
@@ -71,7 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="biguasim/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/spaces.html">Action Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="biguasim/holooceanclient.html">BiguaSim Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biguasim/biguasimclient.html">BiguaSim Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/packagemanager.html">Package Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/sensors.html">Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/lcm.html">LCM</a></li>
@@ -438,11 +438,11 @@ at <a class="reference external" href="https://www.furg.br">Federal University o
 <li class="toctree-l2"><a class="reference internal" href="biguasim/commands.html#biguasim.command.TeleportCameraCommand"><code class="docutils literal notranslate"><span class="pre">TeleportCameraCommand</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="biguasim/holooceanclient.html">BiguaSim Client</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient.acquire"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.acquire()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient.malloc"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.malloc()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="biguasim/holooceanclient.html#biguasim.biguasimclient.BiguaSimClient.release"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.release()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="biguasim/biguasimclient.html">BiguaSim Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient.acquire"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.acquire()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient.malloc"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.malloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/biguasimclient.html#biguasim.biguasimclient.BiguaSimClient.release"><code class="docutils literal notranslate"><span class="pre">BiguaSimClient.release()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -639,8 +639,21 @@ at <a class="reference external" href="https://www.furg.br">Federal University o
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/dynamics.html">Fossen Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="biguasim/dynamics.html#torpedo-dynamics">Torpedo Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="biguasim/dynamics.html#otter-dynamics">Otter Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics"><code class="docutils literal notranslate"><span class="pre">FossenDynamics</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.R2euler"><code class="docutils literal notranslate"><span class="pre">FossenDynamics.R2euler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.convert_NED_to_NWU"><code class="docutils literal notranslate"><span class="pre">FossenDynamics.convert_NED_to_NWU()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.convert_NWU_to_NED"><code class="docutils literal notranslate"><span class="pre">FossenDynamics.convert_NWU_to_NED()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.set_u_control_rad"><code class="docutils literal notranslate"><span class="pre">FossenDynamics.set_u_control_rad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.dynamics.FossenDynamics.update"><code class="docutils literal notranslate"><span class="pre">FossenDynamics.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="biguasim/dynamics.html#module-biguasim.vehicle_dynamics.torpedo">Torpedo Dynamics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.TAUV"><code class="docutils literal notranslate"><span class="pre">TAUV</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinDep"><code class="docutils literal notranslate"><span class="pre">fourFinDep</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.fourFinInd"><code class="docutils literal notranslate"><span class="pre">fourFinInd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="biguasim/dynamics.html#biguasim.vehicle_dynamics.torpedo.threeFinInd"><code class="docutils literal notranslate"><span class="pre">threeFinInd</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="biguasim/shmem.html">Shared Memory</a><ul>

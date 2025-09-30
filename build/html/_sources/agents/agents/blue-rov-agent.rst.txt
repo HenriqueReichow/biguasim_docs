@@ -12,7 +12,7 @@ Description
 ===========
 An implementation of the BlueROV2 Heavy vehicle from Blue Robotics. 
 
-See the :class:`~holoocean.agents.BlueROV2`.
+See the :class:`~biguasim.agents.BlueROV2`.
 
 
 Control Schemes
