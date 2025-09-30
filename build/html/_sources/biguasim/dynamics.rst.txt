@@ -1,4 +1,4 @@
-Fossen Dynamics
+BiguaSim Dynamics
 ===============
 
 .. automodule:: biguasim.dynamics

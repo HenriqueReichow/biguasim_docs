@@ -260,9 +260,6 @@ body.dark-mode .admonition code {
 
 /* ===================================================================
    Seção: RESTAURA / GARANTE estilo para API docs (autodoc / napoleon)
-   — estas regras são mais específicas e aplicam exceções sobre seus
-   seletores globais com !important, para que assinaturas, tipos e
-   campos formatados apareçam como no HoloOcean.
    =================================================================== */
 
 /* Blocos de assinatura (class / function signatures) */
@@ -416,7 +413,6 @@ body.dark-mode .rst-content code {
      html_css_files = ['custom_style.css']
  - Para melhor formatação do napoleon, escreva docstrings em
    Google-style ou NumPy-style (ex: "Args:", "Parameters:").
- - Se precisar, eu ajusto as cores para combinar 100% com o HoloOcean.
 =========================================================== */
 /* ---------------- Ajustes para blocos no modo noturno ---------------- */
 
