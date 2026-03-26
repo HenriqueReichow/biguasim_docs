@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,24 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Improving Performance &mdash; BiguaSim 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=90e08f4c" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom_style.css?v=25159554" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=8d563738"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../_static/copybutton.js?v=f281be69"></script>
-        <script src="../_static/darkmode.js?v=3994c1fa"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/darkmode.js?v=3994c1fa"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -42,9 +40,6 @@
           <a href="../index.html" class="icon icon-home">
             BiguaSim
           </a>
-              <div class="version">
-                1.0.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -254,7 +249,7 @@ remove the camera from the configuration.</p>
 Create a <a class="reference internal" href="scenarios.html#custom-scenarios"><span class="std std-ref">custom scenario</span></a>, and in the
 <a class="reference internal" href="../sensors/docs/sensor-config.html#configuration-block"><span class="std std-ref">configuration block</span></a> for the <code class="docutils literal notranslate"><span class="pre">RGBCamera</span></code> or <code class="docutils literal notranslate"><span class="pre">Camera</span></code>, set the
 <code class="docutils literal notranslate"><span class="pre">CaptureWidth</span></code> and <code class="docutils literal notranslate"><span class="pre">CaptureHeight</span></code>.</p>
-<p>See <code class="xref py py-class docutils literal notranslate"><span class="pre">RGBCamera</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Camera</span></code> for more details.</p>
+<p>See <a class="reference internal" href="../biguasim/sensors.html#biguasim.sensors.RGBCamera" title="biguasim.sensors.RGBCamera"><code class="xref py py-class docutils literal notranslate"><span class="pre">RGBCamera</span></code></a> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Camera</span></code> for more details.</p>
 </section>
 <section id="id2">
 <h3>Changing Ticks-Per-Capture<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
@@ -266,7 +261,7 @@ See <a class="reference internal" href="../sensors/docs/sensor-config.html#senso
 <h2>Disable Viewport Rendering<a class="headerlink" href="#disable-viewport-rendering" title="Link to this heading"></a></h2>
 <p>Rendering the viewport window can be unnecessary when running simulations sequentially,
 such as when using BiguaSim for reinforcement learning. You can disable the viewport with
-the <code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code> method (see
+the <a class="reference internal" href="../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.should_render_viewport" title="biguasim.environments.BiguaSimEnvironment.should_render_viewport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">should_render_viewport()</span></code></a> method (see
 <a class="reference internal" href="viewport.html#headless"><span class="std std-ref">Using BiguaSim Headless</span></a> for details).</p>
 <p>At lower camera resolutions, disabling the viewport can improve framerates by up to 40%.</p>
 </section>
@@ -274,7 +269,7 @@ the <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <h2>Change Render Quality<a class="headerlink" href="#change-render-quality" title="Link to this heading"></a></h2>
 <p>You can adjust BiguaSim to render at a lower (or higher) quality to improve
 performance. See the
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">set_render_quality()</span></code> method.</p>
+<a class="reference internal" href="../biguasim/environments.html#biguasim.environments.BiguaSimEnvironment.set_render_quality" title="biguasim.environments.BiguaSimEnvironment.set_render_quality"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_render_quality()</span></code></a> method.</p>
 <p>Below is a comparison of render qualities and the frame time in ms.</p>
 <table class="docutils align-default">
 <thead>
@@ -321,7 +316,7 @@ performance. See the
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright FURG.</p>
+    <p>&#169; Copyright Nautec FURG.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

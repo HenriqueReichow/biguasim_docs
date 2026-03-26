@@ -15,7 +15,7 @@ ROS2 topics.
 Installation
 ------------
 Using the ROS2 Bridge requires downloading a separate package. 
-For more information see the README on the repository: https://github.com/byu-holoocean/holoocean-ros
+For more information see the README on the repository: https://github.com/byu-biguasim/biguasim-ros
 
 
 .. _`lcm`:

@@ -123,7 +123,7 @@ Configuration Block
 The contents of the ``configuration`` block are sensor-specific. The configuration block is
 passed verbatim to the sensor itself, which parses it.
 
-For example, the docstring for :class:`~holoocean.sensors.RGBCamera` states that
+For example, the docstring for :class:`~biguasim.sensors.RGBCamera` states that
 it accepts ``CaptureWidth`` and ``CaptureHeight`` parameters, so an example
 sensor configuration would be:
 
