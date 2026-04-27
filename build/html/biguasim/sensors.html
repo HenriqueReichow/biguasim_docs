@@ -100,13 +100,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DVLSensor.dtype"><code class="docutils literal notranslate"><span class="pre">DVLSensor.dtype</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#biguasim.sensors.DepthCamera"><code class="docutils literal notranslate"><span class="pre">DepthCamera</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DepthCamera.data_shape"><code class="docutils literal notranslate"><span class="pre">DepthCamera.data_shape</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DepthCamera.dtype"><code class="docutils literal notranslate"><span class="pre">DepthCamera.dtype</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DepthCamera.sensor_data"><code class="docutils literal notranslate"><span class="pre">DepthCamera.sensor_data</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DepthCamera.set_ticks_per_capture"><code class="docutils literal notranslate"><span class="pre">DepthCamera.set_ticks_per_capture()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#biguasim.sensors.DepthSensor"><code class="docutils literal notranslate"><span class="pre">DepthSensor</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DepthSensor.data_shape"><code class="docutils literal notranslate"><span class="pre">DepthSensor.data_shape</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.DepthSensor.dtype"><code class="docutils literal notranslate"><span class="pre">DepthSensor.dtype</span></code></a></li>
@@ -137,7 +130,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#biguasim.sensors.ImagingSonar"><code class="docutils literal notranslate"><span class="pre">ImagingSonar</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.ImagingSonar.data_shape"><code class="docutils literal notranslate"><span class="pre">ImagingSonar.data_shape</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.ImagingSonar.dtype"><code class="docutils literal notranslate"><span class="pre">ImagingSonar.dtype</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#biguasim.sensors.ImagingSonar.sensor_data"><code class="docutils literal notranslate"><span class="pre">ImagingSonar.sensor_data</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#biguasim.sensors.LocationSensor"><code class="docutils literal notranslate"><span class="pre">LocationSensor</span></code></a><ul>
@@ -296,85 +288,82 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.DVLSensor" title="biguasim.sensors.DVLSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DVLSensor</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
 <td><p>Doppler Velocity Log Sensor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.DepthCamera" title="biguasim.sensors.DepthCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DepthCamera</span></code></a>(client, agent_name, agent_type)</p></td>
-<td><p>Captures high-precision depth data (Float32) directly from the GPU.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.DepthSensor" title="biguasim.sensors.DepthSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DepthSensor</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.DepthSensor" title="biguasim.sensors.DepthSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DepthSensor</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Pressure/Depth Sensor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.DynamicsSensor" title="biguasim.sensors.DynamicsSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicsSensor</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.DynamicsSensor" title="biguasim.sensors.DynamicsSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicsSensor</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Gives all relevant information needed for implementing custom dynamics.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.FOVDetection" title="biguasim.sensors.FOVDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FOVDetection</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.FOVDetection" title="biguasim.sensors.FOVDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FOVDetection</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Returns true if the agent is colliding with anything (including the ground).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.GPSSensor" title="biguasim.sensors.GPSSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GPSSensor</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.GPSSensor" title="biguasim.sensors.GPSSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GPSSensor</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
 <td><p>Gets the location of the agent in the world if the agent is close enough to the surface.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.IMUSensor" title="biguasim.sensors.IMUSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMUSensor</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.IMUSensor" title="biguasim.sensors.IMUSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMUSensor</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
 <td><p>Inertial Measurement Unit sensor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.ImagingSonar" title="biguasim.sensors.ImagingSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImagingSonar</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.ImagingSonar" title="biguasim.sensors.ImagingSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImagingSonar</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Simulates an imaging sonar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.LocationSensor" title="biguasim.sensors.LocationSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocationSensor</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.LocationSensor" title="biguasim.sensors.LocationSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocationSensor</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Gets the location of the agent in the world.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.MagnetometerSensor" title="biguasim.sensors.MagnetometerSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MagnetometerSensor</span></code></a>(client, agent_name, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.MagnetometerSensor" title="biguasim.sensors.MagnetometerSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MagnetometerSensor</span></code></a>(client, agent_name, ...)</p></td>
 <td><p>Gets the global x-axis (or given vector) in the local frame.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.OpticalModemSensor" title="biguasim.sensors.OpticalModemSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpticalModemSensor</span></code></a>(client, agent_name, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.OpticalModemSensor" title="biguasim.sensors.OpticalModemSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpticalModemSensor</span></code></a>(client, agent_name, ...)</p></td>
 <td><p>Handles communication between agents using an optical modem.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.OrientationSensor" title="biguasim.sensors.OrientationSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OrientationSensor</span></code></a>(client[, agent_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.OrientationSensor" title="biguasim.sensors.OrientationSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OrientationSensor</span></code></a>(client[, agent_name, ...])</p></td>
 <td><p>Gets the forward, right, and up vector for the agent.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.PoseSensor" title="biguasim.sensors.PoseSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PoseSensor</span></code></a>(client[, agent_name, agent_type, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.PoseSensor" title="biguasim.sensors.PoseSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PoseSensor</span></code></a>(client[, agent_name, agent_type, ...])</p></td>
 <td><p>Gets the forward, right, and up vector for the agent.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.ProfilingSonar" title="biguasim.sensors.ProfilingSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProfilingSonar</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.ProfilingSonar" title="biguasim.sensors.ProfilingSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProfilingSonar</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Simulates a multibeam profiling sonar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.RGBCamera" title="biguasim.sensors.RGBCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGBCamera</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.RGBCamera" title="biguasim.sensors.RGBCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGBCamera</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
 <td><p>Captures agent's view.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.RGBDCamera" title="biguasim.sensors.RGBDCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGBDCamera</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.RGBDCamera" title="biguasim.sensors.RGBDCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGBDCamera</span></code></a>(client, agent_name, agent_type[, ...])</p></td>
 <td><p><strong>*WIP: need to fully test this sensor*</strong></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.RangeFinderSensor" title="biguasim.sensors.RangeFinderSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeFinderSensor</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.RangeFinderSensor" title="biguasim.sensors.RangeFinderSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeFinderSensor</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Returns distances to nearest collisions in the directions specified by the parameters.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.RaycastLidar" title="biguasim.sensors.RaycastLidar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaycastLidar</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.RaycastLidar" title="biguasim.sensors.RaycastLidar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaycastLidar</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p><strong>*WIP: need to fully test this senssor*</strong> Runs Agent's Lidar</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.RaycastSemanticLidar" title="biguasim.sensors.RaycastSemanticLidar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaycastSemanticLidar</span></code></a>(client, agent_name, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.RaycastSemanticLidar" title="biguasim.sensors.RaycastSemanticLidar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaycastSemanticLidar</span></code></a>(client, agent_name, ...)</p></td>
 <td><p><strong>*WIP: need to fully test this senssor*</strong> Runs Agent's Lidar</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.RotationSensor" title="biguasim.sensors.RotationSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RotationSensor</span></code></a>(client[, agent_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.RotationSensor" title="biguasim.sensors.RotationSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RotationSensor</span></code></a>(client[, agent_name, ...])</p></td>
 <td><p>Gets the rotation of the agent in the world, with rotation XYZ about the fixed frame, in degrees.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.SemanticSegmentationCamera" title="biguasim.sensors.SemanticSegmentationCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemanticSegmentationCamera</span></code></a>(client, ...[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.SemanticSegmentationCamera" title="biguasim.sensors.SemanticSegmentationCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemanticSegmentationCamera</span></code></a>(client, ...[, ...])</p></td>
 <td><p><strong>*WIP: need to fully test this senssor*</strong> Captures agent's view.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.SensorDefinition" title="biguasim.sensors.SensorDefinition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SensorDefinition</span></code></a>(agent_name, agent_type, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.SensorDefinition" title="biguasim.sensors.SensorDefinition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SensorDefinition</span></code></a>(agent_name, agent_type, ...)</p></td>
 <td><p>A class for new sensors and their parameters, to be used for adding new sensors.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.SensorFactory" title="biguasim.sensors.SensorFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SensorFactory</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.SensorFactory" title="biguasim.sensors.SensorFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SensorFactory</span></code></a>()</p></td>
 <td><p>Given a sensor definition, constructs the appropriate BiguaSimSensor object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.SidescanSonar" title="biguasim.sensors.SidescanSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SidescanSonar</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.SidescanSonar" title="biguasim.sensors.SidescanSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SidescanSonar</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Simulates a sidescan sonar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.SinglebeamSonar" title="biguasim.sensors.SinglebeamSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SinglebeamSonar</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.SinglebeamSonar" title="biguasim.sensors.SinglebeamSonar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SinglebeamSonar</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Simulates an echosounder, which is a sonar sensor with a single cone shaped beam.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.VelocitySensor" title="biguasim.sensors.VelocitySensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VelocitySensor</span></code></a>(client[, agent_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.VelocitySensor" title="biguasim.sensors.VelocitySensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VelocitySensor</span></code></a>(client[, agent_name, ...])</p></td>
 <td><p>Returns the x, y, and z velocity of the sensor in the global frame.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.ViewportCapture" title="biguasim.sensors.ViewportCapture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ViewportCapture</span></code></a>(client, agent_name, agent_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.ViewportCapture" title="biguasim.sensors.ViewportCapture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ViewportCapture</span></code></a>(client, agent_name, agent_type)</p></td>
 <td><p>Captures what the viewport is seeing.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.WorldNumSensor" title="biguasim.sensors.WorldNumSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorldNumSensor</span></code></a>(client[, agent_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.WorldNumSensor" title="biguasim.sensors.WorldNumSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorldNumSensor</span></code></a>(client[, agent_name, ...])</p></td>
 <td><p>Returns any numeric value from the world corresponding to a given key.</p></td>
 </tr>
 </tbody>
@@ -795,77 +784,6 @@ following options:</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="biguasim.sensors.DepthCamera">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.sensors.</span></span><span class="sig-name descname"><span class="pre">DepthCamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DepthCamera'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.sensors.DepthCamera" title="Link to this definition"></a></dt>
-<dd><p>Captures high-precision depth data (Float32) directly from the GPU.
-Follows the AirSim architecture:
-- Channel 0 (Red): Linear Depth in Centimeters.</p>
-<p><strong>Attributes:</strong></p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.DepthCamera.data_shape" title="biguasim.sensors.DepthCamera.data_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_shape</span></code></a></p></td>
-<td><p>The shape of the sensor data</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.DepthCamera.dtype" title="biguasim.sensors.DepthCamera.dtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dtype</span></code></a></p></td>
-<td><p>The type of data in the sensor</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.DepthCamera.sensor_data" title="biguasim.sensors.DepthCamera.sensor_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sensor_data</span></code></a></p></td>
-<td><p>Retorna APENAS o Depth Map em Metros.</p></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Methods:</strong></p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.DepthCamera.set_ticks_per_capture" title="biguasim.sensors.DepthCamera.set_ticks_per_capture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_ticks_per_capture</span></code></a>(ticks_per_capture)</p></td>
-<td><p>Sets this DepthCamera to capture a new frame every ticks_per_capture.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py property">
-<dt class="sig sig-object py" id="biguasim.sensors.DepthCamera.data_shape">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_shape</span></span><a class="headerlink" href="#biguasim.sensors.DepthCamera.data_shape" title="Link to this definition"></a></dt>
-<dd><p>The shape of the sensor data</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Sensor data shape</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="biguasim.sensors.DepthCamera.dtype">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dtype</span></span><a class="headerlink" href="#biguasim.sensors.DepthCamera.dtype" title="Link to this definition"></a></dt>
-<dd><p>The type of data in the sensor</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Type of sensor data</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>numpy dtype</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="biguasim.sensors.DepthCamera.sensor_data">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sensor_data</span></span><a class="headerlink" href="#biguasim.sensors.DepthCamera.sensor_data" title="Link to this definition"></a></dt>
-<dd><p>Retorna APENAS o Depth Map em Metros.
-Sem chaves falsas de point_cloud.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="biguasim.sensors.DepthCamera.set_ticks_per_capture">
-<span class="sig-name descname"><span class="pre">set_ticks_per_capture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks_per_capture</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.sensors.DepthCamera.set_ticks_per_capture" title="Link to this definition"></a></dt>
-<dd><p>Sets this DepthCamera to capture a new frame every ticks_per_capture.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="biguasim.sensors.DepthSensor">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biguasim.sensors.</span></span><span class="sig-name descname"><span class="pre">DepthSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DepthSensor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biguasim.sensors.DepthSensor" title="Link to this definition"></a></dt>
 <dd><p>Pressure/Depth Sensor.</p>
@@ -1221,9 +1139,6 @@ the options in the following sections.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#biguasim.sensors.ImagingSonar.dtype" title="biguasim.sensors.ImagingSonar.dtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dtype</span></code></a></p></td>
 <td><p>The type of data in the sensor</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#biguasim.sensors.ImagingSonar.sensor_data" title="biguasim.sensors.ImagingSonar.sensor_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sensor_data</span></code></a></p></td>
-<td><p>Get the sensor data buffer</p></td>
-</tr>
 </tbody>
 </table>
 <dl class="py property">
@@ -1250,20 +1165,6 @@ the options in the following sections.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy dtype</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="biguasim.sensors.ImagingSonar.sensor_data">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sensor_data</span></span><a class="headerlink" href="#biguasim.sensors.ImagingSonar.sensor_data" title="Link to this definition"></a></dt>
-<dd><p>Get the sensor data buffer</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Current sensor data</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code> of size <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.data_shape</span></code></p>
 </dd>
 </dl>
 </dd></dl>
